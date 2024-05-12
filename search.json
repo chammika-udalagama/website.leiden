@@ -1,0 +1,58 @@
+[
+  {
+    "objectID": "docs/about/instructions.html",
+    "href": "docs/about/instructions.html",
+    "title": "Instructions",
+    "section": "",
+    "text": "Need, Good and Nice:When possible, I have categorized the content as Need to Know, Good to Know and Nice to Know. You should typically know everything that is Need to Know and Good to Know. You should look at the Nice to Know portions once you are more comfortable with Python.\nExercises & Problems:\n\nExercises(Simple): These will only reinforce Python syntax and best suit those who are new to Python.\nExercises: These general tasks will help you practice using Python for simple scientific problems.\nProblems: More demanding tasks tailored specifically for this seminar, ranging from straightforward problems to more challenging and longer tasks.\n\nThe website has a search option that accommodates free text. This can help locate things (most of the time).\n\n\n\n\nDay 1 is mostly about developing and enhancing your Python knowledge. I think this is also the most demanding day of the seminar because you need to pick and choose from several topics and exercises to match your current knowledge and interest in Python.\nOverall, by the end of the first day, I hope you know enough Python so we can focus on using Python to solve problems in the following days. However, please don’t rush; this is an opportunity to slowly strengthen your command of Python, so take it easy and enjoy!\n\n\nIf you are a beginner, and new to Python, start by working on the examples and simple exercises in sections (A) Setting up and (B) Python | Basics\nIf you are an intermediate used and already know your way around Python,"
+  },
+  {
+    "objectID": "docs/about/instructions.html#things-to-note-about-the-website",
+    "href": "docs/about/instructions.html#things-to-note-about-the-website",
+    "title": "Instructions",
+    "section": "",
+    "text": "Need, Good and Nice:When possible, I have categorized the content as Need to Know, Good to Know and Nice to Know. You should typically know everything that is Need to Know and Good to Know. You should look at the Nice to Know portions once you are more comfortable with Python.\nExercises & Problems:\n\nExercises(Simple): These will only reinforce Python syntax and best suit those who are new to Python.\nExercises: These general tasks will help you practice using Python for simple scientific problems.\nProblems: More demanding tasks tailored specifically for this seminar, ranging from straightforward problems to more challenging and longer tasks.\n\nThe website has a search option that accommodates free text. This can help locate things (most of the time)."
+  },
+  {
+    "objectID": "docs/about/instructions.html#recommended-workflow-for-day-1",
+    "href": "docs/about/instructions.html#recommended-workflow-for-day-1",
+    "title": "Instructions",
+    "section": "",
+    "text": "Day 1 is mostly about developing and enhancing your Python knowledge. I think this is also the most demanding day of the seminar because you need to pick and choose from several topics and exercises to match your current knowledge and interest in Python.\nOverall, by the end of the first day, I hope you know enough Python so we can focus on using Python to solve problems in the following days. However, please don’t rush; this is an opportunity to slowly strengthen your command of Python, so take it easy and enjoy!\n\n\nIf you are a beginner, and new to Python, start by working on the examples and simple exercises in sections (A) Setting up and (B) Python | Basics\nIf you are an intermediate used and already know your way around Python,"
+  },
+  {
+    "objectID": "docs/about/overview.html",
+    "href": "docs/about/overview.html",
+    "title": "Overview",
+    "section": "",
+    "text": "Python is a popular and versatile programming language that is easy to learn and read. It enables quick and efficient work in tasks like plotting, data analysis, and simulations. Although not the fastest or most efficient (like, for instance, C++), it is versatile and fun to use, particularly for science applications.\nIn this seminar, we will explore how Python can implement various techniques for solving physics problems. This seminar is not exhaustive but aims to cover a few concepts so you can be exposed to different methods (such as Monte Carlo) and understand different programming approaches (such as object-oriented programming). This experience will complement and supplement what you will learn in your other courses.\n\n\n\nThe material is designed to accommodate varying levels of knowledge, from beginners to advanced users.\nThe goal is to progress from your starting point, regardless of where that may be. “…what ultimately matters in this [seminar] is not so much where you end up relative to your classmates but where you will end up relative to yourself when you began” (Quote from Harvard University’s CS50 course (“CS50” 2024))\nThe best way to learn programming is by doing, so expect to spend plenty of time experimenting and practicing.\nYou are not expected to work on the seminar content outside the seminar hours. The material introduced in the seminar has been intentionally reduced over time to accommodate carryover work from the previous day.\nYou also do not have to complete every topic and problem! Often, you will learn more by focusing on doing a few things well(the cliché less is more).\nYou can work on the material independently. The facilitator’s role will be to:\n\nExplain and clarify topics beyond the provided material.\nPersonalise the learning experience by spending time with each participant.\n\n\n\n\n\n\nDay 1: This is the most demanding day, covering various topics. If you are new to Python, focus on the basics by practicing examples and exercises. If you are more experienced, briefly review the basics before diving into the more advanced topics. Work through the exercises and try your best to complete as many as possible.\nDay 2: We’ll explore using random numbers to solve simple problems, including electron and Brownian motion.\nDay 3: Focus on interacting systems such as the Boltzmann distribution and the Ising model.\nDay 4: Work with differential equations.Start working on your group project.\nDay 5: Complete the group project and present."
+  },
+  {
+    "objectID": "docs/about/overview.html#things-to-note",
+    "href": "docs/about/overview.html#things-to-note",
+    "title": "Overview",
+    "section": "",
+    "text": "The material is designed to accommodate varying levels of knowledge, from beginners to advanced users.\nThe goal is to progress from your starting point, regardless of where that may be. “…what ultimately matters in this [seminar] is not so much where you end up relative to your classmates but where you will end up relative to yourself when you began” (Quote from Harvard University’s CS50 course (“CS50” 2024))\nThe best way to learn programming is by doing, so expect to spend plenty of time experimenting and practicing.\nYou are not expected to work on the seminar content outside the seminar hours. The material introduced in the seminar has been intentionally reduced over time to accommodate carryover work from the previous day.\nYou also do not have to complete every topic and problem! Often, you will learn more by focusing on doing a few things well(the cliché less is more).\nYou can work on the material independently. The facilitator’s role will be to:\n\nExplain and clarify topics beyond the provided material.\nPersonalise the learning experience by spending time with each participant."
+  },
+  {
+    "objectID": "docs/about/overview.html#tentative-schedule",
+    "href": "docs/about/overview.html#tentative-schedule",
+    "title": "Overview",
+    "section": "",
+    "text": "Day 1: This is the most demanding day, covering various topics. If you are new to Python, focus on the basics by practicing examples and exercises. If you are more experienced, briefly review the basics before diving into the more advanced topics. Work through the exercises and try your best to complete as many as possible.\nDay 2: We’ll explore using random numbers to solve simple problems, including electron and Brownian motion.\nDay 3: Focus on interacting systems such as the Boltzmann distribution and the Ising model.\nDay 4: Work with differential equations.Start working on your group project.\nDay 5: Complete the group project and present."
+  },
+  {
+    "objectID": "docs/about/schedule.html",
+    "href": "docs/about/schedule.html",
+    "title": "Schedule",
+    "section": "",
+    "text": "Welcome to SP2273: Working on Interdisciplinary Science, Pythonically. Thank you for joining 731. My name is Chammika Udalagama, and I am the course coordinator for this course. On this page, I will quickly run through many of the important features of the course. I have greatly elaborated on these in other chapters of this part."
+  },
+  {
+    "objectID": "docs/about/schedule.html#footnotes",
+    "href": "docs/about/schedule.html#footnotes",
+    "title": "Schedule",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nWe usually refer to our SPS modules with just the last two digits.↩︎"
+  }
+]
