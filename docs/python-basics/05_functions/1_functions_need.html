@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Seminar on Using Python in Physics - Loops (Nice)</title>
+<title>Seminar on Using Python in Physics - Functions (Need)</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -101,35 +101,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   }
 }</script>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="../../../styles/specific-optimisations.css">
 </head>
@@ -181,7 +152,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><strong>Day 1</strong></li><li class="breadcrumb-item">(B) Python (Basics)</li><li class="breadcrumb-item"><a href="../../../docs/python-basics/04_loops/1_loops_need.html">4. Loops</a></li><li class="breadcrumb-item"><a href="../../../docs/python-basics/04_loops/3_loops_nice.html">Loops (Nice)</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><strong>Day 1</strong></li><li class="breadcrumb-item">(B) Python (Basics)</li><li class="breadcrumb-item"><a href="../../../docs/python-basics/05_functions/1_functions_need.html">5. Functions</a></li><li class="breadcrumb-item"><a href="../../../docs/python-basics/05_functions/1_functions_need.html">Functions (Need)</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -372,13 +343,13 @@ window.Quarto = {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" aria-expanded="false">
  <span class="menu-text">4. Loops</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth3 show">  
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth3 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../docs/python-basics/04_loops/1_loops_need.html" class="sidebar-item-text sidebar-link">
@@ -405,7 +376,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../docs/python-basics/04_loops/3_loops_nice.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../../docs/python-basics/04_loops/3_loops_nice.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Loops (Nice)</span></a>
   </div>
 </li>
@@ -416,16 +387,16 @@ window.Quarto = {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" aria-expanded="true">
  <span class="menu-text">5. Functions</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth3 ">  
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth3 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../docs/python-basics/05_functions/1_functions_need.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/python-basics/05_functions/1_functions_need.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Functions (Need)</span></a>
   </div>
 </li>
@@ -531,19 +502,31 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#there-is-more-to-list-comprehension" id="toc-there-is-more-to-list-comprehension" class="nav-link active" data-scroll-target="#there-is-more-to-list-comprehension"><span class="header-section-number">1</span> There is more to list comprehension</a></li>
-  <li><a href="#zipping-a-dictionary" id="toc-zipping-a-dictionary" class="nav-link" data-scroll-target="#zipping-a-dictionary"><span class="header-section-number">2</span> Zipping a dictionary</a></li>
-  <li><a href="#for-and-while-has-an-else" id="toc-for-and-while-has-an-else" class="nav-link" data-scroll-target="#for-and-while-has-an-else"><span class="header-section-number">3</span> <code>for</code> and <code>while</code> has an <code>else</code></a></li>
-  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises">Exercises</a></li>
+  <li><a href="#what-to-expect-in-this-chapter" id="toc-what-to-expect-in-this-chapter" class="nav-link active" data-scroll-target="#what-to-expect-in-this-chapter">What to expect in this chapter</a></li>
+  <li><a href="#user-defined-functions" id="toc-user-defined-functions" class="nav-link" data-scroll-target="#user-defined-functions"><span class="header-section-number">1</span> User-defined functions</a>
+  <ul class="collapse">
+  <li><a href="#named-functions" id="toc-named-functions" class="nav-link" data-scroll-target="#named-functions"><span class="header-section-number">1.1</span> Named Functions</a>
+  <ul class="collapse">
+  <li><a href="#named-functions-that-return" id="toc-named-functions-that-return" class="nav-link" data-scroll-target="#named-functions-that-return">Named functions that return</a></li>
+  <li><a href="#named-functions-that-dont-return" id="toc-named-functions-that-dont-return" class="nav-link" data-scroll-target="#named-functions-that-dont-return">Named functions that don’t return</a></li>
+  </ul></li>
+  <li><a href="#anonymous-functions" id="toc-anonymous-functions" class="nav-link" data-scroll-target="#anonymous-functions"><span class="header-section-number">1.2</span> Anonymous functions</a></li>
+  <li><a href="#optional-arguments" id="toc-optional-arguments" class="nav-link" data-scroll-target="#optional-arguments"><span class="header-section-number">1.3</span> Optional arguments</a></li>
+  <li><a href="#the-importance-of-functions" id="toc-the-importance-of-functions" class="nav-link" data-scroll-target="#the-importance-of-functions"><span class="header-section-number">1.4</span> The importance of functions?</a>
+  <ul class="collapse">
+  <li><a href="#an-argument-for-functions" id="toc-an-argument-for-functions" class="nav-link" data-scroll-target="#an-argument-for-functions">An argument for functions</a></li>
+  <li><a href="#a-word-of-caution" id="toc-a-word-of-caution" class="nav-link" data-scroll-target="#a-word-of-caution">A word of caution</a></li>
+  </ul></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><strong>Day 1</strong></li><li class="breadcrumb-item">(B) Python (Basics)</li><li class="breadcrumb-item"><a href="../../../docs/python-basics/04_loops/1_loops_need.html">4. Loops</a></li><li class="breadcrumb-item"><a href="../../../docs/python-basics/04_loops/3_loops_nice.html">Loops (Nice)</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><strong>Day 1</strong></li><li class="breadcrumb-item">(B) Python (Basics)</li><li class="breadcrumb-item"><a href="../../../docs/python-basics/05_functions/1_functions_need.html">5. Functions</a></li><li class="breadcrumb-item"><a href="../../../docs/python-basics/05_functions/1_functions_need.html">Functions (Need)</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Loops (Nice)</h1>
+<h1 class="title">Functions (Need)</h1>
 </div>
 
 
@@ -563,103 +546,157 @@ window.Quarto = {
 <div class="hidden">
 
 </div>
-<div class="callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
+<div data-layout-align="left">
+<div id="fig-x" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-x-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="https://imgs.xkcd.com/comics/functional.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="300">
 </div>
-<div class="callout-title-container flex-fill">
-Warning
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-x-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: From <a href="https://xkcd.com/">xkcd</a>.
+</figcaption>
+</figure>
 </div>
 </div>
-<div class="callout-body-container callout-body">
-<p>The material in this ‘Nice’ chapter is <strong>optional</strong>. The discussion typically deals with content beyond what a novice should know. So, please finish <strong>all</strong> the ‘Need’ and ‘Good’ portions before you go through this chapter.</p>
+<section id="what-to-expect-in-this-chapter" class="level1 unnumbered">
+<h1 class="unnumbered">What to expect in this chapter</h1>
+<p>By now, you will be comfortable using functions (e.g.&nbsp;<code>print(), enumerate()</code>). In addition, I hope you are satisfied with the idea that a function is just a chunk of code that does a specific conceptual task. There is also the advantage that you can treat a function as a black box and just use it without knowing exactly what is going on in it. Sometimes this is good because too many details can be detrimental; other times it can be unwise as you do not know how an output is generated.</p>
+<p>In this chapter, I will show you how to craft your own functions. In addition to its practicality, the modularity of functions prompts us to think of solutions about modular solutions to problems.</p>
+</section>
+<section id="user-defined-functions" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> User-defined functions</h1>
+<p><code>print()</code> is an example of an <strong>internal</strong> function in Python. You can also create your own functions. There are two ways to do this: <strong>named</strong> and <strong>anonymous</strong>.</p>
+<section id="named-functions" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="named-functions"><span class="header-section-number">1.1</span> Named Functions</h2>
+<section id="named-functions-that-return" class="level3">
+<h3 class="anchored" data-anchor-id="named-functions-that-return">Named functions that return</h3>
+<p>We define the function by using the keyword <code>def</code> as follows:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> greeting(name):</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> name <span class="op">==</span> <span class="st">'Batman'</span>:</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="st">'Hello Batman! So, nice to meet you!'</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="ss">f'Hello </span><span class="sc">{</span>name<span class="sc">}</span><span class="ss">!'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<p>The function’s name is <code>greeting</code> and it accepts a single argument called <code>name</code>. We can then use the function as:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>greeting(<span class="st">"Super Man"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>or</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>greeting(name<span class="op">=</span><span class="st">"Super Man"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>As with all structures in Python, notice the keyword <code>def</code>, the colon (<code>:</code>) and the indentation that demarcates the function’s code block. Notice also that I have used the keyword <code>return</code> to get an output from the function. When Python sees a <code>return</code> keyword it jumps out of the function with the return value. You can pick up the returned value by assigning it to a variable or even use it directly like:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>greet<span class="op">=</span>greeting(name<span class="op">=</span><span class="st">'Super Man'</span>)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(greet)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>or this works too:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(greeting(name<span class="op">=</span><span class="st">'Super Man'</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Incidentally, you can use <code>return</code> only within a function.</p>
+<p>I also like to point out that you can return almost anything! Here is an example of a function that accepts a list and returns the maximum, minimum and mean.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> basic_stats(numbers):</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    np_numbers <span class="op">=</span> np.array(numbers)</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    my_min <span class="op">=</span> np_numbers.<span class="bu">min</span>()</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    my_max <span class="op">=</span> np_numbers.<span class="bu">max</span>()</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>    my_mean <span class="op">=</span> np_numbers.mean()</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> my_max, my_min, my_mean</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<section id="there-is-more-to-list-comprehension" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> There is more to list comprehension</h1>
+<p>Here is how you can use it:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>list_min, list_max, list_mean <span class="op">=</span> basic_stats([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="named-functions-that-dont-return" class="level3">
+<h3 class="anchored" data-anchor-id="named-functions-that-dont-return">Named functions that don’t return</h3>
+<p>A function does <strong>not</strong> have to return anything. A good example is <code>print()</code>, which does something but does not return a value. You will often also need functions like these, for instance, to save data to a file. I will show you a few of such functions in later chapters.</p>
+</section>
+</section>
+<section id="anonymous-functions" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="anonymous-functions"><span class="header-section-number">1.2</span> Anonymous functions</h2>
+<p>Anonymous or <span class="glossary">lambda</span> functions are suitable for short one-liners. Let me show you two examples.</p>
 <div class="my-examples">
 <ol>
 <li>
+<p>This function accepts a single argument called <code>name</code>.</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>my_short_function <span class="op">=</span> <span class="kw">lambda</span> name: <span class="ss">f"Hello </span><span class="sc">{</span>name<span class="sc">}</span><span class="ss">!"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>We can use it like</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>my_short_function(name<span class="op">=</span><span class="st">"Super Man"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>A <code>lambda</code> function always returns the value of the last statement.</p>
+</li>
+<li>
+<p>The above example is not a very good ‘anonymous’ one because I <strong>have</strong> used a name! So let me show you another one where things are really anonymous.</p>
+<p>Let’s say I want to sort the following 2D list.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>numbers<span class="op">=</span>[[<span class="dv">9</span>, <span class="dv">0</span>, <span class="op">-</span><span class="dv">10</span>],</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>         [<span class="dv">8</span>, <span class="dv">1</span>, <span class="op">-</span><span class="dv">11</span>],</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>         [<span class="dv">7</span>, <span class="dv">2</span>, <span class="op">-</span><span class="dv">12</span>],</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>         [<span class="dv">6</span>, <span class="dv">3</span>, <span class="op">-</span><span class="dv">13</span>],</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>         [<span class="dv">5</span>, <span class="dv">4</span>, <span class="op">-</span><span class="dv">14</span>],</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>         [<span class="dv">4</span>, <span class="dv">5</span>, <span class="op">-</span><span class="dv">15</span>],</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>         [<span class="dv">3</span>, <span class="dv">6</span>, <span class="op">-</span><span class="dv">16</span>],</span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>         [<span class="dv">2</span>, <span class="dv">7</span>, <span class="op">-</span><span class="dv">17</span>],</span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>         [<span class="dv">1</span>, <span class="dv">8</span>, <span class="op">-</span><span class="dv">18</span>],</span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>         [<span class="dv">0</span>, <span class="dv">9</span>, <span class="op">-</span><span class="dv">19</span>]]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>I can use the <code>sorted()</code> function for this. Here are three ways I can use it.</p>
 <div>
 
 </div>
-<div class="quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-panel" data-layout-ncol="3">
 <div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<p>You can have more than one loop in a list comprehension.</p>
-</div>
-<div class="my-text quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>[[a,b] <span class="cf">for</span> a <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">5</span>) <span class="cf">for</span> b <span class="kw">in</span> [<span class="st">'A'</span>, <span class="st">'B'</span>, <span class="st">'C'</span>]]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="my-text quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div class="sourceCode" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Sort by comparing the default key</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="co"># (i.e., the 1st element)</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="bu">sorted</span>(numbers)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
-<pre><code>[[0, 'A']
- [0, 'B']
- [0, 'C']
- [1, 'A']
- [1, 'B']
- [1, 'C']
- [2, 'A']
- [2, 'B']
- [2, 'C']
- [3, 'A']
- [3, 'B']
- [3, 'C']
- [4, 'A']
- [4, 'B']
- [4, 'C']]</code></pre>
+<pre><code>[[0, 9, -19]
+ [1, 8, -18]
+ [2, 7, -17]
+ [3, 6, -16]
+ [4, 5, -15]
+ [5, 4, -14]
+ [6, 3, -13]
+ [7, 2, -12]
+ [8, 1, -11]
+ [9, 0, -10]]</code></pre>
 </div>
 </div>
+<p>Notice that this sorting is based on comparing the first elements of the sub-lists.</p>
 </div>
-</div>
-</div>
-</li>
-<li>
-<div>
-
-</div>
-<div class="quarto-layout-panel" data-layout-ncol="2">
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<p>You can even incorporate a condition!</p>
-</div>
-<div class="my-text quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>[[a,b] <span class="cf">for</span> a <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">5</span>) <span class="cf">for</span> b <span class="kw">in</span> [<span class="st">'A'</span>, <span class="st">'B'</span>, <span class="st">'C'</span>] <span class="cf">if</span> a <span class="op">%</span> <span class="dv">2</span> <span class="op">!=</span> <span class="dv">0</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="my-text quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div class="sourceCode" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Sort by comparing a custom key</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="co"># that uses the 2nd element (index=1)</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="bu">sorted</span>(numbers, key<span class="op">=</span><span class="kw">lambda</span> x: x[<span class="dv">1</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
-<pre><code>[[1, 'A']
- [1, 'B']
- [1, 'C']
- [3, 'A']
- [3, 'B']
- [3, 'C']]</code></pre>
+<pre><code>[[9, 0, -10]
+ [8, 1, -11]
+ [7, 2, -12]
+ [6, 3, -13]
+ [5, 4, -14]
+ [4, 5, -15]
+ [3, 6, -16]
+ [2, 7, -17]
+ [1, 8, -18]
+ [0, 9, -19]]</code></pre>
 </div>
 </div>
+<p>If I want to use some other criteria, then I need to specify a <code>key</code> that <code>sorted()</code> can be used for comparison. As you can see, I have used a <code>lambda</code> function for this.</p>
 </div>
-</div>
-</div>
-</li>
-<li>
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>nested_list<span class="op">=</span>[[<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>], [<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>]]</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>[y <span class="cf">for</span> x <span class="kw">in</span> nested_list <span class="cf">for</span> y <span class="kw">in</span> x]</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>nested_list<span class="op">=</span>[[<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>], [<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>]]</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>output <span class="op">=</span>[]</span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> x <span class="kw">in</span> nested_list:</span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> y <span class="kw">in</span> x:</span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>        output.append(y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="quarto-layout-panel" data-layout-ncol="2">
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<p>Here is a slightly more complicated use of list comprehension to flatten a list.</p>
-</div>
-<div class="my-text quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="my-text quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div class="sourceCode" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Sort by comparing a custom key</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="co"># that uses the sum of the elements.</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="bu">sorted</span>(numbers, key<span class="op">=</span><span class="kw">lambda</span> x: <span class="bu">sum</span>(x))   </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell">
 <div class="cell-output cell-output-stdout">
-<pre><code>[1, 2, 3, 4, 5, 6, 7]</code></pre>
+<pre><code>[[0, 9, -19]
+ [1, 8, -18]
+ [2, 7, -17]
+ [3, 6, -16]
+ [4, 5, -15]
+ [5, 4, -14]
+ [6, 3, -13]
+ [7, 2, -12]
+ [8, 1, -11]
+ [9, 0, -10]]</code></pre>
 </div>
 </div>
-<p>This does the same as:</p>
+<p>This is really powerful as I can specify almost any criterion I like. For example, I can sort according to the sum of the elements of the sub-lists.</p>
 </div>
 </div>
 </div>
@@ -667,250 +704,90 @@ Warning
 </ol>
 </div>
 </section>
-<section id="zipping-a-dictionary" class="level1" data-number="2">
-<h1 data-number="2"><span class="header-section-number">2</span> Zipping a dictionary</h1>
-<p><code>zip()</code> offers one of the easiest ways to combine two lists into a dictionary:</p>
+<section id="optional-arguments" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="optional-arguments"><span class="header-section-number">1.3</span> Optional arguments</h2>
+<p>Python allows us to make arguments to our function <span class="glossary">optional</span>. To do this, we need to give the argument a <span class="glossary">default</span> value so that it always has something to work with.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>super_names<span class="op">=</span>[<span class="st">"Black Widow"</span>, <span class="st">"Iron Man"</span>, <span class="st">"Doctor Strange"</span>]</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>real_names<span class="op">=</span>[<span class="st">"Natasha Romanoff"</span>, <span class="st">"Tony Stark"</span>, <span class="st">"Stephen Strange"</span>]</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="bu">dict</span>(<span class="bu">zip</span>(real_names, super_names))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>{'Natasha Romanoff': 'Black Widow', 'Tony Stark': 'Iron Man', 'Stephen Strange': 'Doctor Strange'}</code></pre>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> greeting(name<span class="op">=</span><span class="st">'no one'</span>):</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> name <span class="op">==</span> <span class="st">'Batman'</span>:</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="st">'Hello Batman! So, nice to meet you!'</span></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="ss">f'Hello </span><span class="sc">{</span>name<span class="sc">}</span><span class="ss">!'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</div>
-<p>In the above <code>dict()</code> is used to recast <code>zip()</code>’s output into a dictionary.</p>
-</section>
-<section id="for-and-while-has-an-else" class="level1" data-number="3">
-<h1 data-number="3"><span class="header-section-number">3</span> <code>for</code> and <code>while</code> has an <code>else</code></h1>
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>numbers<span class="op">=</span>[<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>]</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> numbers:</span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> i <span class="op">&lt;</span> <span class="dv">0</span>: <span class="cf">break</span></span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'No negative numbers in the list'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="quarto-layout-panel" data-layout-ncol="2">
-<div class="quarto-layout-row">
-<div class="my-text quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<p>The <code>for</code> and <code>while</code> loops in Python come with an optional <code>else</code> statement! The code in the <code>else</code> block is executed only if the loops are completed. The <code>else</code> code-block will not run if you exit the loop prematurely (e.g.&nbsp;by using <code>break</code>).</p>
-<p>Shown alongside is a trivial example. You should add a negative number to the list, and re-run the snippet. There will be no message this time.</p>
-<p>So, the <code>else</code> statement can be used to distinguish between the loops completing as planned or if there was a <code>break</code> (or <code>return</code> or an exception).</p>
-</div>
-<div class="my-text quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<p>Now we can run this function without an argument, and it will still work without throwing an error.</p>
 <div class="cell">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>greeting()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>No negative numbers in the list</code></pre>
+<pre><code>'Hello no one!'</code></pre>
 </div>
 </div>
-</div>
-</div>
-</div>
-</section>
-<section id="exercises" class="level1 unnumbered">
-<h1 class="unnumbered">Exercises</h1>
-<div id="exr-x" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 1 (Changing a list)</strong></span> &nbsp;</p>
-<div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">Problem</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">A solution</a></li></ul>
-<div class="tab-content">
-<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
-<p>We want a snippet of code based on a <code>for</code> loop to remove fruits starting with the letter ‘p’ from the following list.</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>fruits <span class="op">=</span> [<span class="st">"apple"</span>, <span class="st">"banana"</span>, <span class="st">"jackfruit"</span>,</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>          <span class="st">"pineapple"</span>, <span class="st">"papaya"</span>, <span class="st">"watermelons"</span>,</span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>          <span class="st">"peaches"</span>, <span class="st">"durian"</span>,  <span class="st">"mangoes"</span>,</span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>          <span class="st">"strawberries"</span>, <span class="st">"passionfruit"</span></span>
-<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>          ]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>The following has been suggested as a solution. However, it does not work!</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> fruit <span class="kw">in</span> fruits:</span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> fruit[<span class="dv">0</span>] <span class="op">==</span> <span class="st">"p"</span>:</span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>        fruits.remove(fruit)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Identify, <strong>understand</strong> and fix the error.</p>
-</div>
-<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
-<div class="sourceCode" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> fruit <span class="kw">in</span> fruits:</span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> fruit[<span class="dv">0</span>] <span class="op">==</span> <span class="st">"p"</span>:</span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>        fruits.remove(fruit)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Although the above code is elegant it has a serious flaw which you can see by using <a href="https://pythontutor.com/">pythontutor.com</a> to <a href="https://pythontutor.com/visualize.html#code=fruits%20%3D%20%5B%22apple%22,%20%22banana%22,%20%22jackfruit%22,%0A%20%20%20%20%20%20%20%20%20%20%22pineapple%22,%20%22papaya%22,%20%22watermelons%22,%0A%20%20%20%20%20%20%20%20%20%20%22peaches%22,%20%22durian%22,%20%20%22mangoes%22,%0A%20%20%20%20%20%20%20%20%20%20%22strawberries%22,%20%22passionfruit%22%0A%20%20%20%20%20%20%20%20%20%20%5D%0A%0Afor%20fruit%20in%20fruits%3A%0A%20%20%20%20if%20fruit%5B0%5D%20%3D%3D%20%22p%22%3A%0A%20%20%20%20%20%20%20%20fruits.remove%28fruit%29&amp;cumulative=false&amp;curInstr=2&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=3&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false" target="_blank">visualise</a> the flow of the script.</p>
-<p>A safer solution is the following:</p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>fruits <span class="op">=</span> [<span class="st">"apple"</span>, <span class="st">"banana"</span>, <span class="st">"jackfruit"</span>,</span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>          <span class="st">"pineapple"</span>, <span class="st">"papaya"</span>, <span class="st">"watermelons"</span>,</span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>          <span class="st">"peaches"</span>, <span class="st">"durian"</span>,  <span class="st">"mangoes"</span>,</span>
-<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>          <span class="st">"strawberries"</span>, <span class="st">"passionfruit"</span></span>
-<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>          ]</span>
-<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>copy_of_fruits <span class="op">=</span> fruits.copy()</span>
-<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Not that we are looping(iterating) over the copy</span></span>
-<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> fruit <span class="kw">in</span> copy_of_fruits:</span>
-<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> fruit[<span class="dv">0</span>] <span class="op">==</span> <span class="st">"p"</span>:</span>
-<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a>        fruits.remove(fruit)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>An even better, clean and elegant solutions is:</p>
-<div class="sourceCode" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>fruits <span class="op">=</span> [<span class="st">"apple"</span>, <span class="st">"banana"</span>, <span class="st">"jackfruit"</span>,</span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>          <span class="st">"pineapple"</span>, <span class="st">"papaya"</span>, <span class="st">"watermelons"</span>,</span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>          <span class="st">"peaches"</span>, <span class="st">"durian"</span>,  <span class="st">"mangoes"</span>,</span>
-<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>          <span class="st">"strawberries"</span>, <span class="st">"passionfruit"</span></span>
-<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>          ]</span>
-<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>[fruit <span class="cf">for</span> fruit <span class="kw">in</span> fruits <span class="cf">if</span> fruit[<span class="dv">0</span>] <span class="op">!=</span> <span class="st">"p"</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="hidden">
+<p>For another example, let’s look at the documentation for <code>print()</code>.</p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>?<span class="bu">print</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<pre><code>    Docstring:
+    print(value, ..., sep=' ', end='\n', file=sys.stdout, flush=False)
 
-</div>
-<div id="exr-x" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 2 (A list of powers)</strong></span> &nbsp;</p>
-<div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true">Problem</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false">A Solution</a></li></ul>
-<div class="tab-content">
-<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
-<p>The following code is an attempt to create a list <span class="math inline">\([n, n^2,n^3]\)</span> for several values of <span class="math inline">\(n\)</span>. We can specify the maximum value of <span class="math inline">\(n\)</span> by changing <code>maximum_n</code>.</p>
-<div class="sourceCode" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>maximum_n <span class="op">=</span> <span class="dv">5</span></span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span> [[]] <span class="op">*</span> maximum_n</span>
-<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> n <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, maximum_n <span class="op">+</span> <span class="dv">1</span>):</span>
-<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>    result[n <span class="op">-</span> <span class="dv">1</span>].append(n)</span>
-<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>    result[n <span class="op">-</span> <span class="dv">1</span>].append(n<span class="op">**</span><span class="dv">2</span>)</span>
-<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>    result[n <span class="op">-</span> <span class="dv">1</span>].append(n<span class="op">**</span><span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>For <code>maximum_n = 5</code> the content of <code>result</code> should be as shown below.</p>
-<div class="sourceCode" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>[[<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>],</span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a> [<span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">8</span>],</span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a> [<span class="dv">3</span>, <span class="dv">9</span>, <span class="dv">27</span>],</span>
-<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a> [<span class="dv">4</span>, <span class="dv">16</span>, <span class="dv">64</span>],</span>
-<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a> [<span class="dv">5</span>, <span class="dv">25</span>, <span class="dv">125</span>]]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>However, the code does not produce this expected result!<br>Identify, <strong>understand</strong>, <strong>explain</strong> and fix the bug.</p>
-</div>
-<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
-<section id="an-explantion" class="level3">
-<h3 class="anchored" data-anchor-id="an-explantion">An explantion</h3>
-<p>The problem arises because <code>[[]] * 5</code> creates 5 references to the <strong>same</strong> empty list <code>[]</code>. Running a list comprehension will create 5 different empty lists <code>[]</code>.</p>
-<p>Let’s check if what I have said is true.</p>
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>maximum_n <span class="op">=</span> <span class="dv">5</span></span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span> [[]] <span class="op">*</span> maximum_n</span>
-<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> count, element <span class="kw">in</span> <span class="bu">enumerate</span>(result):</span>
-<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(count, <span class="bu">id</span>(element))</span>
-<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>maximum_n <span class="op">=</span> <span class="dv">5</span></span>
-<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span> [[] <span class="cf">for</span> _ <span class="kw">in</span> <span class="bu">range</span>(maximum_n)]</span>
-<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> count, element <span class="kw">in</span> <span class="bu">enumerate</span>(result):</span>
-<span id="cb18-12"><a href="#cb18-12" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(count, <span class="bu">id</span>(element))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+    Prints the values to a stream, or to sys.stdout by default.
+    Optional keyword arguments:
+    file:  a file-like object (stream); defaults to the current sys.stdout.
+    sep:   string inserted between values, default a space.
+    end:   string appended after the last value, default a newline.
+    flush: whether to forcibly flush the stream.
+    Type:      builtin_function_or_method</code></pre>
+<p>You see that <code>print()</code> can accept other arguments that are optional with default values. However, we can specify them if we like; here goes.</p>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Using default values</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'I'</span>, <span class="st">'am'</span>, <span class="st">'Batman!'</span>)</span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Specifying an optional argument</span></span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'I'</span>, <span class="st">'am'</span>, <span class="st">'Batman!'</span>, sep<span class="op">=</span><span class="st">'---'</span>)  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="quarto-layout-panel" data-layout-ncol="2">
 <div class="quarto-layout-row">
 <div class="cell quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="cell-output cell-output-stdout">
-<pre><code>0 129842694954176
-1 129842694954176
-2 129842694954176
-3 129842694954176
-4 129842694954176</code></pre>
+<pre><code>I am Batman!</code></pre>
 </div>
 </div>
 <div class="cell quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="cell-output cell-output-stdout">
-<pre><code>0 129842695019328
-1 129842695020224
-2 129842695022080
-3 129842695020672
-4 129842695020416</code></pre>
+<pre><code>I---am---Batman!</code></pre>
 </div>
 </div>
 </div>
 </div>
-</section>
-<section id="a-solution-2" class="level3">
-<h3 class="anchored" data-anchor-id="a-solution-2">A solution</h3>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>maximum_n <span class="op">=</span> <span class="dv">5</span></span>
-<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="co"># result = [[]] * maximum_n</span></span>
-<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span> [[] <span class="cf">for</span> _ <span class="kw">in</span> <span class="bu">range</span>(maximum_n)]</span>
-<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> n <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, maximum_n <span class="op">+</span> <span class="dv">1</span>):</span>
-<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a>    result[n <span class="op">-</span> <span class="dv">1</span>].append(n)</span>
-<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a>    result[n <span class="op">-</span> <span class="dv">1</span>].append(n<span class="op">**</span><span class="dv">2</span>)</span>
-<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a>    result[n <span class="op">-</span> <span class="dv">1</span>].append(n<span class="op">**</span><span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
 </div>
-<div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code>[[1, 1, 1]
- [2, 4, 8]
- [3, 9, 27]
- [4, 16, 64]
- [5, 25, 125]]</code></pre>
+<div class="callout-title-container flex-fill">
+Remember
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Remember:</p>
+<ul>
+<li>you can define your own functions,</li>
+<li>functions can have optional arguments,</li>
+<li>functions <strong>don’t</strong> always have to return anything.</li>
+</ul>
 </div>
 </div>
 </section>
-</div>
-</div>
-</div>
-</div>
-<div id="exr-x" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 3 (Time profiling)</strong></span> &nbsp;</p>
-<div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-3-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-1" role="tab" aria-controls="tabset-3-1" aria-selected="true">Problem</a></li></ul>
-<div class="tab-content">
-<div id="tabset-3-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-3-1-tab">
-<p>Use <code>%%timeit</code> to compare the execution speeds of the following:</p>
-<div class="my-table-800">
-<table class="table">
-<colgroup>
-<col style="width: 3%">
-<col style="width: 42%">
-<col style="width: 49%">
-<col style="width: 4%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: center;">#</th>
-<th style="text-align: left;">Option 1</th>
-<th style="text-align: left;">Option 2</th>
-<th style="text-align: center;">Result</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;">1</td>
-<td style="text-align: left;">Creating a list of squares with <code>for</code> loop</td>
-<td style="text-align: left;">Creating a list of squares with <code>while</code> loop</td>
-<td style="text-align: center;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">2</td>
-<td style="text-align: left;">Creating a list of squares with a <code>for</code> loop.</td>
-<td style="text-align: left;">Creating a list of squares with a <strong>list comprehension</strong> loop.</td>
-<td style="text-align: center;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">3</td>
-<td style="text-align: left;">Creating a list of squares using <strong>list</strong> <code>append()</code></td>
-<td style="text-align: left;">Creating a list of squares using <strong>list</strong> <code>+=</code></td>
-<td style="text-align: center;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">4</td>
-<td style="text-align: left;">Creating a list of squares using <strong>list</strong> <code>append()</code></td>
-<td style="text-align: left;">Creating a list of squares using <code>append()</code>of <strong>Numpy</strong></td>
-<td style="text-align: center;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">5</td>
-<td style="text-align: left;">Creating a list of squares using <strong>Numpy</strong></td>
-<td style="text-align: left;">Creating a list of squares using <strong>List comprehension</strong> loop.</td>
-<td style="text-align: center;"></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
-</div>
-</div>
+<section id="the-importance-of-functions" class="level2" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="the-importance-of-functions"><span class="header-section-number">1.4</span> The importance of functions?</h2>
+<section id="an-argument-for-functions" class="level3">
+<h3 class="anchored" data-anchor-id="an-argument-for-functions">An argument for functions</h3>
+<p>Now that you know a bit about creating functions, let me highlight why functions are a good idea.</p>
+<p><strong>Abstraction of details</strong> The most important benefit of functions goes beyond programming and relates to your ability to strategize. If you break up a complicated solution into modular chunks (i.e., functions), it becomes easier to think about it because you are not dealing with all the details all at once. As a result, it is easier to focus on your overall solution because you are not distracted by unnecessary information. This hiding of ‘stuff’ is called <span class="glossary">abstraction</span> in computer science lingo. The concept of abstraction can be tricky to grasp. So, let me share an analogy related to driving.</p>
+<p>A vehicle has many ‘abstracted’ systems, amongst which the engine is a good example. You do not need to know the engine’s details (e.g.&nbsp;electric, petrol, diesel, guineapig) to use it. You can use the engine of almost any car because you are not required to know what happens inside. This frees up your resources because you are not distracted by unnecessary details. Of course, there will be times when you want to know how an engine works to pick the best engine.</p>
+<p><strong>Reusability of code</strong> If you <span class="glossary">encapsulate</span> a chunk of code in a function, it becomes straightforward to reuse it instead of copying and pasting at different places. This means your code will be shorter and more compact.</p>
+<p><strong>Maintainability of code</strong> With functions, your code is easier to change and maintain because you need only make changes in one place, at the function definition.</p>
+</section>
+<section id="a-word-of-caution" class="level3">
+<h3 class="anchored" data-anchor-id="a-word-of-caution">A word of caution</h3>
+<p>I have seen many instances where functions are <strong>abused</strong>; for example, by trying to do too many things or having too many arguments. They can also be <strong>overused</strong>. Having too many functions can make it difficult to read your code and also increase computational overheads. You will get a better feel for when to use functions with experience, but please bear in mind that functions can be misused.</p>
 
 
+</section>
+</section>
 </section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->

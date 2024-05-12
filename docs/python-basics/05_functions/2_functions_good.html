@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Seminar on Using Python in Physics - Loops (Nice)</title>
+<title>Seminar on Using Python in Physics - Functions (Good)</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -101,35 +101,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   }
 }</script>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="../../../styles/specific-optimisations.css">
 </head>
@@ -181,7 +152,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><strong>Day 1</strong></li><li class="breadcrumb-item">(B) Python (Basics)</li><li class="breadcrumb-item"><a href="../../../docs/python-basics/04_loops/1_loops_need.html">4. Loops</a></li><li class="breadcrumb-item"><a href="../../../docs/python-basics/04_loops/3_loops_nice.html">Loops (Nice)</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><strong>Day 1</strong></li><li class="breadcrumb-item">(B) Python (Basics)</li><li class="breadcrumb-item"><a href="../../../docs/python-basics/05_functions/1_functions_need.html">5. Functions</a></li><li class="breadcrumb-item"><a href="../../../docs/python-basics/05_functions/2_functions_good.html">Functions (Good)</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -372,13 +343,13 @@ window.Quarto = {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" aria-expanded="false">
  <span class="menu-text">4. Loops</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth3 show">  
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth3 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../docs/python-basics/04_loops/1_loops_need.html" class="sidebar-item-text sidebar-link">
@@ -405,7 +376,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../docs/python-basics/04_loops/3_loops_nice.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../../docs/python-basics/04_loops/3_loops_nice.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Loops (Nice)</span></a>
   </div>
 </li>
@@ -416,13 +387,13 @@ window.Quarto = {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" aria-expanded="true">
  <span class="menu-text">5. Functions</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth3 ">  
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth3 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../docs/python-basics/05_functions/1_functions_need.html" class="sidebar-item-text sidebar-link">
@@ -437,7 +408,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../docs/python-basics/05_functions/2_functions_good.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/python-basics/05_functions/2_functions_good.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Functions (Good)</span></a>
   </div>
 </li>
@@ -531,19 +502,29 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#there-is-more-to-list-comprehension" id="toc-there-is-more-to-list-comprehension" class="nav-link active" data-scroll-target="#there-is-more-to-list-comprehension"><span class="header-section-number">1</span> There is more to list comprehension</a></li>
-  <li><a href="#zipping-a-dictionary" id="toc-zipping-a-dictionary" class="nav-link" data-scroll-target="#zipping-a-dictionary"><span class="header-section-number">2</span> Zipping a dictionary</a></li>
-  <li><a href="#for-and-while-has-an-else" id="toc-for-and-while-has-an-else" class="nav-link" data-scroll-target="#for-and-while-has-an-else"><span class="header-section-number">3</span> <code>for</code> and <code>while</code> has an <code>else</code></a></li>
-  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises">Exercises</a></li>
+  <li><a href="#what-to-expect-in-this-chapter" id="toc-what-to-expect-in-this-chapter" class="nav-link active" data-scroll-target="#what-to-expect-in-this-chapter">What to expect in this chapter</a></li>
+  <li><a href="#checks-balances-and-contingencies" id="toc-checks-balances-and-contingencies" class="nav-link" data-scroll-target="#checks-balances-and-contingencies"><span class="header-section-number">1</span> Checks, balances, and contingencies</a>
+  <ul class="collapse">
+  <li><a href="#assert" id="toc-assert" class="nav-link" data-scroll-target="#assert"><span class="header-section-number">1.1</span> <code>assert</code></a></li>
+  <li><a href="#try-except" id="toc-try-except" class="nav-link" data-scroll-target="#try-except"><span class="header-section-number">1.2</span> <code>try-except</code></a></li>
+  <li><a href="#a-simple-suggestion" id="toc-a-simple-suggestion" class="nav-link" data-scroll-target="#a-simple-suggestion"><span class="header-section-number">1.3</span> A simple suggestion</a></li>
+  </ul></li>
+  <li><a href="#some-loose-ends" id="toc-some-loose-ends" class="nav-link" data-scroll-target="#some-loose-ends"><span class="header-section-number">2</span> Some loose ends</a>
+  <ul class="collapse">
+  <li><a href="#positional-keyword-and-default-arguments" id="toc-positional-keyword-and-default-arguments" class="nav-link" data-scroll-target="#positional-keyword-and-default-arguments"><span class="header-section-number">2.1</span> Positional, keyword and default arguments</a></li>
+  <li><a href="#docstrings" id="toc-docstrings" class="nav-link" data-scroll-target="#docstrings"><span class="header-section-number">2.2</span> Docstrings</a></li>
+  <li><a href="#function-are-first-class-citizens" id="toc-function-are-first-class-citizens" class="nav-link" data-scroll-target="#function-are-first-class-citizens"><span class="header-section-number">2.3</span> Function are first-class citizens</a></li>
+  <li><a href="#more-about-unpacking" id="toc-more-about-unpacking" class="nav-link" data-scroll-target="#more-about-unpacking"><span class="header-section-number">2.4</span> More about unpacking</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><strong>Day 1</strong></li><li class="breadcrumb-item">(B) Python (Basics)</li><li class="breadcrumb-item"><a href="../../../docs/python-basics/04_loops/1_loops_need.html">4. Loops</a></li><li class="breadcrumb-item"><a href="../../../docs/python-basics/04_loops/3_loops_nice.html">Loops (Nice)</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><strong>Day 1</strong></li><li class="breadcrumb-item">(B) Python (Basics)</li><li class="breadcrumb-item"><a href="../../../docs/python-basics/05_functions/1_functions_need.html">5. Functions</a></li><li class="breadcrumb-item"><a href="../../../docs/python-basics/05_functions/2_functions_good.html">Functions (Good)</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Loops (Nice)</h1>
+<h1 class="title">Functions (Good)</h1>
 </div>
 
 
@@ -563,354 +544,210 @@ window.Quarto = {
 <div class="hidden">
 
 </div>
-<div class="callout callout-style-default callout-warning callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
+<section id="what-to-expect-in-this-chapter" class="level1 unnumbered">
+<h1 class="unnumbered">What to expect in this chapter</h1>
+<p>In this chapter, I will tie up some loose ends about functions like types of arguments and docstrings. I will also discuss exception handling so that you can better understand how to deal with errors. By the end of this chapter, you will know the difference between positional, keyword, and default arguments of functions. You can also write code that checks and handles potential problems.</p>
+</section>
+<section id="checks-balances-and-contingencies" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Checks, balances, and contingencies</h1>
+<p>Users and programmers are not infallible, and you cannot think of everything that can go wrong. So, having checks, balances, and contingencies in your code is a good idea. So, let’s talk about pre-empting problems. This topic applies to more than just functions, but let’s start here.</p>
+<p>There are two standard ways Python allows us to incorporate checks: <code>assert</code> and <code>try-except</code>.</p>
+<section id="assert" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="assert"><span class="header-section-number">1.1</span> <code>assert</code></h2>
+<p>Python has a command called <code>assert</code> that can check a condition and halt execution if necessary. It also gives the option of printing a message.</p>
+<p>The basic syntax is as follows:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> condition<span class="op">-</span>to<span class="op">-</span>check, message</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><code>assert</code> stops the flow if the condition <strong>fails</strong>. Here is an example.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> x <span class="op">&gt;=</span> <span class="dv">0</span>, <span class="st">"x is becoming negative!"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>The program will run for as long as the condition is <code>True</code>. If it fails, then an <code>AssertationError</code> is raised, and the program stops running!</p>
+<div>
+
 </div>
-<div class="callout-title-container flex-fill">
-Warning
+<div class="quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="my-text quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<p>The following <strong>will</strong> run without a problem.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">10</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> x <span class="op">&gt;=</span> <span class="dv">0</span>, <span class="st">"x is becoming negative!"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="my-text quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<p>The following will throw an error and stop.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="op">-</span><span class="dv">1</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> x <span class="op">&gt;=</span> <span class="dv">0</span>, <span class="st">"x is becoming negative!"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
-<div class="callout-body-container callout-body">
-<p>The material in this ‘Nice’ chapter is <strong>optional</strong>. The discussion typically deals with content beyond what a novice should know. So, please finish <strong>all</strong> the ‘Need’ and ‘Good’ portions before you go through this chapter.</p>
+</div>
+</section>
+<section id="try-except" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="try-except"><span class="header-section-number">1.2</span> <code>try-except</code></h2>
+<p>A technical name for things going wrong is <span class="glossary">exceptions</span>. For example, division by zero will raise a <code>ZeroDivisionError</code>. An exception left unhandled will halt the flow of the programme. However, if you are a control freak, Python offers an (absurdly) simple ‘try-except’ structure to catch and handle these exceptions yourself.</p>
+<p>The <code>try-except</code> syntax can also ensure that your programme can handle some situations beyond your control. For example, when I use Python to speak to the Canvas server, I use <code>try-except</code> to handle situations when the server does not respond.</p>
+<p>Let me show you how to use the <code>try-except</code> flow control statement.</p>
+<p>We can solicit a user response using the <code>input()</code> function. Let’s say we do this and ask for a number, as shown in the snippet below.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>number<span class="op">=</span><span class="bu">input</span>(<span class="st">"Give me a number and I will calculate its square."</span>)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>square<span class="op">=</span><span class="bu">int</span>(number)<span class="op">**</span><span class="dv">2</span>              <span class="co"># Convert English to number</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'The square of </span><span class="sc">{</span>number<span class="sc">}</span><span class="ss"> is </span><span class="sc">{</span>square<span class="sc">}</span><span class="ss">!'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This will work fine if the typecasting <code>int(number)</code> makes sense. What if the input is not a number but something else like ‘hahaha’?</p>
+<p>Let’s use the <code>try-except</code> to get around this problem.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="cf">try</span>:</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    number<span class="op">=</span><span class="bu">input</span>(<span class="st">"Give me a number and I will calculate its square."</span>)</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    square<span class="op">=</span><span class="bu">int</span>(number)<span class="op">**</span><span class="dv">2</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f'The square of </span><span class="sc">{</span>number<span class="sc">}</span><span class="ss"> is </span><span class="sc">{</span>square<span class="sc">}</span><span class="ss">!'</span>)</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="cf">except</span>:</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="ss">f"Oh oh! I cannot square </span><span class="sc">{</span>number<span class="sc">}</span><span class="ss">!"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Notice how I have enclosed (and protected) that part of the code that we think can potentially lead to trouble in the <code>try</code> block. If something (anything) goes wrong, Python will ignore the error and run the code in the <code>except</code> block.</p>
+<p>You can have more control over how the expetions are handled with a <code>try-except</code> block. However, we do not have to worry about that at this point.</p>
+</section>
+<section id="a-simple-suggestion" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="a-simple-suggestion"><span class="header-section-number">1.3</span> A simple suggestion</h2>
+<p>When starting out with some code, it is always good for your code to signal to the outside world that it has finished certain milestones. A ‘soft’ way to do this is to include ‘print()’ statements here and there to let the outside world know what is happening in the innards of your program. Otherwise, you will stare at a blank cell, wondering what is happening.</p>
+</section>
+</section>
+<section id="some-loose-ends" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Some loose ends</h1>
+<section id="positional-keyword-and-default-arguments" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="positional-keyword-and-default-arguments"><span class="header-section-number">2.1</span> Positional, keyword and default arguments</h2>
+<p>In the past chapter, some of you may have noticed that I was (carelessly) switching between passing two styles of passing arguments to the function <code>greeting()</code>. I wrote <code>greeting('Super Man')</code> or <code>greeting(name='Super Man')</code>. We need to talk a bit more about this so that you are not bewildered when you see other people’s code.</p>
+<p>There are three ‘ways’ to pass a value to an argument. I will call them <span class="glossary">positional</span>, <span class="glossary">keyword</span> or <span class="glossary">default</span>. To make this clearer, consider the following function.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> side_by_side(a, b, c<span class="op">=</span><span class="dv">42</span>):</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="ss">f'</span><span class="sc">{</span>a<span class="sc">: 2d}</span><span class="ss">|</span><span class="sc">{</span>b<span class="sc">: 2d}</span><span class="ss">|</span><span class="sc">{</span>c<span class="sc">: 2d}</span><span class="ss">'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Here are three ways I can use this function.</p>
+<div>
+
+</div>
+<div class="quarto-layout-panel" data-layout-ncol="3">
+<div class="quarto-layout-row">
+<div class="my-text quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<p><strong>Positional</strong></p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>side_by_side(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Here, I am telling Python to assign <code>1, 2, 3</code> to <code>a, b, c</code> using the positional order of the arguments.</p>
+</div>
+<div class="my-text quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<p><strong>Keywords</strong></p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>side_by_side(c<span class="op">=</span><span class="dv">3</span>, b<span class="op">=</span><span class="dv">1</span>, a<span class="op">=</span><span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Here, I explicitly specify the keyword to assign the values to each of <code>a, b, c</code>. (No, the order does not matter)</p>
+</div>
+<div class="my-text quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<p><strong>Default</strong></p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>side_by_side(<span class="dv">1</span>, b<span class="op">=</span><span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Here, since <code>c</code> is optional, I can choose not to specify it (of course, provided I want <code>c</code> to be <code>1</code>).</p>
 </div>
 </div>
-<section id="there-is-more-to-list-comprehension" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> There is more to list comprehension</h1>
+</div>
+<p>Below are some examples of how you can combine these three styles. However, one style (keyword followed by positional) confuses Python and won’t work.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>side_by_side(<span class="dv">1</span>, <span class="dv">2</span>)           <span class="co"># Two positional, 1 default</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="co">## ' 1| 2| 42'</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>side_by_side(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>)        <span class="co"># Three positional</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="co">## ' 1| 2| 3'</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>side_by_side(a<span class="op">=</span><span class="dv">1</span>, b<span class="op">=</span><span class="dv">2</span>)       <span class="co"># Two keyword, 1 default</span></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a><span class="co">## ' 1| 2| 42'</span></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>side_by_side(c<span class="op">=</span><span class="dv">3</span>, b<span class="op">=</span><span class="dv">1</span>, a<span class="op">=</span><span class="dv">2</span>)  <span class="co"># Three keyword</span></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a><span class="co">## ' 2| 1| 3'</span></span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>side_by_side(<span class="dv">1</span>, c<span class="op">=</span><span class="dv">3</span>, b<span class="op">=</span><span class="dv">2</span>)    <span class="co"># One positional, 2 keyword</span></span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a><span class="co">## ' 1| 2| 3'</span></span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>side_by_side(<span class="dv">1</span>, b<span class="op">=</span><span class="dv">2</span>)         <span class="co"># One positional, 1 keyword, 1 default</span></span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a><span class="co">## ' 1| 2| 42'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Let me reiterate that the following will <strong>not</strong> work because Python cannot unambiguously determine the position of <code>1</code>?</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Keywords cannot be followed </span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="co"># by positional arguments</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>side_by_side(a<span class="op">=</span><span class="dv">2</span>, <span class="dv">1</span>)      <span class="co"># Won't work.                          </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="docstrings" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="docstrings"><span class="header-section-number">2.2</span> Docstrings</h2>
+<p>Python has a <span class="glossary">docstring</span> feature that allows us to document what a function does inside the function. This documentation (i.e., the docstring) is displayed when we ask Python to show us the help info using <code>help()</code>.</p>
+<p>Here is a simple example.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> side_by_side(a, b, c<span class="op">=</span><span class="dv">42</span>):</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">'''</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="co">    A test function to demonstrate how </span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="co">    positional, keyword and default arguments </span></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="co">    work.</span></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a><span class="co">    '''</span></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="ss">f'</span><span class="sc">{</span>a<span class="sc">: 2d}</span><span class="ss">|</span><span class="sc">{</span>b<span class="sc">: 2d}</span><span class="ss">|</span><span class="sc">{</span>c<span class="sc">: 2d}</span><span class="ss">'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>A docstring needs to be sandwiched between a pair of <code>'''</code> (or <code>"""</code>) and can span multiple lines.</p>
+<p>Let’s see if it works by asking for help.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="bu">help</span>(side_by_side)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Help on function side_by_side in module __main__:
+
+side_by_side(a, b, c=42)
+    A test function to demonstrate how 
+    positional, keyword and default arguments 
+    work.</code></pre>
+</div>
+</div>
+<p>Docstrings <strong>can</strong> be used for writing multiline comments, but the practice is frowned upon by Puritans; so if you misuse it be ready for their ire!</p>
+</section>
+<section id="function-are-first-class-citizens" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="function-are-first-class-citizens"><span class="header-section-number">2.3</span> Function are first-class citizens</h2>
+<p>Python functions are called <span class="glossary">first-class citizens</span> because they have the same privileges as variables. This opens up useful possibilities for scientific programming because we can <strong>pass a function as an argument to another function</strong>!</p>
+<p>Consider this:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> my_function(angle, trig_function):</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> trig_function(angle)</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Let's use the function</span></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>my_function(np.pi<span class="op">/</span><span class="dv">2</span>, np.sin)        </span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a><span class="co">## 1.0</span></span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>my_function(np.pi<span class="op">/</span><span class="dv">2</span>, np.cos)        </span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a><span class="co">## 6.123233995736766e-17</span></span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>my_function(np.pi<span class="op">/</span><span class="dv">2</span>, <span class="kw">lambda</span> x: np.cos(<span class="dv">2</span><span class="op">*</span>x))  </span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a><span class="co">## -1.0</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><strong>Note</strong>: When we pass a function as an argument, we do <strong>not</strong> include the parenthesis <code>()</code>.</p>
+</section>
+<section id="more-about-unpacking" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="more-about-unpacking"><span class="header-section-number">2.4</span> More about unpacking</h2>
+<p>There is more to unpacking. For example, unpacking can make extracting information from lists and arrays a breeze. Here are some examples.</p>
 <div class="my-examples">
 <ol>
 <li>
-<div>
-
-</div>
-<div class="quarto-layout-panel" data-layout-ncol="2">
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<p>You can have more than one loop in a list comprehension.</p>
-</div>
-<div class="my-text quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>[[a,b] <span class="cf">for</span> a <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">5</span>) <span class="cf">for</span> b <span class="kw">in</span> [<span class="st">'A'</span>, <span class="st">'B'</span>, <span class="st">'C'</span>]]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>x, y, z <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>]</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>x, y, z</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[[0, 'A']
- [0, 'B']
- [0, 'C']
- [1, 'A']
- [1, 'B']
- [1, 'C']
- [2, 'A']
- [2, 'B']
- [2, 'C']
- [3, 'A']
- [3, 'B']
- [3, 'C']
- [4, 'A']
- [4, 'B']
- [4, 'C']]</code></pre>
-</div>
-</div>
-</div>
+<pre><code>(1, 2, 3)</code></pre>
 </div>
 </div>
 </li>
 <li>
-<div>
-
-</div>
-<div class="quarto-layout-panel" data-layout-ncol="2">
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<p>You can even incorporate a condition!</p>
-</div>
-<div class="my-text quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>[[a,b] <span class="cf">for</span> a <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">5</span>) <span class="cf">for</span> b <span class="kw">in</span> [<span class="st">'A'</span>, <span class="st">'B'</span>, <span class="st">'C'</span>] <span class="cf">if</span> a <span class="op">%</span> <span class="dv">2</span> <span class="op">!=</span> <span class="dv">0</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>x, y, z <span class="op">=</span> np.array([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>])</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>x, y, z</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[[1, 'A']
- [1, 'B']
- [1, 'C']
- [3, 'A']
- [3, 'B']
- [3, 'C']]</code></pre>
-</div>
-</div>
-</div>
+<pre><code>(1, 2, 3)</code></pre>
 </div>
 </div>
 </li>
 <li>
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>nested_list<span class="op">=</span>[[<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>], [<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>]]</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>[y <span class="cf">for</span> x <span class="kw">in</span> nested_list <span class="cf">for</span> y <span class="kw">in</span> x]</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>nested_list<span class="op">=</span>[[<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>], [<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>]]</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>output <span class="op">=</span>[]</span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> x <span class="kw">in</span> nested_list:</span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> y <span class="kw">in</span> x:</span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>        output.append(y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="quarto-layout-panel" data-layout-ncol="2">
-<div class="quarto-layout-row">
-<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<p>Here is a slightly more complicated use of list comprehension to flatten a list.</p>
-</div>
-<div class="my-text quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="cell">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>x, <span class="op">*</span>y, z <span class="op">=</span> np.array([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>])</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>x, y, z</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1, 2, 3, 4, 5, 6, 7]</code></pre>
+<pre><code>(1, [2, 3, 4], 5)</code></pre>
 </div>
 </div>
-<p>This does the same as:</p>
-</div>
+</li>
+<li>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>x, <span class="op">*</span>_, y <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>]</span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>x, y</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>(1, 5)</code></pre>
 </div>
 </div>
 </li>
 </ol>
 </div>
-</section>
-<section id="zipping-a-dictionary" class="level1" data-number="2">
-<h1 data-number="2"><span class="header-section-number">2</span> Zipping a dictionary</h1>
-<p><code>zip()</code> offers one of the easiest ways to combine two lists into a dictionary:</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>super_names<span class="op">=</span>[<span class="st">"Black Widow"</span>, <span class="st">"Iron Man"</span>, <span class="st">"Doctor Strange"</span>]</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>real_names<span class="op">=</span>[<span class="st">"Natasha Romanoff"</span>, <span class="st">"Tony Stark"</span>, <span class="st">"Stephen Strange"</span>]</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="bu">dict</span>(<span class="bu">zip</span>(real_names, super_names))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>{'Natasha Romanoff': 'Black Widow', 'Tony Stark': 'Iron Man', 'Stephen Strange': 'Doctor Strange'}</code></pre>
-</div>
-</div>
-<p>In the above <code>dict()</code> is used to recast <code>zip()</code>’s output into a dictionary.</p>
-</section>
-<section id="for-and-while-has-an-else" class="level1" data-number="3">
-<h1 data-number="3"><span class="header-section-number">3</span> <code>for</code> and <code>while</code> has an <code>else</code></h1>
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>numbers<span class="op">=</span>[<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>]</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> numbers:</span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> i <span class="op">&lt;</span> <span class="dv">0</span>: <span class="cf">break</span></span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'No negative numbers in the list'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="quarto-layout-panel" data-layout-ncol="2">
-<div class="quarto-layout-row">
-<div class="my-text quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<p>The <code>for</code> and <code>while</code> loops in Python come with an optional <code>else</code> statement! The code in the <code>else</code> block is executed only if the loops are completed. The <code>else</code> code-block will not run if you exit the loop prematurely (e.g.&nbsp;by using <code>break</code>).</p>
-<p>Shown alongside is a trivial example. You should add a negative number to the list, and re-run the snippet. There will be no message this time.</p>
-<p>So, the <code>else</code> statement can be used to distinguish between the loops completing as planned or if there was a <code>break</code> (or <code>return</code> or an exception).</p>
-</div>
-<div class="my-text quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code>No negative numbers in the list</code></pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="exercises" class="level1 unnumbered">
-<h1 class="unnumbered">Exercises</h1>
-<div id="exr-x" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 1 (Changing a list)</strong></span> &nbsp;</p>
-<div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">Problem</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">A solution</a></li></ul>
-<div class="tab-content">
-<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
-<p>We want a snippet of code based on a <code>for</code> loop to remove fruits starting with the letter ‘p’ from the following list.</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>fruits <span class="op">=</span> [<span class="st">"apple"</span>, <span class="st">"banana"</span>, <span class="st">"jackfruit"</span>,</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>          <span class="st">"pineapple"</span>, <span class="st">"papaya"</span>, <span class="st">"watermelons"</span>,</span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>          <span class="st">"peaches"</span>, <span class="st">"durian"</span>,  <span class="st">"mangoes"</span>,</span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>          <span class="st">"strawberries"</span>, <span class="st">"passionfruit"</span></span>
-<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>          ]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>The following has been suggested as a solution. However, it does not work!</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> fruit <span class="kw">in</span> fruits:</span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> fruit[<span class="dv">0</span>] <span class="op">==</span> <span class="st">"p"</span>:</span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>        fruits.remove(fruit)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Identify, <strong>understand</strong> and fix the error.</p>
-</div>
-<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
-<div class="sourceCode" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> fruit <span class="kw">in</span> fruits:</span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> fruit[<span class="dv">0</span>] <span class="op">==</span> <span class="st">"p"</span>:</span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>        fruits.remove(fruit)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Although the above code is elegant it has a serious flaw which you can see by using <a href="https://pythontutor.com/">pythontutor.com</a> to <a href="https://pythontutor.com/visualize.html#code=fruits%20%3D%20%5B%22apple%22,%20%22banana%22,%20%22jackfruit%22,%0A%20%20%20%20%20%20%20%20%20%20%22pineapple%22,%20%22papaya%22,%20%22watermelons%22,%0A%20%20%20%20%20%20%20%20%20%20%22peaches%22,%20%22durian%22,%20%20%22mangoes%22,%0A%20%20%20%20%20%20%20%20%20%20%22strawberries%22,%20%22passionfruit%22%0A%20%20%20%20%20%20%20%20%20%20%5D%0A%0Afor%20fruit%20in%20fruits%3A%0A%20%20%20%20if%20fruit%5B0%5D%20%3D%3D%20%22p%22%3A%0A%20%20%20%20%20%20%20%20fruits.remove%28fruit%29&amp;cumulative=false&amp;curInstr=2&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=3&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false" target="_blank">visualise</a> the flow of the script.</p>
-<p>A safer solution is the following:</p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>fruits <span class="op">=</span> [<span class="st">"apple"</span>, <span class="st">"banana"</span>, <span class="st">"jackfruit"</span>,</span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>          <span class="st">"pineapple"</span>, <span class="st">"papaya"</span>, <span class="st">"watermelons"</span>,</span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>          <span class="st">"peaches"</span>, <span class="st">"durian"</span>,  <span class="st">"mangoes"</span>,</span>
-<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>          <span class="st">"strawberries"</span>, <span class="st">"passionfruit"</span></span>
-<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>          ]</span>
-<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>copy_of_fruits <span class="op">=</span> fruits.copy()</span>
-<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Not that we are looping(iterating) over the copy</span></span>
-<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> fruit <span class="kw">in</span> copy_of_fruits:</span>
-<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> fruit[<span class="dv">0</span>] <span class="op">==</span> <span class="st">"p"</span>:</span>
-<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a>        fruits.remove(fruit)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>An even better, clean and elegant solutions is:</p>
-<div class="sourceCode" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>fruits <span class="op">=</span> [<span class="st">"apple"</span>, <span class="st">"banana"</span>, <span class="st">"jackfruit"</span>,</span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>          <span class="st">"pineapple"</span>, <span class="st">"papaya"</span>, <span class="st">"watermelons"</span>,</span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>          <span class="st">"peaches"</span>, <span class="st">"durian"</span>,  <span class="st">"mangoes"</span>,</span>
-<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>          <span class="st">"strawberries"</span>, <span class="st">"passionfruit"</span></span>
-<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>          ]</span>
-<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>[fruit <span class="cf">for</span> fruit <span class="kw">in</span> fruits <span class="cf">if</span> fruit[<span class="dv">0</span>] <span class="op">!=</span> <span class="st">"p"</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="hidden">
-
-</div>
-<div id="exr-x" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 2 (A list of powers)</strong></span> &nbsp;</p>
-<div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true">Problem</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false">A Solution</a></li></ul>
-<div class="tab-content">
-<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
-<p>The following code is an attempt to create a list <span class="math inline">\([n, n^2,n^3]\)</span> for several values of <span class="math inline">\(n\)</span>. We can specify the maximum value of <span class="math inline">\(n\)</span> by changing <code>maximum_n</code>.</p>
-<div class="sourceCode" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>maximum_n <span class="op">=</span> <span class="dv">5</span></span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span> [[]] <span class="op">*</span> maximum_n</span>
-<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> n <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, maximum_n <span class="op">+</span> <span class="dv">1</span>):</span>
-<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>    result[n <span class="op">-</span> <span class="dv">1</span>].append(n)</span>
-<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>    result[n <span class="op">-</span> <span class="dv">1</span>].append(n<span class="op">**</span><span class="dv">2</span>)</span>
-<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>    result[n <span class="op">-</span> <span class="dv">1</span>].append(n<span class="op">**</span><span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>For <code>maximum_n = 5</code> the content of <code>result</code> should be as shown below.</p>
-<div class="sourceCode" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>[[<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>],</span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a> [<span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">8</span>],</span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a> [<span class="dv">3</span>, <span class="dv">9</span>, <span class="dv">27</span>],</span>
-<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a> [<span class="dv">4</span>, <span class="dv">16</span>, <span class="dv">64</span>],</span>
-<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a> [<span class="dv">5</span>, <span class="dv">25</span>, <span class="dv">125</span>]]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>However, the code does not produce this expected result!<br>Identify, <strong>understand</strong>, <strong>explain</strong> and fix the bug.</p>
-</div>
-<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
-<section id="an-explantion" class="level3">
-<h3 class="anchored" data-anchor-id="an-explantion">An explantion</h3>
-<p>The problem arises because <code>[[]] * 5</code> creates 5 references to the <strong>same</strong> empty list <code>[]</code>. Running a list comprehension will create 5 different empty lists <code>[]</code>.</p>
-<p>Let’s check if what I have said is true.</p>
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>maximum_n <span class="op">=</span> <span class="dv">5</span></span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span> [[]] <span class="op">*</span> maximum_n</span>
-<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> count, element <span class="kw">in</span> <span class="bu">enumerate</span>(result):</span>
-<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(count, <span class="bu">id</span>(element))</span>
-<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>maximum_n <span class="op">=</span> <span class="dv">5</span></span>
-<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span> [[] <span class="cf">for</span> _ <span class="kw">in</span> <span class="bu">range</span>(maximum_n)]</span>
-<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> count, element <span class="kw">in</span> <span class="bu">enumerate</span>(result):</span>
-<span id="cb18-12"><a href="#cb18-12" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(count, <span class="bu">id</span>(element))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="quarto-layout-panel" data-layout-ncol="2">
-<div class="quarto-layout-row">
-<div class="cell quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<div class="cell-output cell-output-stdout">
-<pre><code>0 129842694954176
-1 129842694954176
-2 129842694954176
-3 129842694954176
-4 129842694954176</code></pre>
-</div>
-</div>
-<div class="cell quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<div class="cell-output cell-output-stdout">
-<pre><code>0 129842695019328
-1 129842695020224
-2 129842695022080
-3 129842695020672
-4 129842695020416</code></pre>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="a-solution-2" class="level3">
-<h3 class="anchored" data-anchor-id="a-solution-2">A solution</h3>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>maximum_n <span class="op">=</span> <span class="dv">5</span></span>
-<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="co"># result = [[]] * maximum_n</span></span>
-<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span> [[] <span class="cf">for</span> _ <span class="kw">in</span> <span class="bu">range</span>(maximum_n)]</span>
-<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> n <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, maximum_n <span class="op">+</span> <span class="dv">1</span>):</span>
-<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a>    result[n <span class="op">-</span> <span class="dv">1</span>].append(n)</span>
-<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a>    result[n <span class="op">-</span> <span class="dv">1</span>].append(n<span class="op">**</span><span class="dv">2</span>)</span>
-<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a>    result[n <span class="op">-</span> <span class="dv">1</span>].append(n<span class="op">**</span><span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code>[[1, 1, 1]
- [2, 4, 8]
- [3, 9, 27]
- [4, 16, 64]
- [5, 25, 125]]</code></pre>
-</div>
-</div>
-</section>
-</div>
-</div>
-</div>
-</div>
-<div id="exr-x" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 3 (Time profiling)</strong></span> &nbsp;</p>
-<div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-3-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-1" role="tab" aria-controls="tabset-3-1" aria-selected="true">Problem</a></li></ul>
-<div class="tab-content">
-<div id="tabset-3-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-3-1-tab">
-<p>Use <code>%%timeit</code> to compare the execution speeds of the following:</p>
-<div class="my-table-800">
-<table class="table">
-<colgroup>
-<col style="width: 3%">
-<col style="width: 42%">
-<col style="width: 49%">
-<col style="width: 4%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: center;">#</th>
-<th style="text-align: left;">Option 1</th>
-<th style="text-align: left;">Option 2</th>
-<th style="text-align: center;">Result</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;">1</td>
-<td style="text-align: left;">Creating a list of squares with <code>for</code> loop</td>
-<td style="text-align: left;">Creating a list of squares with <code>while</code> loop</td>
-<td style="text-align: center;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">2</td>
-<td style="text-align: left;">Creating a list of squares with a <code>for</code> loop.</td>
-<td style="text-align: left;">Creating a list of squares with a <strong>list comprehension</strong> loop.</td>
-<td style="text-align: center;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">3</td>
-<td style="text-align: left;">Creating a list of squares using <strong>list</strong> <code>append()</code></td>
-<td style="text-align: left;">Creating a list of squares using <strong>list</strong> <code>+=</code></td>
-<td style="text-align: center;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">4</td>
-<td style="text-align: left;">Creating a list of squares using <strong>list</strong> <code>append()</code></td>
-<td style="text-align: left;">Creating a list of squares using <code>append()</code>of <strong>Numpy</strong></td>
-<td style="text-align: center;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">5</td>
-<td style="text-align: left;">Creating a list of squares using <strong>Numpy</strong></td>
-<td style="text-align: left;">Creating a list of squares using <strong>List comprehension</strong> loop.</td>
-<td style="text-align: center;"></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
-</div>
-</div>
 
 
+</section>
 </section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->

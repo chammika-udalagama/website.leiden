@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Seminar on Using Python in Physics - Loops (Nice)</title>
+<title>Seminar on Using Python in Physics - Storing Data (Good)</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -181,7 +181,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><strong>Day 1</strong></li><li class="breadcrumb-item">(B) Python (Basics)</li><li class="breadcrumb-item"><a href="../../../docs/python-basics/04_loops/1_loops_need.html">4. Loops</a></li><li class="breadcrumb-item"><a href="../../../docs/python-basics/04_loops/3_loops_nice.html">Loops (Nice)</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><strong>Day 1</strong></li><li class="breadcrumb-item">(B) Python (Basics)</li><li class="breadcrumb-item"><a href="../../../docs/python-basics/03_storing-data/1_storing-data_need.html">3. Storing Data</a></li><li class="breadcrumb-item"><a href="../../../docs/python-basics/03_storing-data/2_storing-data_good.html">Storing Data (Good)</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -334,13 +334,13 @@ window.Quarto = {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="true">
  <span class="menu-text">3. Storing Data</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth3 ">  
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth3 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../docs/python-basics/03_storing-data/1_storing-data_need.html" class="sidebar-item-text sidebar-link">
@@ -355,7 +355,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../docs/python-basics/03_storing-data/2_storing-data_good.html" class="sidebar-item-text sidebar-link">
+  <a href="../../../docs/python-basics/03_storing-data/2_storing-data_good.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Storing Data (Good)</span></a>
   </div>
 </li>
@@ -372,13 +372,13 @@ window.Quarto = {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" aria-expanded="false">
  <span class="menu-text">4. Loops</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth3 show">  
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth3 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../../docs/python-basics/04_loops/1_loops_need.html" class="sidebar-item-text sidebar-link">
@@ -405,7 +405,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../docs/python-basics/04_loops/3_loops_nice.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../../docs/python-basics/04_loops/3_loops_nice.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Loops (Nice)</span></a>
   </div>
 </li>
@@ -531,19 +531,28 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#there-is-more-to-list-comprehension" id="toc-there-is-more-to-list-comprehension" class="nav-link active" data-scroll-target="#there-is-more-to-list-comprehension"><span class="header-section-number">1</span> There is more to list comprehension</a></li>
-  <li><a href="#zipping-a-dictionary" id="toc-zipping-a-dictionary" class="nav-link" data-scroll-target="#zipping-a-dictionary"><span class="header-section-number">2</span> Zipping a dictionary</a></li>
-  <li><a href="#for-and-while-has-an-else" id="toc-for-and-while-has-an-else" class="nav-link" data-scroll-target="#for-and-while-has-an-else"><span class="header-section-number">3</span> <code>for</code> and <code>while</code> has an <code>else</code></a></li>
-  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises">Exercises</a></li>
+  <li><a href="#what-to-expect-in-this-chapter" id="toc-what-to-expect-in-this-chapter" class="nav-link active" data-scroll-target="#what-to-expect-in-this-chapter">What to expect in this chapter</a></li>
+  <li><a href="#subsetting-indexing-and-slicing" id="toc-subsetting-indexing-and-slicing" class="nav-link" data-scroll-target="#subsetting-indexing-and-slicing"><span class="header-section-number">1</span> Subsetting: Indexing and Slicing</a>
+  <ul class="collapse">
+  <li><a href="#lists-arrays-in-1d-subsetting-indexing" id="toc-lists-arrays-in-1d-subsetting-indexing" class="nav-link" data-scroll-target="#lists-arrays-in-1d-subsetting-indexing"><span class="header-section-number">1.1</span> Lists &amp; Arrays in 1D | Subsetting &amp; Indexing</a></li>
+  <li><a href="#arrays-only-subsetting-by-masking" id="toc-arrays-only-subsetting-by-masking" class="nav-link" data-scroll-target="#arrays-only-subsetting-by-masking"><span class="header-section-number">1.2</span> Arrays only | Subsetting by masking</a></li>
+  <li><a href="#lists-arrays-in-2d-indexing-slicing" id="toc-lists-arrays-in-2d-indexing-slicing" class="nav-link" data-scroll-target="#lists-arrays-in-2d-indexing-slicing"><span class="header-section-number">1.3</span> Lists &amp; Arrays in 2D | Indexing &amp; Slicing</a></li>
+  <li><a href="#growing-lists" id="toc-growing-lists" class="nav-link" data-scroll-target="#growing-lists"><span class="header-section-number">1.4</span> Growing lists</a></li>
+  </ul></li>
+  <li><a href="#some-loose-ends" id="toc-some-loose-ends" class="nav-link" data-scroll-target="#some-loose-ends">Some loose ends</a>
+  <ul class="collapse">
+  <li><a href="#tuples" id="toc-tuples" class="nav-link" data-scroll-target="#tuples"><span class="header-section-number">1.5</span> Tuples</a></li>
+  <li><a href="#be-very-careful-when-copying" id="toc-be-very-careful-when-copying" class="nav-link" data-scroll-target="#be-very-careful-when-copying"><span class="header-section-number">1.6</span> Be VERY careful when copying</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><strong>Day 1</strong></li><li class="breadcrumb-item">(B) Python (Basics)</li><li class="breadcrumb-item"><a href="../../../docs/python-basics/04_loops/1_loops_need.html">4. Loops</a></li><li class="breadcrumb-item"><a href="../../../docs/python-basics/04_loops/3_loops_nice.html">Loops (Nice)</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><strong>Day 1</strong></li><li class="breadcrumb-item">(B) Python (Basics)</li><li class="breadcrumb-item"><a href="../../../docs/python-basics/03_storing-data/1_storing-data_need.html">3. Storing Data</a></li><li class="breadcrumb-item"><a href="../../../docs/python-basics/03_storing-data/2_storing-data_good.html">Storing Data (Good)</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Loops (Nice)</h1>
+<h1 class="title">Storing Data (Good)</h1>
 </div>
 
 
@@ -563,103 +572,353 @@ window.Quarto = {
 <div class="hidden">
 
 </div>
-<div class="callout callout-style-default callout-warning callout-titled">
+<section id="what-to-expect-in-this-chapter" class="level1 unnumbered">
+<h1 class="unnumbered">What to expect in this chapter</h1>
+<p>You should now know how to store data using lists, arrays and dictionaries. I will now show you more details on accessing and modifying these structures. This is important because most of what you do with programming is related to accessing and changing data. You will also gain a better understanding of the differences and similarities between lists, NumPy arrays and dictionaries.</p>
+</section>
+<section id="subsetting-indexing-and-slicing" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Subsetting: Indexing and Slicing</h1>
+<p>You will often need to select a subset (<span class="glossary">subsetting</span>) of the data in a list (or array). One form of this is picking a single element called <span class="glossary">indexing</span> (You already know how to do this from the previous chapter). Another option is to select a range of elements. This is called <span class="glossary">slicing</span>.</p>
+<p>So, in summary, what we mean when we say…</p>
+<ul>
+<li><strong>Subsetting</strong> means to ‘select’.<br>
+</li>
+<li><strong>Indexing</strong> refers to selecting one element.<br>
+</li>
+<li><strong>Slicing</strong> refers to selecting a range of elements.<br></li>
+</ul>
+<section id="lists-arrays-in-1d-subsetting-indexing" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="lists-arrays-in-1d-subsetting-indexing"><span class="header-section-number">1.1</span> Lists &amp; Arrays in 1D | Subsetting &amp; Indexing</h2>
+<p>Since slicing gives us a range of elements, we must specify two indices to indicate where to start and end. The various syntaxes for these are shown in the table below.</p>
+<p>The following applies to <strong>both</strong> lists and arrays.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>py_list<span class="op">=</span>[<span class="st">"a1"</span>, <span class="st">"b2"</span>, <span class="st">"c3"</span>, <span class="st">"d4"</span>, <span class="st">"e5"</span>,</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>         <span class="st">"f6"</span>, <span class="st">"g7"</span>, <span class="st">"h8"</span>, <span class="st">"i9"</span>, <span class="st">"j10"</span>]</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>np_array<span class="op">=</span>np.array(py_list)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Pick one</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> py_list  <span class="co"># OR</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np_array</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<table class="table">
+<colgroup>
+<col style="width: 9%">
+<col style="width: 27%">
+<col style="width: 29%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Syntax</th>
+<th>Result</th>
+<th></th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>x[0]</code></td>
+<td>First element</td>
+<td><code>'a1'</code></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><code>x[-1]</code></td>
+<td>Last element</td>
+<td><code>'j10'</code></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><code>x[0:3]</code></td>
+<td>Index 0 to 2</td>
+<td><code>['a1','b2','c3']</code></td>
+<td>Gives <span class="math inline">\(3−0=3\)</span> elements</td>
+</tr>
+<tr class="even">
+<td><code>x[1:6]</code></td>
+<td>Index 1 to 5</td>
+<td><code>['b2','c3','d4','e5','f6']</code></td>
+<td>Gives <span class="math inline">\(6−1=5\)</span> elements</td>
+</tr>
+<tr class="odd">
+<td><code>x[1:6:2]</code></td>
+<td>Index 1 to 5 in steps of 2</td>
+<td><code>['b2','d4','f6']</code></td>
+<td>Gives every other of <span class="math inline">\(6−1=5\)</span> elements</td>
+</tr>
+<tr class="even">
+<td><code>x[5:]</code></td>
+<td>Index 5 to the end</td>
+<td><code>['f6','g7','h8','i9','j10']</code></td>
+<td>Gives <code>len(x)</code><span class="math inline">\(−5=5\)</span> elements</td>
+</tr>
+<tr class="odd">
+<td><code>x[:5]</code></td>
+<td>Index 0 to 5</td>
+<td><code>['a1','b2','c3','d4','e5']</code></td>
+<td>Gives <span class="math inline">\(5−0=5\)</span> elements</td>
+</tr>
+<tr class="even">
+<td><code>x[5:2:-1]</code></td>
+<td>Index 5 to 3 (i.e., in reverse)</td>
+<td><code>['f6','e5','d4']</code></td>
+<td>Gives <span class="math inline">\(5−2=3\)</span> elements</td>
+</tr>
+<tr class="odd">
+<td><code>x[::-1]</code></td>
+<td>Reverses the list</td>
+<td><code>['j10','i9','h8',...,'b2','a1']</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Warning
+Remember
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>The material in this ‘Nice’ chapter is <strong>optional</strong>. The discussion typically deals with content beyond what a novice should know. So, please finish <strong>all</strong> the ‘Need’ and ‘Good’ portions before you go through this chapter.</p>
+<p>Remember slicing in Python can be a bit tricky.<br>If you slice with <code>[i:j]</code>, the slice will start at <code>i</code> and end at <code>j-1</code>, giving you a total of <code>j-i</code> elements.</p>
 </div>
 </div>
-<section id="there-is-more-to-list-comprehension" class="level1" data-number="1">
-<h1 data-number="1"><span class="header-section-number">1</span> There is more to list comprehension</h1>
+</section>
+<section id="arrays-only-subsetting-by-masking" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="arrays-only-subsetting-by-masking"><span class="header-section-number">1.2</span> Arrays only | Subsetting by masking</h2>
+<p>One of the most powerful things you can do with NumPy arrays is subsetting by <span class="glossary">masking</span>. To make sense of this, consider the following.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>np_array <span class="op">=</span> np.array([<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>, <span class="dv">10</span>])</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>my_mask <span class="op">=</span> np_array <span class="op">&gt;</span> <span class="dv">3</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>my_mask</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>array([False, False, False,  True,  True,  True,  True,  True,  True,
+        True])</code></pre>
+</div>
+</div>
+<p>The answer to my question is in the form of a ‘Yes’/‘No’ or <code>True</code>/<code>False</code> format. I can use this <code>True</code>/<code>False</code> format to ask NumPy to show me <strong>only those that are <code>True</code></strong> by</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>np_array[my_mask]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>array([ 4,  5,  6,  7,  8,  9, 10])</code></pre>
+</div>
+</div>
+<p>This is why I used the term ‘masking’. The <code>True</code>/<code>False</code> answer acts like a mask allowing only the <code>True</code> subset to be seen.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Remember
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Remember that subsetting by masking <strong>only</strong> works with NumPy arrays.</p>
+</div>
+</div>
+<p>Instead of creating another variable, I can also do all of this succinctly as:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>np_array[np_array <span class="op">&gt;</span> <span class="dv">3</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>array([ 4,  5,  6,  7,  8,  9, 10])</code></pre>
+</div>
+</div>
+<p>Let me show you a few more quick examples</p>
 <div class="my-examples">
 <ol>
 <li>
-<div>
-
-</div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>np_array[<span class="op">~</span>(np_array <span class="op">&gt;</span> <span class="dv">3</span>)]                 <span class="co"># '~' means 'NOT'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="quarto-layout-panel" data-layout-ncol="2">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<p>You can have more than one loop in a list comprehension.</p>
+<p>We can <strong>invert</strong> our mask by using the <code>~</code>.<br><code>~</code> is called the <span class="glossary">Bitwise Not</span> operator.</p>
 </div>
-<div class="my-text quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>[[a,b] <span class="cf">for</span> a <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">5</span>) <span class="cf">for</span> b <span class="kw">in</span> [<span class="st">'A'</span>, <span class="st">'B'</span>, <span class="st">'C'</span>]]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell">
+<div class="cell quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="cell-output cell-output-stdout">
-<pre><code>[[0, 'A']
- [0, 'B']
- [0, 'C']
- [1, 'A']
- [1, 'B']
- [1, 'C']
- [2, 'A']
- [2, 'B']
- [2, 'C']
- [3, 'A']
- [3, 'B']
- [3, 'C']
- [4, 'A']
- [4, 'B']
- [4, 'C']]</code></pre>
-</div>
+<pre><code>array([1, 2, 3])</code></pre>
 </div>
 </div>
 </div>
 </div>
 </li>
 <li>
-<div>
-
-</div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>np_array[(np_array <span class="op">&gt;</span> <span class="dv">3</span>) <span class="op">&amp;</span> (np_array <span class="op">&lt;</span> <span class="dv">8</span>)] <span class="co"># '&amp;' means 'AND'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="quarto-layout-panel" data-layout-ncol="2">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<p>You can even incorporate a condition!</p>
+<p>We can combine one mask <strong>AND</strong> another mask.<br>(<code>AND</code> will show something only if both masks are true.)</p>
 </div>
-<div class="my-text quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>[[a,b] <span class="cf">for</span> a <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">5</span>) <span class="cf">for</span> b <span class="kw">in</span> [<span class="st">'A'</span>, <span class="st">'B'</span>, <span class="st">'C'</span>] <span class="cf">if</span> a <span class="op">%</span> <span class="dv">2</span> <span class="op">!=</span> <span class="dv">0</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell">
+<div class="cell quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="cell-output cell-output-stdout">
-<pre><code>[[1, 'A']
- [1, 'B']
- [1, 'C']
- [3, 'A']
- [3, 'B']
- [3, 'C']]</code></pre>
-</div>
+<pre><code>array([4, 5, 6, 7])</code></pre>
 </div>
 </div>
 </div>
 </div>
 </li>
 <li>
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>nested_list<span class="op">=</span>[[<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>], [<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>]]</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>[y <span class="cf">for</span> x <span class="kw">in</span> nested_list <span class="cf">for</span> y <span class="kw">in</span> x]</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>nested_list<span class="op">=</span>[[<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>], [<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>]]</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>output <span class="op">=</span>[]</span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> x <span class="kw">in</span> nested_list:</span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> y <span class="kw">in</span> x:</span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>        output.append(y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>np_array[(np_array <span class="op">&lt;</span> <span class="dv">3</span>) <span class="op">|</span> (np_array <span class="op">&gt;</span> <span class="dv">8</span>)] <span class="co"># '|' means 'OR'</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="quarto-layout-panel" data-layout-ncol="2">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<p>Here is a slightly more complicated use of list comprehension to flatten a list.</p>
+<p>We can combine one mask <strong>OR</strong> another mask.<br>(<code>OR</code> will show something if either mask is true.)</p>
 </div>
-<div class="my-text quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="cell quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="cell-output cell-output-stdout">
+<pre><code>array([ 1,  2,  9, 10])</code></pre>
+</div>
+</div>
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Remember
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Remember:</p>
+<ul>
+<li>Always use the Bitwise NOT(<code>~</code>), Bitwise OR(<code>|</code>) and Bitwise AND(<code>&amp;</code>) when combining masks with NumPy.</li>
+<li>Always use brackets to clarify what you are asking the mask to do.</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="lists-arrays-in-2d-indexing-slicing" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="lists-arrays-in-2d-indexing-slicing"><span class="header-section-number">1.3</span> Lists &amp; Arrays in 2D | Indexing &amp; Slicing</h2>
+<p>The differences between lists and arrays become even more apparent with higher dimensional lists and arrays. Especially when you try indexing and slicing in higher dimensions.</p>
+<p>Let’s consider the following 2D list.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>py_list_2d <span class="op">=</span> [[<span class="dv">1</span>, <span class="st">"A"</span>], [<span class="dv">2</span>, <span class="st">"B"</span>], [<span class="dv">3</span>, <span class="st">"C"</span>], [<span class="dv">4</span>, <span class="st">"D"</span>],</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>              [<span class="dv">5</span>, <span class="st">"E"</span>], [<span class="dv">6</span>, <span class="st">"F"</span>], [<span class="dv">7</span>, <span class="st">"G"</span>], [<span class="dv">8</span>, <span class="st">"H"</span>],</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>              [<span class="dv">9</span>, <span class="st">"I"</span>], [<span class="dv">10</span>, <span class="st">"J"</span>]]</span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>np_array_2d <span class="op">=</span> np.array(py_list_2d)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="my-examples">
+<ol>
+<li>
+<p>What is at position 4 (index 3)?</p>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>py_list_2d[<span class="dv">3</span>]</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>np_array_2d[<span class="dv">3</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="cell quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="cell-output cell-output-stdout">
+<pre><code>[4, 'D']</code></pre>
+</div>
+</div>
+<div class="cell quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="cell-output cell-output-stdout">
+<pre><code>array(['4', 'D'], dtype='&lt;U21')</code></pre>
+</div>
+</div>
+</div>
+</div>
+</li>
+<li>
+<p>What is the FIRST element at position 4 (index 3)</p>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>py_list_2d[<span class="dv">3</span>][<span class="dv">0</span>]</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>np_array_2d[<span class="dv">3</span>, <span class="dv">0</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="cell quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="cell-output cell-output-stdout">
+<pre><code>4</code></pre>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="cell">
 <div class="cell-output cell-output-stdout">
-<pre><code>[1, 2, 3, 4, 5, 6, 7]</code></pre>
+<pre><code>'4'</code></pre>
 </div>
 </div>
-<p>This does the same as:</p>
+<p>Notice how the syntax for arrays uses just a single pair of square brackets (<code>[ ]</code>).</p>
+</div>
+</div>
+</div>
+</li>
+<li>
+<p>What are the first three elements?</p>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>py_list_2d[:<span class="dv">3</span>]</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>np_array_2d[:<span class="dv">3</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="cell quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="cell-output cell-output-stdout">
+<pre><code>[[1, 'A'], [2, 'B'], [3, 'C']]</code></pre>
+</div>
+</div>
+<div class="cell quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="cell-output cell-output-stdout">
+<pre><code>array([['1', 'A'],
+       ['2', 'B'],
+       ['3', 'C']], dtype='&lt;U21')</code></pre>
+</div>
+</div>
+</div>
+</div>
+</li>
+<li>
+<p>Hmmm…</p>
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>py_list_2d[:<span class="dv">3</span>][<span class="dv">0</span>]</span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>np_array_2d[:<span class="dv">3</span>, <span class="dv">0</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1, 'A']</code></pre>
+</div>
+</div>
+<p>You might think that this will yield the first elements (i.e., <code>[1, 2, 3]</code>) of all the sub-lists up to index 2.<br>No! Instead, it gives the first of the list you get from <code>py_list_2d[:3]</code>.</p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>array(['1', '2', '3'], dtype='&lt;U21')</code></pre>
+</div>
+</div>
+<p>Notice how differently NumPy arrays work.</p>
+</div>
+</div>
+</div>
+</li>
+<li>
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>py_list_2d[<span class="dv">3</span>:<span class="dv">6</span>][<span class="dv">0</span>]</span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>np_array_2d[<span class="dv">3</span>:<span class="dv">6</span>, <span class="dv">0</span>]</span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>np_array_2d[:, <span class="dv">0</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="quarto-layout-panel" data-layout-ncol="2">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>[4, 'D']</code></pre>
+</div>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>array(['4', '5', '6'], dtype='&lt;U21')</code></pre>
+</div>
+</div>
+<p>If you want ‘everything’ you just use <code>:</code>.</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>array(['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'], dtype='&lt;U21')</code></pre>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -667,253 +926,139 @@ Warning
 </ol>
 </div>
 </section>
-<section id="zipping-a-dictionary" class="level1" data-number="2">
-<h1 data-number="2"><span class="header-section-number">2</span> Zipping a dictionary</h1>
-<p><code>zip()</code> offers one of the easiest ways to combine two lists into a dictionary:</p>
+<section id="growing-lists" class="level2" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="growing-lists"><span class="header-section-number">1.4</span> Growing lists</h2>
+<p>NumPy arrays are invaluable, and their slicing syntax (e.g.&nbsp;<code>[:3,0]</code>) is more intuitive than lists. So, why do we even bother with lists? One advantage of lists is their ease and efficiency in growing. NumPy arrays are fantastic for fast math operations, <strong>provided you do not change their size</strong><a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>. So, I will not discuss how to change the size of a NumPy array. Instead, let me show you how to grow a list. This will be useful later; for instance when you try to solve differential equations numerically.</p>
+<div class="my-examples">
+<ol>
+<li>
+<p>Creating a larger list from a smaller one.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>super_names<span class="op">=</span>[<span class="st">"Black Widow"</span>, <span class="st">"Iron Man"</span>, <span class="st">"Doctor Strange"</span>]</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>real_names<span class="op">=</span>[<span class="st">"Natasha Romanoff"</span>, <span class="st">"Tony Stark"</span>, <span class="st">"Stephen Strange"</span>]</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="bu">dict</span>(<span class="bu">zip</span>(real_names, super_names))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>x<span class="op">=</span>[<span class="dv">1</span>, <span class="dv">2</span>]<span class="op">*</span><span class="dv">5</span></span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>{'Natasha Romanoff': 'Black Widow', 'Tony Stark': 'Iron Man', 'Stephen Strange': 'Doctor Strange'}</code></pre>
+<pre><code>[1, 2, 1, 2, 1, 2, 1, 2, 1, 2]</code></pre>
 </div>
 </div>
-<p>In the above <code>dict()</code> is used to recast <code>zip()</code>’s output into a dictionary.</p>
-</section>
-<section id="for-and-while-has-an-else" class="level1" data-number="3">
-<h1 data-number="3"><span class="header-section-number">3</span> <code>for</code> and <code>while</code> has an <code>else</code></h1>
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>numbers<span class="op">=</span>[<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>]</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> numbers:</span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> i <span class="op">&lt;</span> <span class="dv">0</span>: <span class="cf">break</span></span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'No negative numbers in the list'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="quarto-layout-panel" data-layout-ncol="2">
+</li>
+<li>
+<p>Three ways to grow a list by appending one element at a time.</p>
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>x<span class="op">=</span>[<span class="dv">1</span>]</span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>x<span class="op">=</span> x <span class="op">+</span> [<span class="dv">2</span>]</span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a>x<span class="op">=</span> x <span class="op">+</span> [<span class="dv">3</span>]</span>
+<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a>x<span class="op">=</span> x <span class="op">+</span> [<span class="dv">4</span>]</span>
+<span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a>x</span>
+<span id="cb33-6"><a href="#cb33-6" aria-hidden="true" tabindex="-1"></a>x<span class="op">=</span>[<span class="dv">1</span>]</span>
+<span id="cb33-7"><a href="#cb33-7" aria-hidden="true" tabindex="-1"></a>x<span class="op">+=</span> [<span class="dv">2</span>]</span>
+<span id="cb33-8"><a href="#cb33-8" aria-hidden="true" tabindex="-1"></a>x<span class="op">+=</span> [<span class="dv">3</span>]</span>
+<span id="cb33-9"><a href="#cb33-9" aria-hidden="true" tabindex="-1"></a>x<span class="op">+=</span> [<span class="dv">4</span>]</span>
+<span id="cb33-10"><a href="#cb33-10" aria-hidden="true" tabindex="-1"></a>x</span>
+<span id="cb33-11"><a href="#cb33-11" aria-hidden="true" tabindex="-1"></a>x<span class="op">=</span>[<span class="dv">1</span>]</span>
+<span id="cb33-12"><a href="#cb33-12" aria-hidden="true" tabindex="-1"></a>x.append(<span class="dv">2</span>)</span>
+<span id="cb33-13"><a href="#cb33-13" aria-hidden="true" tabindex="-1"></a>x.append(<span class="dv">3</span>)</span>
+<span id="cb33-14"><a href="#cb33-14" aria-hidden="true" tabindex="-1"></a>x.append(<span class="dv">4</span>)</span>
+<span id="cb33-15"><a href="#cb33-15" aria-hidden="true" tabindex="-1"></a>x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="quarto-layout-panel" data-layout-ncol="3">
 <div class="quarto-layout-row">
-<div class="my-text quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<p>The <code>for</code> and <code>while</code> loops in Python come with an optional <code>else</code> statement! The code in the <code>else</code> block is executed only if the loops are completed. The <code>else</code> code-block will not run if you exit the loop prematurely (e.g.&nbsp;by using <code>break</code>).</p>
-<p>Shown alongside is a trivial example. You should add a negative number to the list, and re-run the snippet. There will be no message this time.</p>
-<p>So, the <code>else</code> statement can be used to distinguish between the loops completing as planned or if there was a <code>break</code> (or <code>return</code> or an exception).</p>
-</div>
-<div class="my-text quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
-<div class="cell">
+<div class="cell quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
 <div class="cell-output cell-output-stdout">
-<pre><code>No negative numbers in the list</code></pre>
+<pre><code>[1, 2, 3, 4]</code></pre>
+</div>
+</div>
+<div class="cell quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1, 2, 3, 4]</code></pre>
+</div>
+</div>
+<div class="cell quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1, 2, 3, 4]</code></pre>
 </div>
 </div>
 </div>
 </div>
-</div>
-</section>
-<section id="exercises" class="level1 unnumbered">
-<h1 class="unnumbered">Exercises</h1>
-<div id="exr-x" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 1 (Changing a list)</strong></span> &nbsp;</p>
-<div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">Problem</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">A solution</a></li></ul>
-<div class="tab-content">
-<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
-<p>We want a snippet of code based on a <code>for</code> loop to remove fruits starting with the letter ‘p’ from the following list.</p>
-<div class="sourceCode" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>fruits <span class="op">=</span> [<span class="st">"apple"</span>, <span class="st">"banana"</span>, <span class="st">"jackfruit"</span>,</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>          <span class="st">"pineapple"</span>, <span class="st">"papaya"</span>, <span class="st">"watermelons"</span>,</span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>          <span class="st">"peaches"</span>, <span class="st">"durian"</span>,  <span class="st">"mangoes"</span>,</span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>          <span class="st">"strawberries"</span>, <span class="st">"passionfruit"</span></span>
-<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>          ]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>The following has been suggested as a solution. However, it does not work!</p>
-<div class="sourceCode" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> fruit <span class="kw">in</span> fruits:</span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> fruit[<span class="dv">0</span>] <span class="op">==</span> <span class="st">"p"</span>:</span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>        fruits.remove(fruit)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Identify, <strong>understand</strong> and fix the error.</p>
-</div>
-<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
-<div class="sourceCode" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> fruit <span class="kw">in</span> fruits:</span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> fruit[<span class="dv">0</span>] <span class="op">==</span> <span class="st">"p"</span>:</span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>        fruits.remove(fruit)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>Although the above code is elegant it has a serious flaw which you can see by using <a href="https://pythontutor.com/">pythontutor.com</a> to <a href="https://pythontutor.com/visualize.html#code=fruits%20%3D%20%5B%22apple%22,%20%22banana%22,%20%22jackfruit%22,%0A%20%20%20%20%20%20%20%20%20%20%22pineapple%22,%20%22papaya%22,%20%22watermelons%22,%0A%20%20%20%20%20%20%20%20%20%20%22peaches%22,%20%22durian%22,%20%20%22mangoes%22,%0A%20%20%20%20%20%20%20%20%20%20%22strawberries%22,%20%22passionfruit%22%0A%20%20%20%20%20%20%20%20%20%20%5D%0A%0Afor%20fruit%20in%20fruits%3A%0A%20%20%20%20if%20fruit%5B0%5D%20%3D%3D%20%22p%22%3A%0A%20%20%20%20%20%20%20%20fruits.remove%28fruit%29&amp;cumulative=false&amp;curInstr=2&amp;heapPrimitives=nevernest&amp;mode=display&amp;origin=opt-frontend.js&amp;py=3&amp;rawInputLstJSON=%5B%5D&amp;textReferences=false" target="_blank">visualise</a> the flow of the script.</p>
-<p>A safer solution is the following:</p>
-<div class="sourceCode" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>fruits <span class="op">=</span> [<span class="st">"apple"</span>, <span class="st">"banana"</span>, <span class="st">"jackfruit"</span>,</span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>          <span class="st">"pineapple"</span>, <span class="st">"papaya"</span>, <span class="st">"watermelons"</span>,</span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>          <span class="st">"peaches"</span>, <span class="st">"durian"</span>,  <span class="st">"mangoes"</span>,</span>
-<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>          <span class="st">"strawberries"</span>, <span class="st">"passionfruit"</span></span>
-<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>          ]</span>
-<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>copy_of_fruits <span class="op">=</span> fruits.copy()</span>
-<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Not that we are looping(iterating) over the copy</span></span>
-<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> fruit <span class="kw">in</span> copy_of_fruits:</span>
-<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> fruit[<span class="dv">0</span>] <span class="op">==</span> <span class="st">"p"</span>:</span>
-<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a>        fruits.remove(fruit)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>An even better, clean and elegant solutions is:</p>
-<div class="sourceCode" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>fruits <span class="op">=</span> [<span class="st">"apple"</span>, <span class="st">"banana"</span>, <span class="st">"jackfruit"</span>,</span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>          <span class="st">"pineapple"</span>, <span class="st">"papaya"</span>, <span class="st">"watermelons"</span>,</span>
-<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>          <span class="st">"peaches"</span>, <span class="st">"durian"</span>,  <span class="st">"mangoes"</span>,</span>
-<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>          <span class="st">"strawberries"</span>, <span class="st">"passionfruit"</span></span>
-<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>          ]</span>
-<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>[fruit <span class="cf">for</span> fruit <span class="kw">in</span> fruits <span class="cf">if</span> fruit[<span class="dv">0</span>] <span class="op">!=</span> <span class="st">"p"</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="hidden">
-
-</div>
-<div id="exr-x" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 2 (A list of powers)</strong></span> &nbsp;</p>
-<div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true">Problem</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false">A Solution</a></li></ul>
-<div class="tab-content">
-<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
-<p>The following code is an attempt to create a list <span class="math inline">\([n, n^2,n^3]\)</span> for several values of <span class="math inline">\(n\)</span>. We can specify the maximum value of <span class="math inline">\(n\)</span> by changing <code>maximum_n</code>.</p>
-<div class="sourceCode" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>maximum_n <span class="op">=</span> <span class="dv">5</span></span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span> [[]] <span class="op">*</span> maximum_n</span>
-<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> n <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, maximum_n <span class="op">+</span> <span class="dv">1</span>):</span>
-<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>    result[n <span class="op">-</span> <span class="dv">1</span>].append(n)</span>
-<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>    result[n <span class="op">-</span> <span class="dv">1</span>].append(n<span class="op">**</span><span class="dv">2</span>)</span>
-<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>    result[n <span class="op">-</span> <span class="dv">1</span>].append(n<span class="op">**</span><span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>For <code>maximum_n = 5</code> the content of <code>result</code> should be as shown below.</p>
-<div class="sourceCode" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>[[<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>],</span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a> [<span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">8</span>],</span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a> [<span class="dv">3</span>, <span class="dv">9</span>, <span class="dv">27</span>],</span>
-<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a> [<span class="dv">4</span>, <span class="dv">16</span>, <span class="dv">64</span>],</span>
-<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a> [<span class="dv">5</span>, <span class="dv">25</span>, <span class="dv">125</span>]]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>However, the code does not produce this expected result!<br>Identify, <strong>understand</strong>, <strong>explain</strong> and fix the bug.</p>
-</div>
-<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
-<section id="an-explantion" class="level3">
-<h3 class="anchored" data-anchor-id="an-explantion">An explantion</h3>
-<p>The problem arises because <code>[[]] * 5</code> creates 5 references to the <strong>same</strong> empty list <code>[]</code>. Running a list comprehension will create 5 different empty lists <code>[]</code>.</p>
-<p>Let’s check if what I have said is true.</p>
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>maximum_n <span class="op">=</span> <span class="dv">5</span></span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span> [[]] <span class="op">*</span> maximum_n</span>
-<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> count, element <span class="kw">in</span> <span class="bu">enumerate</span>(result):</span>
-<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(count, <span class="bu">id</span>(element))</span>
-<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>maximum_n <span class="op">=</span> <span class="dv">5</span></span>
-<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span> [[] <span class="cf">for</span> _ <span class="kw">in</span> <span class="bu">range</span>(maximum_n)]</span>
-<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> count, element <span class="kw">in</span> <span class="bu">enumerate</span>(result):</span>
-<span id="cb18-12"><a href="#cb18-12" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(count, <span class="bu">id</span>(element))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="quarto-layout-panel" data-layout-ncol="2">
+<p>If you are wondering, there <strong>are</strong> differences between these three versions. Their execution speeds are different; the version with <code>append()</code> runs about 1.5 times faster than the rest!</p>
+</li>
+<li>
+<p>Here are three ways of incorporating multiple elements.<br>Notice the difference between the effects of <code>extend()</code> and <code>append()</code>.</p>
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>]</span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>x <span class="op">+=</span> [<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>]</span>
+<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a>x</span>
+<span id="cb37-4"><a href="#cb37-4" aria-hidden="true" tabindex="-1"></a>x<span class="op">=</span>[<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>]</span>
+<span id="cb37-5"><a href="#cb37-5" aria-hidden="true" tabindex="-1"></a>x.extend([<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>])</span>
+<span id="cb37-6"><a href="#cb37-6" aria-hidden="true" tabindex="-1"></a>x</span>
+<span id="cb37-7"><a href="#cb37-7" aria-hidden="true" tabindex="-1"></a>x<span class="op">=</span>[<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>]</span>
+<span id="cb37-8"><a href="#cb37-8" aria-hidden="true" tabindex="-1"></a>x.append([<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>])</span>
+<span id="cb37-9"><a href="#cb37-9" aria-hidden="true" tabindex="-1"></a>x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="quarto-layout-panel" data-layout-ncol="3">
 <div class="quarto-layout-row">
-<div class="cell quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="cell quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
 <div class="cell-output cell-output-stdout">
-<pre><code>0 129842694954176
-1 129842694954176
-2 129842694954176
-3 129842694954176
-4 129842694954176</code></pre>
+<pre><code>[1, 2, 3, 4, 5, 6]</code></pre>
 </div>
 </div>
-<div class="cell quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="cell quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
 <div class="cell-output cell-output-stdout">
-<pre><code>0 129842695019328
-1 129842695020224
-2 129842695022080
-3 129842695020672
-4 129842695020416</code></pre>
+<pre><code>[1, 2, 3, 4, 5, 6]</code></pre>
+</div>
+</div>
+<div class="cell quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1, 2, 3, [4, 5, 6]]</code></pre>
 </div>
 </div>
 </div>
+</div>
+</li>
+</ol>
 </div>
 </section>
-<section id="a-solution-2" class="level3">
-<h3 class="anchored" data-anchor-id="a-solution-2">A solution</h3>
+</section>
+<section id="some-loose-ends" class="level1 unnumbered">
+<h1 class="unnumbered">Some loose ends</h1>
+<section id="tuples" class="level2" data-number="1.5">
+<h2 data-number="1.5" class="anchored" data-anchor-id="tuples"><span class="header-section-number">1.5</span> Tuples</h2>
+<p>Before we end this section, I must introduce you to another data storage structure called a <span class="glossary">tuple</span>. Tuples are similar to lists, except they use <code>( )</code> and cannot be changed after creation (i.e., they are immutable).</p>
+<p>Let me first create a simple tuple.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>maximum_n <span class="op">=</span> <span class="dv">5</span></span>
-<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="co"># result = [[]] * maximum_n</span></span>
-<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span> [[] <span class="cf">for</span> _ <span class="kw">in</span> <span class="bu">range</span>(maximum_n)]</span>
-<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> n <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, maximum_n <span class="op">+</span> <span class="dv">1</span>):</span>
-<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a>    result[n <span class="op">-</span> <span class="dv">1</span>].append(n)</span>
-<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a>    result[n <span class="op">-</span> <span class="dv">1</span>].append(n<span class="op">**</span><span class="dv">2</span>)</span>
-<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a>    result[n <span class="op">-</span> <span class="dv">1</span>].append(n<span class="op">**</span><span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>a<span class="op">=</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>)     <span class="co"># Define tuple</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<p>We can access its data…</p>
 <div class="cell">
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(a[<span class="dv">0</span>])    <span class="co"># Access data</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[[1, 1, 1]
- [2, 4, 8]
- [3, 9, 27]
- [4, 16, 64]
- [5, 25, 125]]</code></pre>
+<pre><code>1</code></pre>
 </div>
 </div>
+<p>But, we cannot change the data.</p>
+<div class="sourceCode" id="cb44"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="co"># The following will NOT work</span></span>
+<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a>a[<span class="dv">0</span>]<span class="op">=-</span><span class="dv">1</span></span>
+<span id="cb44-3"><a href="#cb44-3" aria-hidden="true" tabindex="-1"></a>a[<span class="dv">0</span>]<span class="op">+=</span> [<span class="dv">10</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-</div>
-</div>
-</div>
-</div>
-<div id="exr-x" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 3 (Time profiling)</strong></span> &nbsp;</p>
-<div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-3-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-1" role="tab" aria-controls="tabset-3-1" aria-selected="true">Problem</a></li></ul>
-<div class="tab-content">
-<div id="tabset-3-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-3-1-tab">
-<p>Use <code>%%timeit</code> to compare the execution speeds of the following:</p>
-<div class="my-table-800">
-<table class="table">
-<colgroup>
-<col style="width: 3%">
-<col style="width: 42%">
-<col style="width: 49%">
-<col style="width: 4%">
-</colgroup>
-<thead>
-<tr class="header">
-<th style="text-align: center;">#</th>
-<th style="text-align: left;">Option 1</th>
-<th style="text-align: left;">Option 2</th>
-<th style="text-align: center;">Result</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: center;">1</td>
-<td style="text-align: left;">Creating a list of squares with <code>for</code> loop</td>
-<td style="text-align: left;">Creating a list of squares with <code>while</code> loop</td>
-<td style="text-align: center;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">2</td>
-<td style="text-align: left;">Creating a list of squares with a <code>for</code> loop.</td>
-<td style="text-align: left;">Creating a list of squares with a <strong>list comprehension</strong> loop.</td>
-<td style="text-align: center;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">3</td>
-<td style="text-align: left;">Creating a list of squares using <strong>list</strong> <code>append()</code></td>
-<td style="text-align: left;">Creating a list of squares using <strong>list</strong> <code>+=</code></td>
-<td style="text-align: center;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: center;">4</td>
-<td style="text-align: left;">Creating a list of squares using <strong>list</strong> <code>append()</code></td>
-<td style="text-align: left;">Creating a list of squares using <code>append()</code>of <strong>Numpy</strong></td>
-<td style="text-align: center;"></td>
-</tr>
-<tr class="odd">
-<td style="text-align: center;">5</td>
-<td style="text-align: left;">Creating a list of squares using <strong>Numpy</strong></td>
-<td style="text-align: left;">Creating a list of squares using <strong>List comprehension</strong> loop.</td>
-<td style="text-align: center;"></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
-</div>
-</div>
+<section id="be-very-careful-when-copying" class="level2" data-number="1.6">
+<h2 data-number="1.6" class="anchored" data-anchor-id="be-very-careful-when-copying"><span class="header-section-number">1.6</span> Be VERY careful when copying</h2>
+<p>Variables in Python have subtle features that might make your life miserable if you are not careful. You should be particularly mindful when making copies of lists and arrays.</p>
+<p>For example, if you want to copy a list, you might be tempted to do the following; PLEASE DON’T!</p>
+<div class="sourceCode" id="cb45"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a>x<span class="op">=</span>[<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>]</span>
+<span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a>y<span class="op">=</span>x           <span class="co"># DON'T do this!</span></span>
+<span id="cb45-3"><a href="#cb45-3" aria-hidden="true" tabindex="-1"></a>z<span class="op">=</span>x           <span class="co"># DON'T do this!</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>The correct way to do this is as follows:</p>
+<div class="sourceCode" id="cb46"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a>x<span class="op">=</span>[<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>]</span>
+<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a>y<span class="op">=</span>x.copy()</span>
+<span id="cb46-3"><a href="#cb46-3" aria-hidden="true" tabindex="-1"></a>z<span class="op">=</span>x.copy()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><strong>Note:</strong> At this stage, you only have to know that you must use <code>copy()</code> to be safe; you <strong>do not</strong> have to understand why. However, if you want to, please refer to the discussion on <a href="#sec-python-variables">mutable and immutable objects</a>.</p>
 
 
 </section>
+</section>
 
-<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>The gains in speed are due to NumPy doing things to all the elements in the array in one go. For this, the data needs to be stored in a specific order in memory. Adding or removing elements hinders this optimization. When you change the size of a NumPy array, NumPy destroys the existing array and creates a new one, making it extremely inefficient.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
