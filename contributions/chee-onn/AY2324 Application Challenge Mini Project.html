@@ -1,0 +1,1288 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.549">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>SP2273 | Working on Interdisciplinary Science, Pythonically - AY23/24 SP2273 Application Challenge / Mini Project</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script type="application/json" class="js-hypothesis-config">
+{
+  "theme": "classic",
+  "openSidebar": false
+}
+</script>
+<script async="" src="https://hypothes.is/embed.js"></script>
+<script>
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    document.body.classList.add('hypothesis-enabled');
+  });
+</script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../styles.css">
+<link rel="stylesheet" href="../../styles_quarto.css">
+<link rel="stylesheet" href="../../py_css.css">
+<link rel="stylesheet" href="../../styles-tables.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../_imgs/sp2273_logo_gray.png" alt="" class="navbar-logo">
+    </a>
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">SP2273 | Working on Interdisciplinary Science, Pythonically</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../docs/about_73/04_communicate.html"> 
+<span class="menu-text">Communicate</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../docs/about_73/01_course-overview.html"> 
+<span class="menu-text">Content</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-links" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Links</span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-links">    
+        <li>
+    <a class="dropdown-item" href="https://docs.google.com/spreadsheets/d/1eoV-CkjbCo3rketr7Bnjsw6umWnqUO6tbMrlzSAAYHY/edit?usp=sharing">
+ <span class="dropdown-text">Schedule Group Presentation</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://docs.google.com/spreadsheets/d/1eoV-CkjbCo3rketr7Bnjsw6umWnqUO6tbMrlzSAAYHY/edit?usp=sharing">
+ <span class="dropdown-text">Schedule Individual Viva</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="https://docs.google.com/spreadsheets/d/1eoV-CkjbCo3rketr7Bnjsw6umWnqUO6tbMrlzSAAYHY/edit?usp=sharing">
+ <span class="dropdown-text">Declare Groups</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#ay2324-sp2273-application-challenge-mini-project" id="toc-ay2324-sp2273-application-challenge-mini-project" class="nav-link active" data-scroll-target="#ay2324-sp2273-application-challenge-mini-project"><span class="header-section-number">1</span> AY23/24 SP2273 Application Challenge / Mini Project</a>
+  <ul class="collapse">
+  <li><a href="#topic-stochastic-modelling" id="toc-topic-stochastic-modelling" class="nav-link" data-scroll-target="#topic-stochastic-modelling"><span class="header-section-number">1.1</span> Topic: Stochastic Modelling</a>
+  <ul class="collapse">
+  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#brief-outline-of-ssa" id="toc-brief-outline-of-ssa" class="nav-link" data-scroll-target="#brief-outline-of-ssa">Brief outline of SSA</a></li>
+  <li><a href="#suggested-workflow" id="toc-suggested-workflow" class="nav-link" data-scroll-target="#suggested-workflow">Suggested Workflow</a></li>
+  <li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link" data-scroll-target="#learning-objectives">Learning Objectives</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  </ul></li>
+  <li><a href="#application-challenge" id="toc-application-challenge" class="nav-link" data-scroll-target="#application-challenge"><span class="header-section-number">1.2</span> Application Challenge</a>
+  <ul class="collapse">
+  <li><a href="#schlogl-reaction-difficulty-1-star" id="toc-schlogl-reaction-difficulty-1-star" class="nav-link" data-scroll-target="#schlogl-reaction-difficulty-1-star">Schlogl Reaction (Difficulty: 1 star)</a></li>
+  <li><a href="#lotka-volterra-predator-prey-model-difficulty-2-stars" id="toc-lotka-volterra-predator-prey-model-difficulty-2-stars" class="nav-link" data-scroll-target="#lotka-volterra-predator-prey-model-difficulty-2-stars">Lotka-Volterra Predator-Prey Model (Difficulty: 2 stars)</a></li>
+  <li><a href="#lac-operon-difficulty-3-stars" id="toc-lac-operon-difficulty-3-stars" class="nav-link" data-scroll-target="#lac-operon-difficulty-3-stars">Lac Operon (Difficulty: 3 stars)</a></li>
+  </ul></li>
+  <li><a href="#suggested-answers" id="toc-suggested-answers" class="nav-link" data-scroll-target="#suggested-answers"><span class="header-section-number">1.3</span> Suggested Answers</a>
+  <ul class="collapse">
+  <li><a href="#schlogl-reaction" id="toc-schlogl-reaction" class="nav-link" data-scroll-target="#schlogl-reaction">Schlogl Reaction</a></li>
+  <li><a href="#lotka-volterra-predator-prey-model" id="toc-lotka-volterra-predator-prey-model" class="nav-link" data-scroll-target="#lotka-volterra-predator-prey-model">Lotka-Volterra Predator-Prey Model</a></li>
+  <li><a href="#lac-operon" id="toc-lac-operon" class="nav-link" data-scroll-target="#lac-operon">Lac Operon</a></li>
+  </ul></li>
+  <li><a href="#mini-project" id="toc-mini-project" class="nav-link" data-scroll-target="#mini-project"><span class="header-section-number">1.4</span> Mini Project</a>
+  <ul class="collapse">
+  <li><a href="#stochastic-modelling-of-copper-homeostasis-in-e.-coli" id="toc-stochastic-modelling-of-copper-homeostasis-in-e.-coli" class="nav-link" data-scroll-target="#stochastic-modelling-of-copper-homeostasis-in-e.-coli">Stochastic modelling of copper homeostasis in E. coli</a></li>
+  <li><a href="#stochastic-modelling-of-lysislysogeny-circuit-of-bacteriophage-lambda" id="toc-stochastic-modelling-of-lysislysogeny-circuit-of-bacteriophage-lambda" class="nav-link" data-scroll-target="#stochastic-modelling-of-lysislysogeny-circuit-of-bacteriophage-lambda">Stochastic modelling of lysis/lysogeny circuit of bacteriophage lambda</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">AY23/24 SP2273 Application Challenge / Mini Project</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="ay2324-sp2273-application-challenge-mini-project" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> AY23/24 SP2273 Application Challenge / Mini Project</h1>
+<p><strong>Disclaimer:</strong> Sincere apologies. For some strange reasons, the markdown is not rendering properly for the raw cells.</p>
+<p><strong>Disclaimer:</strong> If they are errors or discrepancies with the text, the google doc has the original version as backup.</p>
+<section id="topic-stochastic-modelling" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="topic-stochastic-modelling"><span class="header-section-number">1.1</span> Topic: Stochastic Modelling</h2>
+<p>Chapters covered: 1. Storing Data 2. Loops 3. Plotting 4. Random Numbers 5. Numerical Solutions</p>
+<section id="introduction" class="level3">
+<h3 class="anchored" data-anchor-id="introduction">Introduction</h3>
+<p>Much of the Science we know revolves around the use of the reductionist approach, where a system of interest is broken down into individual components and studied one at a time. While this has most certainly helped deepen our understanding of the underlying biological processes, there lies a growing interest now in piecing them back together and examining it as a whole. This is a relatively new field known as Systems Biology. Although it might be enticing to think that a system is no more than a sum of its parts, this is not always the case.</p>
+<p>To help us in this endeavour, we would require the right mathematical and computation tools. One of which is modelling, where we attempt to create a simplified representation of a system of interest. This allows us to explore our understanding, to perform imaginative experiments, and ideally to make predictions. However, it inherently requires some sort of simplification and is not an exact replica of the system. That is perfectly alright because the purpose of modelling is to help us gain new insights into our system of interest.</p>
+<p>There exists a plethora of approaches to modelling such as logic, deterministic, and stochastic. Stochastic models have the benefit of accounting for stochasticity, or chance, that is present in all biological systems. This has greater importance in shaping outcomes especially when the system of interest is small with low population counts. Importantly, one must consider if the system of interest fits these underlying assumptions that comes with stochastic models: 1. The components exist homogeneously 2. The components move randomly</p>
+<p>We shall focus on a discrete stochastic method known as the stochastic simulation algorithm (SSA) that was published by Daniel T. Gillespie back in 1977. I chose this method because it is relatively simple and easy to understand for the purpose of this course. It is also an excellent entry into exploring stochastic modelling. At present, this method is widely applied to model biological systems, chemical reactions, ecological systems, cellular signalling, and epidemiology.</p>
+</section>
+<section id="brief-outline-of-ssa" class="level3">
+<h3 class="anchored" data-anchor-id="brief-outline-of-ssa">Brief outline of SSA</h3>
+<ol type="1">
+<li>Set reaction rate parameters, initial counts of each component, and time to 0.</li>
+<li>Determine the next event.
+<ol type="a">
+<li>Calculate the propensities of each event with the formula: Propensity = rate constant x dependent component counts.</li>
+<li>Randomly sample from a uniform distribution based on the weighted probabilities as determined by the reaction propensities.</li>
+<li>Concept: Greater the event propensity, greater the probability of selecting the event.</li>
+</ol></li>
+<li>Determine the time to the next event.
+<ol type="a">
+<li>Randomly sample from an exponential distribution using a scale parameter of 1/total propensity.</li>
+<li>Reason for doing so is because time between events follows an exponential distribution.</li>
+<li>Concept: Greater the number of potential events, shorter the time to the next event.</li>
+</ol></li>
+<li>Update the counts of each component along with time.</li>
+<li>Repeat steps 2-4 until maximum simulation time is reached.</li>
+</ol>
+<p>In essence, the beauty of SSA lies in the fact that at any point in time, we only need to answer what is the next event and when is the next event. The flipside of it is that it pays with computational power and time as each iteration requires drawing two random numbers as well as calculating the propensities.</p>
+<p><strong>Note: Be careful not to set the maximum simulation time too high.</strong></p>
+</section>
+<section id="suggested-workflow" class="level3">
+<h3 class="anchored" data-anchor-id="suggested-workflow">Suggested Workflow</h3>
+<ol type="1">
+<li>Create an event-propensity table for the system of interest</li>
+<li>Follow the brief outline of SSA and code in Python3) Simulate and plot graph</li>
+<li>Manipulate parameters and have fun</li>
+</ol>
+</section>
+<section id="learning-objectives" class="level3">
+<h3 class="anchored" data-anchor-id="learning-objectives">Learning Objectives</h3>
+<p>At the end of this section, students should be able to: 1. Perform modelling using SSA in Python 2. Understand how Python can be applied in Science 3. Develop ideas on how Python can be used in their home field</p>
+</section>
+<section id="references" class="level3">
+<h3 class="anchored" data-anchor-id="references">References</h3>
+<p>Gillespie, D. T. (1977). Exact stochastic simulation of coupled chemical reactions. The journal of physical chemistry, 81(25), 2340-2361.</p>
+<p>Lancaster, A., &amp; Webster, G. (2019). Python for the Life Sciences: A Gentle Introduction to Python for Life Scientists. Apress.</p>
+<p>Székely, T., Jr, &amp; Burrage, K. (2014). Stochastic simulation in systems biology. Computational and structural biotechnology journal, 12(20-21), 14–25. https://doi.org/10.1016/j.csbj.2014.10.003</p>
+<p>Wilkinson D. J. (2009). Stochastic modelling for quantitative description of heterogeneous biological systems. Nature reviews. Genetics, 10(2), 122–133. https://doi.org/10.1038/nrg2509</p>
+</section>
+</section>
+<section id="application-challenge" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="application-challenge"><span class="header-section-number">1.2</span> Application Challenge</h2>
+<p>I chose these systems with the intent of covering the three main specialisations in Life Sciences although now it has been reduced to two due to the merger of Biomedical Sciences and Molecular Cell Biology. Nonetheless, the Schlogl reaction relates to Biochemistry, the Lotka-Volterra predator-prey model relates to Ecology, and the Lac operon relates to Molecular Biology.</p>
+<section id="schlogl-reaction-difficulty-1-star" class="level3">
+<h3 class="anchored" data-anchor-id="schlogl-reaction-difficulty-1-star">Schlogl Reaction (Difficulty: 1 star)</h3>
+<p>The Schlogl reaction system is made up of four reactions that can exhibit bistability under certain conditions. It is an intriguing example that is similar to that of a toggle switch model. Importantly, the bistability nature cannot be captured by deterministic models as the spontaneous transition between the two states is attributed to stochasticity, or more specifically intrinsic heterogeneity. The four reactions are as follows.</p>
+<p>Reaction 1: A + 2X → 3X</p>
+<p>Reaction 2: 3X → A + 2X</p>
+<p>Reaction 3: B → X</p>
+<p>Reaction 4: X → B</p>
+<p>X, A and B represent three different molecular species. We are interested in how the number of X change with time. In contrast, A and B are considered as buffer species where their numbers are assumed to be constant. The propensity for Reaction 1 can be derived by calculating <span class="math inline">\(k1*A*X*(X-1)/2\)</span> where k1 denotes the rate constant while A and X denote their respective counts. Similarly, the propensity for Reaction 2 can be derived by calculating <span class="math inline">\(k2*X*(X-1)*(X-2)/6\)</span>.</p>
+<p>Your task is to come up with the code to simulate how the number of X change with time by implementing the stochastic simulation algorithm (SSA). Keep in mind that time (t) is nondimensional. Set these parameters accordingly A=10<sup>5</sup>, B=2x10<sup>5</sup>, k1=3x10<sup>-7</sup>, k2=10<sup>-4</sup>, k3=10<sup>-3</sup>, and k4=3.5. Simulate for initial number of X at 100, 250 and 400 up till t=10.</p>
+<p>Here are some things to get your group started. 1. Using a markdown cell, generate an event-propensity table for the Schlogl reaction. Ideally, there should be three columns for events, propensities, rate constants. 1. Follow the brief outline of SSA and come up with code. 1. Simulate and plot graph. You may wish to repeat the simulations to deduce at which initial number of X will result in bistability. 1. Use a loop to capture the data for all initial numbers of X and plot onto a single graph. 1. Use a markdown cell to elaborate on your analysis and interpretation of the graph.</p>
+<p><strong>Adapted from Székely &amp; Burrage (2014) and Ilie, Enright &amp; Jackson (2009).</strong></p>
+<section id="references-1" class="level4">
+<h4 class="anchored" data-anchor-id="references-1">References</h4>
+<p>Székely, T., Jr, &amp; Burrage, K. (2014). Stochastic simulation in systems biology. Computational and structural biotechnology journal, 12(20-21), 14–25. https://doi.org/10.1016/j.csbj.2014.10.003</p>
+<p>Ilie, S., Enright, W. H., &amp; Jackson, K. R. (2009). Numerical solution of stochastic models of biochemical kinetics. Canadian Applied Mathematics Quarterly, 17(3), 523-554.</p>
+</section>
+</section>
+<section id="lotka-volterra-predator-prey-model-difficulty-2-stars" class="level3">
+<h3 class="anchored" data-anchor-id="lotka-volterra-predator-prey-model-difficulty-2-stars">Lotka-Volterra Predator-Prey Model (Difficulty: 2 stars)</h3>
+<p>The Lotka-Volterra (LV) predator-prey model allows examining how the populations of prey and predator change with time in an ecosystem. Recently, it has become more apparent that the population of wild chickens in NUS is rising and has even invaded the football fields or around S16 in search of food. Suddenly, a wild thought appears in your mind wondering what would happen if foxes were introduced into this ecosystem. The events for this model are as follows.</p>
+<p>Reaction 1: C → 2C</p>
+<p>Reaction 2: C + F → 2F</p>
+<p>Reaction 3: F → <span class="math inline">\(\emptyset\)</span></p>
+<p>C and F represent chickens and foxes respectively. We are interested in how the populations of chickens and foxes change with time.</p>
+<p>Your task is to come up with the code to simulate how the populations of chickens and foxes change with time by implementing the stochastic simulation algorithm (SSA). Keep in mind that time (t) is nondimensional. Set these parameters accordingly k1=1, k2=0.005, and k3=0.6. Simulate for initial numbers of chickens at 50 and foxes at 50 up till t=100.</p>
+<p>Here are some things to get your group started. 1. Using a markdown cell, generate an event-propensity table for the LV model. Ideally, there should be three columns for events, propensities, rate constants. 1. Follow the brief outline of SSA and come up with code. 1. Simulate and plot graph. You may wish to repeat the simulations and notice if there are any differences compared to a deterministic model. 1. Use a markdown cell to elaborate on your analysis and interpretation of the graph.</p>
+<p><strong>Adapted from University of Pennsylvania and University of Glasgow.</strong></p>
+<section id="references-2" class="level4">
+<h4 class="anchored" data-anchor-id="references-2">References</h4>
+<p>https://www.seas.upenn.edu/~ese3030/homework/week_10/week_10_ctmc_lac_operon.pdf</p>
+<p>https://www.dcs.gla.ac.uk/~srogers/teaching/mscbioinfo/SysBio2.pdf</p>
+</section>
+</section>
+<section id="lac-operon-difficulty-3-stars" class="level3">
+<h3 class="anchored" data-anchor-id="lac-operon-difficulty-3-stars">Lac Operon (Difficulty: 3 stars)</h3>
+<p>The lac operon is a group of genes under a single promoter that enables lactose utilisation upon expression and is a classic example of a genetic regulatory system in bacteria. Just like us, bacteria are lazy individuals. They prefer to consume the simpler glucose but can still reduce the complex lactose when push comes to shove. To break down lactose into glucose, they employ the enzyme <span class="math inline">\(\beta\)</span>-galactosidase. These events can then be simplified as follows.</p>
+<p>Reaction 1: L + <span class="math inline">\(\beta\)</span>-gal → G + <span class="math inline">\(\beta\)</span>-gal (k1=1)</p>
+<p>Reaction 2: G → <span class="math inline">\(\emptyset\)</span> (k2=0.1)</p>
+<p>Note: L: lactose, <span class="math inline">\(\beta\)</span>-gal: <span class="math inline">\(\beta\)</span>-galactosidase, G: glucose, k: rate constants</p>
+<p>But before the bacteria can wield β-galactosidase, it needs to make it first. The gene responsible for this enzyme lies in the lac operon. Since lactose is not widely available, it makes sense that the gene is turned OFF by default. This is achieved by constitutively expressing a lac repressor protein (LRP) that binds to part of the operon to prevent transcription of this gene. You can imagine that the flipside of this is the activation of the operon to turn ON transcription of this gene. There can also be a case where it is neither turned ON or OFF. These events can then be simplified as follows.</p>
+<p>Reaction 3: O → O + mRNA (k3=0.01)</p>
+<p>Reaction 4: AO → AO + mRNA (k4=0.1)</p>
+<p>Reaction 5: RO → RO + mRNA (k5=0.001)</p>
+<p>Note: O: operon, AO: activated operon, RO: repressed operon; k: rate constants. Reaction 5 exists due to leaky expression.</p>
+<p>Let’s focus on how the gene is turned OFF by default. We know that the LRP is always expressed and binds to part of the operon to prevent transcription of <span class="math inline">\(\beta\)</span>-galactosidase.When lactose is present, it will bind to LRP to prevent interfering with transcription. If they can bind, then they can also dissociate. These events can then be simplified as follows.</p>
+<p>Reaction 6: LRP + O → RO (k6=1)</p>
+<p>Reaction 7: RO → LRP + RO (k7=1)</p>
+<p>Reaction 8: LRP + L → LRP-L (k8=10)</p>
+<p>Reaction 9: LRP-L → LRP + L (k9=1)</p>
+<p>Note: LRP: lac repressor protein, O: operon, RO: repressed operon, L: lactose, LRP-L: lac repressor protein bound with lactose, k: rate constants.</p>
+<p>Let’s now focus on how the gene is turned ON when glucose is absent. Another protein called the catabolite activator protein (CAP) can bind to the operon and activate transcription of <span class="math inline">\(\beta\)</span>-galactosidase. When glucose is present, it will bind to CAP to prevent interfering with transcription. If they can bind, then they can also dissociate. These events can then be simplified as follows.</p>
+<p>Reaction 10: CAP + O → AO (k10=1)</p>
+<p>Reaction 11: AO → CAP + O (k11=1)</p>
+<p>Reaction 12: CAP + G → CAP-G (k12=10)</p>
+<p>Reaction 13: CAP-G → CAP + G (k13=1)</p>
+<p>Note: CAP: catabolite activator protein, O: operon, AO: activated operon, G: glucose, CAP-G: catabolite activator protein bound with glucose, k: rate constants.</p>
+<p>As with all protein production, the last step is to translate the mRNA into the enzyme <span class="math inline">\(\beta\)</span>-galactosidase. These events can then be simplified as follows.</p>
+<p>Reaction 14: mRNA → mRNA + <span class="math inline">\(\beta\)</span>-gal (k14=1)</p>
+<p>Reaction 15: mRNA → <span class="math inline">\(\emptyset\)</span> (k15=1)</p>
+<p>Reaction 16: <span class="math inline">\(\beta\)</span>-gal → <span class="math inline">\(\emptyset\)</span> (k16=0.1)</p>
+<p>Note: <span class="math inline">\(\beta\)</span>-gal: <span class="math inline">\(\beta\)</span>-galactosidase, k: rate constants.</p>
+<p>Your task is to come up with the code to simulate how the numbers of lactose and glucose change with time by implementing the stochastic simulation algorithm (SSA). Keep in mind that time (t) is nondimensional. Simulate for initial numbers of lactose at 50, glucose at 50, operon at 1, LRP at 10, and CAP at 10 up till t=120. The initial numbers of the remaining components are at 0.</p>
+<p>Here are some things to get your group started. 1. Using a markdown cell, generate an event-propensity table for the lac operon system. Ideally, there should be three columns for events, propensities, rate constants. 1. Follow the brief outline of SSA and come up with code. 1. Simulate and plot graph. Set the width of the graph wider to get a clearer view of the graph. 1. Use a markdown cell to elaborate on your analysis and interpretation of the graph.</p>
+<p><strong>Adapted from University of Pennsylvania and University of Rochester.</strong></p>
+<section id="references-3" class="level4">
+<h4 class="anchored" data-anchor-id="references-3">References</h4>
+<p>https://www.seas.upenn.edu/~ese3030/homework/week_10/week_10_ctmc_lac_operon.pdf</p>
+<p>https://www.hajim.rochester.edu/ece/sites/gmateos/ECE440/Slides/block_4_continuous_time_markov_chains_part_e.pdf</p>
+</section>
+</section>
+</section>
+<section id="suggested-answers" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="suggested-answers"><span class="header-section-number">1.3</span> Suggested Answers</h2>
+<p><strong>Disclaimer:</strong> The codes work but they have not been optimized yet due to time constraints. The plotted graphs are correct and students attempting these should get same/similar graphs.</p>
+<section id="schlogl-reaction" class="level3">
+<h3 class="anchored" data-anchor-id="schlogl-reaction">Schlogl Reaction</h3>
+<p>The Schlogl reaction system is made up of four reactions that can exhibit bistability under certain parameter settings, similar to that of a toggle switch model. The table below shows the event-propensity table for the Schlogl reaction system. | <strong>No.</strong> | <strong>Events</strong> | <strong>Propensities</strong> | <strong>Rate constants</strong> | |:——-:|:—————-:|:——————–:|:————————–:| | 1 | A + 2X → 3X | <span class="math inline">\(k_{1}AX(X-1)/2\)</span> | <span class="math inline">\(k_{1} = 3 \times 10^{-7}\)</span> | | 2 | 3X → A + 2X | <span class="math inline">\(k_{2}X(X-1)(X-2)/6\)</span> | <span class="math inline">\(k_{2} = 10^{-4}\)</span> | | 3 | B → X | <span class="math inline">\(k_{3}B\)</span> | <span class="math inline">\(k_{3} = 10^{-3}\)</span> | | 4 | X → B | <span class="math inline">\(k_{4}X\)</span> | <span class="math inline">\(k_{4} = 3.5\)</span> |</p>
+<div id="22b50823-2acb-412a-bd07-99ab34fa3592" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib <span class="im">import</span> pyplot <span class="im">as</span> plt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="198b200e-4e34-4b31-9cd8-319f46dd4c52" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># initial A, B counts</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">10</span><span class="op">**</span><span class="dv">5</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="dv">2</span> <span class="op">*</span> <span class="dv">10</span><span class="op">**</span><span class="dv">5</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co"># reaction rate constants</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>k1 <span class="op">=</span> <span class="dv">3</span> <span class="op">*</span> <span class="dv">10</span><span class="op">**-</span><span class="dv">7</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>k2 <span class="op">=</span> <span class="dv">10</span><span class="op">**-</span><span class="dv">4</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>k3 <span class="op">=</span> <span class="dv">10</span><span class="op">**-</span><span class="dv">3</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>k4 <span class="op">=</span> <span class="fl">3.5</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="co"># dictionary to update counts for each reaction</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>d <span class="op">=</span> {<span class="st">'r1'</span>: np.array([<span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>]),</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>     <span class="st">'r2'</span>: np.array([<span class="op">-</span><span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>]),</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>     <span class="st">'r3'</span>: np.array([<span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>]),</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>     <span class="st">'r4'</span>: np.array([<span class="op">-</span><span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>])</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a><span class="co"># list to store simulation history</span></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>sim_hx <span class="op">=</span> []</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a><span class="co"># varying initial X count</span></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> xstart <span class="kw">in</span> [<span class="dv">100</span>, <span class="dv">250</span>, <span class="dv">250</span>, <span class="dv">400</span>]:</span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>    <span class="co"># initial counts</span></span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> xstart</span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>    x0 <span class="op">=</span> np.array([x, a, b])</span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>    xt <span class="op">=</span> [x0]</span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a>    <span class="co"># time parameters</span></span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>    t <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>    tpoints <span class="op">=</span> [t]</span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>    tmax <span class="op">=</span> <span class="dv">10</span></span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a>    <span class="co"># simulation loop</span></span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> t <span class="op">&lt;</span> tmax:</span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a>        <span class="co"># get current counts</span></span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a>        curr_x <span class="op">=</span> xt[<span class="op">-</span><span class="dv">1</span>][<span class="dv">0</span>]</span>
+<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a>        curr_a <span class="op">=</span> xt[<span class="op">-</span><span class="dv">1</span>][<span class="dv">1</span>]</span>
+<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a>        curr_b <span class="op">=</span> xt[<span class="op">-</span><span class="dv">1</span>][<span class="dv">2</span>]</span>
+<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a>        <span class="co"># calculate propensities</span></span>
+<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a>        p1 <span class="op">=</span> k1 <span class="op">*</span> curr_a <span class="op">*</span> curr_x <span class="op">*</span> (curr_x<span class="op">-</span><span class="dv">1</span>) <span class="op">/</span> <span class="dv">2</span></span>
+<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a>        p2 <span class="op">=</span> k2 <span class="op">*</span> curr_x <span class="op">*</span> (curr_x<span class="op">-</span><span class="dv">1</span>) <span class="op">*</span> (curr_x<span class="op">-</span><span class="dv">2</span>) <span class="op">/</span> <span class="dv">6</span></span>
+<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a>        p3 <span class="op">=</span> k3 <span class="op">*</span> curr_b</span>
+<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a>        p4 <span class="op">=</span> k4 <span class="op">*</span> curr_x</span>
+<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a>        <span class="co"># put them in array</span></span>
+<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a>        array_p <span class="op">=</span> np.array([p1, p2, p3, p4])</span>
+<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a>        <span class="co"># calculate total propensity</span></span>
+<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a>        total_p <span class="op">=</span> array_p.<span class="bu">sum</span>()</span>
+<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a>        <span class="co"># randomly sample from uniform distribution</span></span>
+<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a>        sample_p <span class="op">=</span> np.random.uniform(<span class="dv">0</span>, total_p)</span>
+<span id="cb2-56"><a href="#cb2-56" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb2-57"><a href="#cb2-57" aria-hidden="true" tabindex="-1"></a>        <span class="co"># determine next event</span></span>
+<span id="cb2-58"><a href="#cb2-58" aria-hidden="true" tabindex="-1"></a>        array_pcs <span class="op">=</span> np.cumsum(array_p)</span>
+<span id="cb2-59"><a href="#cb2-59" aria-hidden="true" tabindex="-1"></a>        mask <span class="op">=</span> array_pcs <span class="op">&gt;</span> sample_p</span>
+<span id="cb2-60"><a href="#cb2-60" aria-hidden="true" tabindex="-1"></a>        index <span class="op">=</span> mask.nonzero()[<span class="dv">0</span>][<span class="dv">0</span>]</span>
+<span id="cb2-61"><a href="#cb2-61" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb2-62"><a href="#cb2-62" aria-hidden="true" tabindex="-1"></a>        <span class="co"># update counts</span></span>
+<span id="cb2-63"><a href="#cb2-63" aria-hidden="true" tabindex="-1"></a>        xnew <span class="op">=</span> xt[<span class="op">-</span><span class="dv">1</span>] <span class="op">+</span> d[<span class="ss">f'r</span><span class="sc">{</span>index<span class="op">+</span><span class="dv">1</span><span class="sc">}</span><span class="ss">'</span>]</span>
+<span id="cb2-64"><a href="#cb2-64" aria-hidden="true" tabindex="-1"></a>        xt.append(xnew)</span>
+<span id="cb2-65"><a href="#cb2-65" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb2-66"><a href="#cb2-66" aria-hidden="true" tabindex="-1"></a>        <span class="co"># determine time to next event</span></span>
+<span id="cb2-67"><a href="#cb2-67" aria-hidden="true" tabindex="-1"></a>        scale_para <span class="op">=</span> <span class="dv">1</span> <span class="op">/</span> total_p</span>
+<span id="cb2-68"><a href="#cb2-68" aria-hidden="true" tabindex="-1"></a>        dt <span class="op">=</span> np.random.exponential(scale_para)</span>
+<span id="cb2-69"><a href="#cb2-69" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb2-70"><a href="#cb2-70" aria-hidden="true" tabindex="-1"></a>        <span class="co"># update time</span></span>
+<span id="cb2-71"><a href="#cb2-71" aria-hidden="true" tabindex="-1"></a>        t <span class="op">+=</span> dt</span>
+<span id="cb2-72"><a href="#cb2-72" aria-hidden="true" tabindex="-1"></a>        tpoints.append(t)</span>
+<span id="cb2-73"><a href="#cb2-73" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb2-74"><a href="#cb2-74" aria-hidden="true" tabindex="-1"></a>    <span class="co"># convert counts history to array</span></span>
+<span id="cb2-75"><a href="#cb2-75" aria-hidden="true" tabindex="-1"></a>    xt <span class="op">=</span> np.array(xt)</span>
+<span id="cb2-76"><a href="#cb2-76" aria-hidden="true" tabindex="-1"></a>    sim_hx.append([xt, tpoints])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="a135b891-afde-4f14-9cef-8a0ebee2f361" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>plt.xlim([<span class="dv">0</span>, <span class="dv">10</span>])</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>plt.ylim([<span class="dv">0</span>, <span class="dv">800</span>])</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'time'</span>)</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'X'</span>)</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>plt.plot(sim_hx[<span class="dv">0</span>][<span class="dv">1</span>], sim_hx[<span class="dv">0</span>][<span class="dv">0</span>], c<span class="op">=</span><span class="st">'deeppink'</span>)</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>plt.plot(sim_hx[<span class="dv">1</span>][<span class="dv">1</span>], sim_hx[<span class="dv">1</span>][<span class="dv">0</span>], c<span class="op">=</span><span class="st">'forestgreen'</span>)</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>plt.plot(sim_hx[<span class="dv">2</span>][<span class="dv">1</span>], sim_hx[<span class="dv">2</span>][<span class="dv">0</span>], c<span class="op">=</span><span class="st">'royalblue'</span>)</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>plt.plot(sim_hx[<span class="dv">3</span>][<span class="dv">1</span>], sim_hx[<span class="dv">3</span>][<span class="dv">0</span>], c<span class="op">=</span><span class="st">'darkorange'</span>)</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="AY2324 Application Challenge Mini Project_files/figure-html/cell-4-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="lotka-volterra-predator-prey-model" class="level3">
+<h3 class="anchored" data-anchor-id="lotka-volterra-predator-prey-model">Lotka-Volterra Predator-Prey Model</h3>
+<p>The Lotka-Volterra predator-prey model looks at how the populations of prey and predator changes with time in an ecology system. The table below shows the event-propensity table for the Lotka-Volterra predator-prey model. | <strong>No.</strong> | <strong>Events</strong> | <strong>Propensities</strong> | <strong>Rate constants</strong> | |:——-:|:——————–:|:—————-:|:——————:| | 1 | X → 2X | <span class="math inline">\(k_{1}X\)</span> | <span class="math inline">\(k_{1} = 1\)</span> | | 2 | X + Y → 2Y | <span class="math inline">\(k_{2}XY\)</span> | <span class="math inline">\(k_{2} = 0.005\)</span> | | 3 | Y → <span class="math inline">\(\emptyset\)</span> | <span class="math inline">\(k_{3}Y\)</span> | <span class="math inline">\(k_{3} = 0.6\)</span> |</p>
+<p><strong>Note: Deterministic model will oscillate continuously; Stochastic model, by chance, will stop oscillating after some time and go extinct.</strong></p>
+<div id="02605fb8-f2d5-409a-b048-1a458956d4ad" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib <span class="im">import</span> pyplot <span class="im">as</span> plt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="946b0ea1-dfd9-41c7-8ba3-422e77ff9e64" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># initial X, Y counts</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="dv">50</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> <span class="dv">50</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>start <span class="op">=</span> np.array([x, y])</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>counts <span class="op">=</span> [start]</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="co"># reaction rate constants</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>k1 <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>k2 <span class="op">=</span> <span class="fl">0.005</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>k3 <span class="op">=</span> <span class="fl">0.6</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="co"># time parameters</span></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>t <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>tpoints <span class="op">=</span> [t]</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>tmax <span class="op">=</span> <span class="dv">100</span></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a><span class="co"># dictionary to update counts for each reaction</span></span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>d <span class="op">=</span> {<span class="st">'r1'</span>: np.array([<span class="dv">1</span>, <span class="dv">0</span>]),</span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>     <span class="st">'r2'</span>: np.array([<span class="op">-</span><span class="dv">1</span>, <span class="dv">1</span>]),</span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>     <span class="st">'r3'</span>: np.array([<span class="dv">0</span>, <span class="op">-</span><span class="dv">1</span>])</span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a><span class="co"># simulation loop</span></span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> t <span class="op">&lt;</span> tmax:</span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a>    <span class="co"># get current counts</span></span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>    curr_x <span class="op">=</span> counts[<span class="op">-</span><span class="dv">1</span>][<span class="dv">0</span>]</span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a>    curr_y <span class="op">=</span> counts[<span class="op">-</span><span class="dv">1</span>][<span class="dv">1</span>]</span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a>    <span class="co"># oscillations will stop eventually</span></span>
+<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> curr_x <span class="op">==</span> <span class="dv">0</span> <span class="kw">and</span> curr_y <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a>        old_count <span class="op">=</span> counts[<span class="op">-</span><span class="dv">1</span>]</span>
+<span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a>        counts.append(old_count)</span>
+<span id="cb5-34"><a href="#cb5-34" aria-hidden="true" tabindex="-1"></a>        t <span class="op">+=</span> <span class="fl">0.5</span></span>
+<span id="cb5-35"><a href="#cb5-35" aria-hidden="true" tabindex="-1"></a>        tpoints.append(t)</span>
+<span id="cb5-36"><a href="#cb5-36" aria-hidden="true" tabindex="-1"></a>        <span class="cf">continue</span></span>
+<span id="cb5-37"><a href="#cb5-37" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb5-38"><a href="#cb5-38" aria-hidden="true" tabindex="-1"></a>    <span class="co"># calculate propensities</span></span>
+<span id="cb5-39"><a href="#cb5-39" aria-hidden="true" tabindex="-1"></a>    p1 <span class="op">=</span> k1 <span class="op">*</span> curr_x</span>
+<span id="cb5-40"><a href="#cb5-40" aria-hidden="true" tabindex="-1"></a>    p2 <span class="op">=</span> k2 <span class="op">*</span> curr_x <span class="op">*</span> curr_y</span>
+<span id="cb5-41"><a href="#cb5-41" aria-hidden="true" tabindex="-1"></a>    p3 <span class="op">=</span> k3 <span class="op">*</span> curr_y</span>
+<span id="cb5-42"><a href="#cb5-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-43"><a href="#cb5-43" aria-hidden="true" tabindex="-1"></a>    <span class="co"># calculate total propensity</span></span>
+<span id="cb5-44"><a href="#cb5-44" aria-hidden="true" tabindex="-1"></a>    array_p <span class="op">=</span> np.array([p1, p2, p3])</span>
+<span id="cb5-45"><a href="#cb5-45" aria-hidden="true" tabindex="-1"></a>    total_p <span class="op">=</span> array_p.<span class="bu">sum</span>()</span>
+<span id="cb5-46"><a href="#cb5-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-47"><a href="#cb5-47" aria-hidden="true" tabindex="-1"></a>    <span class="co"># randomly sample from uniform distribution</span></span>
+<span id="cb5-48"><a href="#cb5-48" aria-hidden="true" tabindex="-1"></a>    sample_p <span class="op">=</span> np.random.uniform(<span class="dv">0</span>, total_p)</span>
+<span id="cb5-49"><a href="#cb5-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-50"><a href="#cb5-50" aria-hidden="true" tabindex="-1"></a>    <span class="co"># determine next event</span></span>
+<span id="cb5-51"><a href="#cb5-51" aria-hidden="true" tabindex="-1"></a>    array_pcs <span class="op">=</span> np.cumsum(array_p)</span>
+<span id="cb5-52"><a href="#cb5-52" aria-hidden="true" tabindex="-1"></a>    mask <span class="op">=</span> array_pcs <span class="op">&gt;</span> sample_p</span>
+<span id="cb5-53"><a href="#cb5-53" aria-hidden="true" tabindex="-1"></a>    index <span class="op">=</span> mask.nonzero()[<span class="dv">0</span>][<span class="dv">0</span>]</span>
+<span id="cb5-54"><a href="#cb5-54" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb5-55"><a href="#cb5-55" aria-hidden="true" tabindex="-1"></a>    <span class="co"># update counts</span></span>
+<span id="cb5-56"><a href="#cb5-56" aria-hidden="true" tabindex="-1"></a>    new_count <span class="op">=</span> counts[<span class="op">-</span><span class="dv">1</span>] <span class="op">+</span> d[<span class="ss">f'r</span><span class="sc">{</span>index<span class="op">+</span><span class="dv">1</span><span class="sc">}</span><span class="ss">'</span>]</span>
+<span id="cb5-57"><a href="#cb5-57" aria-hidden="true" tabindex="-1"></a>    counts.append(new_count)</span>
+<span id="cb5-58"><a href="#cb5-58" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-59"><a href="#cb5-59" aria-hidden="true" tabindex="-1"></a>    <span class="co"># determine time to next event</span></span>
+<span id="cb5-60"><a href="#cb5-60" aria-hidden="true" tabindex="-1"></a>    scale_para <span class="op">=</span> <span class="dv">1</span> <span class="op">/</span> total_p</span>
+<span id="cb5-61"><a href="#cb5-61" aria-hidden="true" tabindex="-1"></a>    dt <span class="op">=</span> np.random.exponential(scale_para)</span>
+<span id="cb5-62"><a href="#cb5-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-63"><a href="#cb5-63" aria-hidden="true" tabindex="-1"></a>    <span class="co"># update time</span></span>
+<span id="cb5-64"><a href="#cb5-64" aria-hidden="true" tabindex="-1"></a>    t <span class="op">+=</span> dt</span>
+<span id="cb5-65"><a href="#cb5-65" aria-hidden="true" tabindex="-1"></a>    tpoints.append(t)</span>
+<span id="cb5-66"><a href="#cb5-66" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-67"><a href="#cb5-67" aria-hidden="true" tabindex="-1"></a><span class="co"># convert counts history to array</span></span>
+<span id="cb5-68"><a href="#cb5-68" aria-hidden="true" tabindex="-1"></a>counts <span class="op">=</span> np.array(counts)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="b394b4a3-dc9b-4078-b045-f24b18217926" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>plt.xlim([<span class="dv">0</span>, tmax])</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>plt.ylim([<span class="dv">0</span>, <span class="dv">1200</span>])</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'time'</span>)</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'counts'</span>)</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>plt.plot(tpoints, counts[:,<span class="dv">0</span>], c<span class="op">=</span><span class="st">'deeppink'</span>, label<span class="op">=</span><span class="st">'X - prey'</span>)</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>plt.plot(tpoints, counts[:,<span class="dv">1</span>], c<span class="op">=</span><span class="st">'royalblue'</span>, label<span class="op">=</span><span class="st">'Y - predator'</span>)</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>plt.legend(loc<span class="op">=</span><span class="st">'upper right'</span>)</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="AY2324 Application Challenge Mini Project_files/figure-html/cell-7-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="lac-operon" class="level3">
+<h3 class="anchored" data-anchor-id="lac-operon">Lac Operon</h3>
+<p>The lac operon is a group of genes under a single promoter that enables lactose utilization upon expression and is a classic example of a genetic regulatory system in bacteria. The table below shows the event-propensity table for the lac operon system.</p>
+<table class="table">
+<colgroup>
+<col style="width: 10%">
+<col style="width: 44%">
+<col style="width: 23%">
+<col style="width: 22%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;"><strong>No.</strong></th>
+<th style="text-align: center;"><strong>Events</strong></th>
+<th style="text-align: center;"><strong>Propensities</strong></th>
+<th style="text-align: center;"><strong>Rate constants</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">L + <span class="math inline">\(\beta-gal\)</span> → G + <span class="math inline">\(\beta-gal\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(k_{1}.L.\beta-gal\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(k_{1} = 1\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">G → <span class="math inline">\(\emptyset\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(k_{2}.G\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(k_{2} = 0.1\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">3</td>
+<td style="text-align: center;"><span class="math inline">\(O_{p}\)</span> → <span class="math inline">\(O_{p}\)</span> + mRNA</td>
+<td style="text-align: center;"><span class="math inline">\(k_{3}.O_{p}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(k_{3} = 0.01\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">4</td>
+<td style="text-align: center;"><span class="math inline">\(AO_{p}\)</span> → <span class="math inline">\(AO_{p}\)</span> + mRNA</td>
+<td style="text-align: center;"><span class="math inline">\(k_{4}.AO_{p}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(k_{4} = 0.1\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">5</td>
+<td style="text-align: center;"><span class="math inline">\(RO_{p}\)</span> → <span class="math inline">\(RO_{p}\)</span> + mRNA</td>
+<td style="text-align: center;"><span class="math inline">\(k_{5}.RO_{p}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(k_{5} = 0.001\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">LRP + <span class="math inline">\(O_{p}\)</span> → <span class="math inline">\(RO_{p}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(k_{6}.LRP.O_{p}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(k_{6} = 1\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">7</td>
+<td style="text-align: center;"><span class="math inline">\(RO_{p}\)</span> → LRP + <span class="math inline">\(O_{p}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(k_{7}.RO_{p}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(k_{7} = 1\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">LRP + L → LRP-L</td>
+<td style="text-align: center;"><span class="math inline">\(k_{8}.LRP.L\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(k_{8} = 10\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">LRP-L → LRP + L</td>
+<td style="text-align: center;"><span class="math inline">\(k_{9}.LRP-L\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(k_{9} = 1\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">CAP + <span class="math inline">\(O_{p}\)</span> → <span class="math inline">\(AO_{p}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(k_{10}.CAP.O_{p}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(k_{10} = 1\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">11</td>
+<td style="text-align: center;"><span class="math inline">\(AO_{p}\)</span> → CAP + <span class="math inline">\(O_{p}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(k_{11}.AO_{p}\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(k_{11} = 1\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">CAP + G → CAP-G</td>
+<td style="text-align: center;"><span class="math inline">\(k_{12}.CAP.G\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(k_{12} = 10\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">13</td>
+<td style="text-align: center;">CAP-G → CAP + G</td>
+<td style="text-align: center;"><span class="math inline">\(k_{13}.CAP-G\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(k_{13} = 1\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">14</td>
+<td style="text-align: center;">mRNA → mRNA + <span class="math inline">\(\beta-gal\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(k_{14}.mRNA\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(k_{14} = 1\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">15</td>
+<td style="text-align: center;">mRNA → <span class="math inline">\(\emptyset\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(k_{15}.mRNA\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(k_{15} = 1\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">16</td>
+<td style="text-align: center;"><span class="math inline">\(\beta-gal\)</span> → <span class="math inline">\(\emptyset\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(k_{16}.\beta-gal\)</span></td>
+<td style="text-align: center;"><span class="math inline">\(k_{16} = 0.1\)</span></td>
+</tr>
+</tbody>
+</table>
+<div id="765ebf6d-4c79-40fd-b45b-ff267696bc62" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> matplotlib <span class="im">import</span> pyplot <span class="im">as</span> plt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="54d88f47-9b16-444a-8f49-2bfe9b84af5a" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># initial counts</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>l <span class="op">=</span> <span class="dv">50</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>b_gal <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>g <span class="op">=</span> <span class="dv">50</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>op <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>aop <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>rop <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>mrna <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>lrp <span class="op">=</span> <span class="dv">10</span></span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>lrp_l <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>cap <span class="op">=</span> <span class="dv">10</span></span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>cap_g <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>x0 <span class="op">=</span> np.array([l, b_gal, g, op, aop, rop,</span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>               mrna, lrp, lrp_l, cap, cap_g])</span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>xt <span class="op">=</span> [x0]</span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a><span class="co"># reaction rate constants</span></span>
+<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a>k1 <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a>k2 <span class="op">=</span> <span class="fl">0.1</span></span>
+<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a>k3 <span class="op">=</span> <span class="fl">0.01</span></span>
+<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a>k4 <span class="op">=</span> <span class="fl">0.1</span></span>
+<span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a>k5 <span class="op">=</span> <span class="fl">0.001</span></span>
+<span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a>k6 <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb8-24"><a href="#cb8-24" aria-hidden="true" tabindex="-1"></a>k7 <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb8-25"><a href="#cb8-25" aria-hidden="true" tabindex="-1"></a>k8 <span class="op">=</span> <span class="dv">10</span></span>
+<span id="cb8-26"><a href="#cb8-26" aria-hidden="true" tabindex="-1"></a>k9 <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb8-27"><a href="#cb8-27" aria-hidden="true" tabindex="-1"></a>k10 <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb8-28"><a href="#cb8-28" aria-hidden="true" tabindex="-1"></a>k11 <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb8-29"><a href="#cb8-29" aria-hidden="true" tabindex="-1"></a>k12 <span class="op">=</span> <span class="dv">10</span></span>
+<span id="cb8-30"><a href="#cb8-30" aria-hidden="true" tabindex="-1"></a>k13 <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb8-31"><a href="#cb8-31" aria-hidden="true" tabindex="-1"></a>k14 <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb8-32"><a href="#cb8-32" aria-hidden="true" tabindex="-1"></a>k15 <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb8-33"><a href="#cb8-33" aria-hidden="true" tabindex="-1"></a>k16 <span class="op">=</span> <span class="fl">0.1</span></span>
+<span id="cb8-34"><a href="#cb8-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-35"><a href="#cb8-35" aria-hidden="true" tabindex="-1"></a><span class="co"># time parameters</span></span>
+<span id="cb8-36"><a href="#cb8-36" aria-hidden="true" tabindex="-1"></a>t <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb8-37"><a href="#cb8-37" aria-hidden="true" tabindex="-1"></a>tpoints <span class="op">=</span> [t]</span>
+<span id="cb8-38"><a href="#cb8-38" aria-hidden="true" tabindex="-1"></a>tmax <span class="op">=</span> <span class="dv">120</span></span>
+<span id="cb8-39"><a href="#cb8-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-40"><a href="#cb8-40" aria-hidden="true" tabindex="-1"></a><span class="co"># dictionary to update counts for each reaction</span></span>
+<span id="cb8-41"><a href="#cb8-41" aria-hidden="true" tabindex="-1"></a>d <span class="op">=</span> {<span class="st">'r1'</span>: np.array([<span class="op">-</span><span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>]),</span>
+<span id="cb8-42"><a href="#cb8-42" aria-hidden="true" tabindex="-1"></a>     <span class="st">'r2'</span>: np.array([<span class="dv">0</span>, <span class="dv">0</span>, <span class="op">-</span><span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>]),</span>
+<span id="cb8-43"><a href="#cb8-43" aria-hidden="true" tabindex="-1"></a>     <span class="st">'r3'</span>: np.array([<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>]),</span>
+<span id="cb8-44"><a href="#cb8-44" aria-hidden="true" tabindex="-1"></a>     <span class="st">'r4'</span>: np.array([<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>]),</span>
+<span id="cb8-45"><a href="#cb8-45" aria-hidden="true" tabindex="-1"></a>     <span class="st">'r5'</span>: np.array([<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>]),</span>
+<span id="cb8-46"><a href="#cb8-46" aria-hidden="true" tabindex="-1"></a>     <span class="st">'r6'</span>: np.array([<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="op">-</span><span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>, <span class="op">-</span><span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>]),</span>
+<span id="cb8-47"><a href="#cb8-47" aria-hidden="true" tabindex="-1"></a>     <span class="st">'r7'</span>: np.array([<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>, <span class="op">-</span><span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>]),</span>
+<span id="cb8-48"><a href="#cb8-48" aria-hidden="true" tabindex="-1"></a>     <span class="st">'r8'</span>: np.array([<span class="op">-</span><span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="op">-</span><span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>]),</span>
+<span id="cb8-49"><a href="#cb8-49" aria-hidden="true" tabindex="-1"></a>     <span class="st">'r9'</span>: np.array([<span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="op">-</span><span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>]),</span>
+<span id="cb8-50"><a href="#cb8-50" aria-hidden="true" tabindex="-1"></a>     <span class="st">'r10'</span>: np.array([<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="op">-</span><span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="op">-</span><span class="dv">1</span>, <span class="dv">0</span>]),</span>
+<span id="cb8-51"><a href="#cb8-51" aria-hidden="true" tabindex="-1"></a>     <span class="st">'r11'</span>: np.array([<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="op">-</span><span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>]),</span>
+<span id="cb8-52"><a href="#cb8-52" aria-hidden="true" tabindex="-1"></a>     <span class="st">'r12'</span>: np.array([<span class="dv">0</span>, <span class="dv">0</span>, <span class="op">-</span><span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="op">-</span><span class="dv">1</span>, <span class="dv">1</span>]),</span>
+<span id="cb8-53"><a href="#cb8-53" aria-hidden="true" tabindex="-1"></a>     <span class="st">'r13'</span>: np.array([<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">1</span>, <span class="op">-</span><span class="dv">1</span>]),</span>
+<span id="cb8-54"><a href="#cb8-54" aria-hidden="true" tabindex="-1"></a>     <span class="st">'r14'</span>: np.array([<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>]),</span>
+<span id="cb8-55"><a href="#cb8-55" aria-hidden="true" tabindex="-1"></a>     <span class="st">'r15'</span>: np.array([<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="op">-</span><span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>]),</span>
+<span id="cb8-56"><a href="#cb8-56" aria-hidden="true" tabindex="-1"></a>     <span class="st">'r16'</span>: np.array([<span class="dv">0</span>, <span class="op">-</span><span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>])</span>
+<span id="cb8-57"><a href="#cb8-57" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb8-58"><a href="#cb8-58" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-59"><a href="#cb8-59" aria-hidden="true" tabindex="-1"></a><span class="co"># simulation loop</span></span>
+<span id="cb8-60"><a href="#cb8-60" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> t <span class="op">&lt;</span> tmax:</span>
+<span id="cb8-61"><a href="#cb8-61" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-62"><a href="#cb8-62" aria-hidden="true" tabindex="-1"></a>    <span class="co"># get current counts</span></span>
+<span id="cb8-63"><a href="#cb8-63" aria-hidden="true" tabindex="-1"></a>    curr_l <span class="op">=</span> xt[<span class="op">-</span><span class="dv">1</span>][<span class="dv">0</span>]</span>
+<span id="cb8-64"><a href="#cb8-64" aria-hidden="true" tabindex="-1"></a>    curr_b_gal <span class="op">=</span> xt[<span class="op">-</span><span class="dv">1</span>][<span class="dv">1</span>]</span>
+<span id="cb8-65"><a href="#cb8-65" aria-hidden="true" tabindex="-1"></a>    curr_g <span class="op">=</span> xt[<span class="op">-</span><span class="dv">1</span>][<span class="dv">2</span>]</span>
+<span id="cb8-66"><a href="#cb8-66" aria-hidden="true" tabindex="-1"></a>    curr_op <span class="op">=</span> xt[<span class="op">-</span><span class="dv">1</span>][<span class="dv">3</span>]</span>
+<span id="cb8-67"><a href="#cb8-67" aria-hidden="true" tabindex="-1"></a>    curr_aop <span class="op">=</span> xt[<span class="op">-</span><span class="dv">1</span>][<span class="dv">4</span>]</span>
+<span id="cb8-68"><a href="#cb8-68" aria-hidden="true" tabindex="-1"></a>    curr_rop <span class="op">=</span> xt[<span class="op">-</span><span class="dv">1</span>][<span class="dv">5</span>]</span>
+<span id="cb8-69"><a href="#cb8-69" aria-hidden="true" tabindex="-1"></a>    curr_mrna <span class="op">=</span> xt[<span class="op">-</span><span class="dv">1</span>][<span class="dv">6</span>]</span>
+<span id="cb8-70"><a href="#cb8-70" aria-hidden="true" tabindex="-1"></a>    curr_lrp <span class="op">=</span> xt[<span class="op">-</span><span class="dv">1</span>][<span class="dv">7</span>]</span>
+<span id="cb8-71"><a href="#cb8-71" aria-hidden="true" tabindex="-1"></a>    curr_lrp_l <span class="op">=</span> xt[<span class="op">-</span><span class="dv">1</span>][<span class="dv">8</span>]</span>
+<span id="cb8-72"><a href="#cb8-72" aria-hidden="true" tabindex="-1"></a>    curr_cap <span class="op">=</span> xt[<span class="op">-</span><span class="dv">1</span>][<span class="dv">9</span>]</span>
+<span id="cb8-73"><a href="#cb8-73" aria-hidden="true" tabindex="-1"></a>    curr_cap_g <span class="op">=</span> xt[<span class="op">-</span><span class="dv">1</span>][<span class="dv">10</span>]</span>
+<span id="cb8-74"><a href="#cb8-74" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-75"><a href="#cb8-75" aria-hidden="true" tabindex="-1"></a>    <span class="co"># calculate propensities</span></span>
+<span id="cb8-76"><a href="#cb8-76" aria-hidden="true" tabindex="-1"></a>    p1 <span class="op">=</span> k1 <span class="op">*</span> curr_l <span class="op">*</span> curr_b_gal</span>
+<span id="cb8-77"><a href="#cb8-77" aria-hidden="true" tabindex="-1"></a>    p2 <span class="op">=</span> k2 <span class="op">*</span> curr_g</span>
+<span id="cb8-78"><a href="#cb8-78" aria-hidden="true" tabindex="-1"></a>    p3 <span class="op">=</span> k3 <span class="op">*</span> curr_op</span>
+<span id="cb8-79"><a href="#cb8-79" aria-hidden="true" tabindex="-1"></a>    p4 <span class="op">=</span> k4 <span class="op">*</span> curr_aop</span>
+<span id="cb8-80"><a href="#cb8-80" aria-hidden="true" tabindex="-1"></a>    p5 <span class="op">=</span> k5 <span class="op">*</span> curr_rop</span>
+<span id="cb8-81"><a href="#cb8-81" aria-hidden="true" tabindex="-1"></a>    p6 <span class="op">=</span> k6 <span class="op">*</span> curr_lrp <span class="op">*</span> curr_op</span>
+<span id="cb8-82"><a href="#cb8-82" aria-hidden="true" tabindex="-1"></a>    p7 <span class="op">=</span> k7 <span class="op">*</span> curr_rop</span>
+<span id="cb8-83"><a href="#cb8-83" aria-hidden="true" tabindex="-1"></a>    p8 <span class="op">=</span> k8 <span class="op">*</span> curr_lrp <span class="op">*</span> curr_l</span>
+<span id="cb8-84"><a href="#cb8-84" aria-hidden="true" tabindex="-1"></a>    p9 <span class="op">=</span> k9 <span class="op">*</span> curr_lrp_l</span>
+<span id="cb8-85"><a href="#cb8-85" aria-hidden="true" tabindex="-1"></a>    p10 <span class="op">=</span> k10 <span class="op">*</span> curr_cap <span class="op">*</span> curr_op</span>
+<span id="cb8-86"><a href="#cb8-86" aria-hidden="true" tabindex="-1"></a>    p11 <span class="op">=</span> k11 <span class="op">*</span> curr_aop</span>
+<span id="cb8-87"><a href="#cb8-87" aria-hidden="true" tabindex="-1"></a>    p12 <span class="op">=</span> k12 <span class="op">*</span> curr_cap <span class="op">*</span> curr_g</span>
+<span id="cb8-88"><a href="#cb8-88" aria-hidden="true" tabindex="-1"></a>    p13 <span class="op">=</span> k13 <span class="op">*</span> curr_cap_g</span>
+<span id="cb8-89"><a href="#cb8-89" aria-hidden="true" tabindex="-1"></a>    p14 <span class="op">=</span> k14 <span class="op">*</span> curr_mrna</span>
+<span id="cb8-90"><a href="#cb8-90" aria-hidden="true" tabindex="-1"></a>    p15 <span class="op">=</span> k15 <span class="op">*</span> curr_mrna</span>
+<span id="cb8-91"><a href="#cb8-91" aria-hidden="true" tabindex="-1"></a>    p16 <span class="op">=</span> k16 <span class="op">*</span> curr_b_gal</span>
+<span id="cb8-92"><a href="#cb8-92" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-93"><a href="#cb8-93" aria-hidden="true" tabindex="-1"></a>    <span class="co"># calculate total propensity</span></span>
+<span id="cb8-94"><a href="#cb8-94" aria-hidden="true" tabindex="-1"></a>    array_p <span class="op">=</span> np.array([p1, p2, p3, p4, p5, p6, p7, p8,</span>
+<span id="cb8-95"><a href="#cb8-95" aria-hidden="true" tabindex="-1"></a>                       p9, p10, p11, p12, p13, p14, p15, p16])</span>
+<span id="cb8-96"><a href="#cb8-96" aria-hidden="true" tabindex="-1"></a>    total_p <span class="op">=</span> array_p.<span class="bu">sum</span>()</span>
+<span id="cb8-97"><a href="#cb8-97" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-98"><a href="#cb8-98" aria-hidden="true" tabindex="-1"></a>    <span class="co"># randomly sample from uniform distribution</span></span>
+<span id="cb8-99"><a href="#cb8-99" aria-hidden="true" tabindex="-1"></a>    sample_p <span class="op">=</span> np.random.uniform(<span class="dv">0</span>, total_p)</span>
+<span id="cb8-100"><a href="#cb8-100" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-101"><a href="#cb8-101" aria-hidden="true" tabindex="-1"></a>    <span class="co"># determine next event</span></span>
+<span id="cb8-102"><a href="#cb8-102" aria-hidden="true" tabindex="-1"></a>    array_pcs <span class="op">=</span> np.cumsum(array_p)</span>
+<span id="cb8-103"><a href="#cb8-103" aria-hidden="true" tabindex="-1"></a>    mask <span class="op">=</span> array_pcs <span class="op">&gt;</span> sample_p</span>
+<span id="cb8-104"><a href="#cb8-104" aria-hidden="true" tabindex="-1"></a>    index <span class="op">=</span> mask.nonzero()[<span class="dv">0</span>][<span class="dv">0</span>]</span>
+<span id="cb8-105"><a href="#cb8-105" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-106"><a href="#cb8-106" aria-hidden="true" tabindex="-1"></a>    <span class="co"># update counts</span></span>
+<span id="cb8-107"><a href="#cb8-107" aria-hidden="true" tabindex="-1"></a>    xnew <span class="op">=</span> xt[<span class="op">-</span><span class="dv">1</span>] <span class="op">+</span> d[<span class="ss">f'r</span><span class="sc">{</span>index<span class="op">+</span><span class="dv">1</span><span class="sc">}</span><span class="ss">'</span>]</span>
+<span id="cb8-108"><a href="#cb8-108" aria-hidden="true" tabindex="-1"></a>    xt.append(xnew)</span>
+<span id="cb8-109"><a href="#cb8-109" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-110"><a href="#cb8-110" aria-hidden="true" tabindex="-1"></a>    <span class="co"># determine time to next event</span></span>
+<span id="cb8-111"><a href="#cb8-111" aria-hidden="true" tabindex="-1"></a>    scale_para <span class="op">=</span> <span class="dv">1</span> <span class="op">/</span> total_p</span>
+<span id="cb8-112"><a href="#cb8-112" aria-hidden="true" tabindex="-1"></a>    dt <span class="op">=</span> np.random.exponential(scale_para)</span>
+<span id="cb8-113"><a href="#cb8-113" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-114"><a href="#cb8-114" aria-hidden="true" tabindex="-1"></a>    <span class="co"># update time</span></span>
+<span id="cb8-115"><a href="#cb8-115" aria-hidden="true" tabindex="-1"></a>    t <span class="op">+=</span> dt</span>
+<span id="cb8-116"><a href="#cb8-116" aria-hidden="true" tabindex="-1"></a>    tpoints.append(t)</span>
+<span id="cb8-117"><a href="#cb8-117" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-118"><a href="#cb8-118" aria-hidden="true" tabindex="-1"></a><span class="co"># convert counts history to array</span></span>
+<span id="cb8-119"><a href="#cb8-119" aria-hidden="true" tabindex="-1"></a>xt <span class="op">=</span> np.array(xt)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="88ef647a-7c21-4766-a85a-58dbe16b8569" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>plt.figure().set_figwidth(<span class="dv">10</span>)</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>plt.xlim([<span class="dv">0</span>, tmax])</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="co">#plt.ylim([0, 100])</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'time'</span>)</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'counts'</span>)</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>plt.plot(tpoints, xt[:,<span class="dv">0</span>], c<span class="op">=</span><span class="st">'darkorange'</span>, label<span class="op">=</span><span class="st">'lactose'</span>)</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>plt.plot(tpoints, xt[:,<span class="dv">2</span>], c<span class="op">=</span><span class="st">'gold'</span>, label<span class="op">=</span><span class="st">'glucose'</span>)</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>plt.legend(loc<span class="op">=</span><span class="st">'upper right'</span>)</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a><span class="co">#plt.twinx()</span></span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a><span class="co">#plt.plot(tpoints, xt[:,1], c='royalblue', label='beta-gal')</span></span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a><span class="co">#plt.plot(tpoints, xt[:,3], c='black', label='regular')</span></span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a><span class="co">#plt.plot(tpoints, xt[:,4], c='forestgreen', label='activated')</span></span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a><span class="co">#plt.plot(tpoints, xt[:,5], c='red', label='repressed')</span></span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a><span class="co">#plt.plot(tpoints, xt[:,6], c='blueviolet', label='mRNA')</span></span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="AY2324 Application Challenge Mini Project_files/figure-html/cell-10-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="mini-project" class="level2" data-number="1.4">
+<h2 data-number="1.4" class="anchored" data-anchor-id="mini-project"><span class="header-section-number">1.4</span> Mini Project</h2>
+<p>The titles proposed here are part of Assignment 2 for SP2274 where students had to use logic models based on Boolean logic gates to model these systems. Many students raised the need to consider stochasticity especially in the context of a single cell organism which fits in comfortably with the topic that will empower students with more control over the system of interest. If they are included in the Mini Project basket, we are hoping to collect some sort of feedback regarding the students’ perception on this project if possible.</p>
+<section id="stochastic-modelling-of-copper-homeostasis-in-e.-coli" class="level3">
+<h3 class="anchored" data-anchor-id="stochastic-modelling-of-copper-homeostasis-in-e.-coli">Stochastic modelling of copper homeostasis in E. coli</h3>
+<p>Copper homeostasis in E. coli that is published in a review paper by Rademacher and Masepohl (2012).</p>
+<p>Rademacher, C., &amp; Masepohl, B. (2012). Copper-responsive gene regulation in bacteria. Microbiology (Reading, England), 158(Pt 10), 2451–2464. https://doi.org/10.1099/mic.0.058487-0</p>
+</section>
+<section id="stochastic-modelling-of-lysislysogeny-circuit-of-bacteriophage-lambda" class="level3">
+<h3 class="anchored" data-anchor-id="stochastic-modelling-of-lysislysogeny-circuit-of-bacteriophage-lambda">Stochastic modelling of lysis/lysogeny circuit of bacteriophage lambda</h3>
+<p>Lysogeny maintenance circuit of bacteriophage lambda that is published in a primary paper by Bednarz et al.&nbsp;(2014).</p>
+<p>Bednarz, M., Halliday, J. A., Herman, C., &amp; Golding, I. (2014). Revisiting bistability in the lysis/lysogeny circuit of bacteriophage lambda. PloS one, 9(6), e100876. https://doi.org/10.1371/journal.pone.0100876</p>
+
+
+</section>
+</section>
+</section>
+
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
