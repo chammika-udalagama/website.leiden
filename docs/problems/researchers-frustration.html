@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="This seminar is designed for students of all levels. No prior programming knowledge is necessary. However, an enthusiasm for learning and exploring new stuff is.">
 
-<title>Seminar on Using Python in Physics</title>
+<title>Seminar on Using Python in Physics - 05| A Researcher’s Frustration</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -24,22 +23,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -67,23 +66,25 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script src="../../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
-<link rel="stylesheet" href="styles/specific-optimisations.css">
-<link rel="stylesheet" href="styles/index.css">
+<link rel="stylesheet" href="../../styles/specific-optimisations.css">
 </head>
 
-<body class="nav-fixed fullcontent">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    <img src="./_imgs/sp2273_logo_gray.png" alt="" class="navbar-logo">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../_imgs/sp2273_logo_gray.png" alt="" class="navbar-logo">
     </a>
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Seminar on Using Python in Physics</span>
     </a>
   </div>
@@ -94,19 +95,19 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./docs/about/overview.html"> 
+    <a class="nav-link" href="../../docs/about/overview.html"> 
 <span class="menu-text">Overview</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./docs/about/instructions.html"> 
+    <a class="nav-link" href="../../docs/about/instructions.html"> 
 <span class="menu-text">Instructions</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./docs/about/instructions.html"> 
+    <a class="nav-link" href="../../docs/about/instructions.html"> 
 <span class="menu-text">Content</span></a>
   </li>  
 </ul>
@@ -117,116 +118,128 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-layout-custom page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#tasks" id="toc-tasks" class="nav-link" data-scroll-target="#tasks">Tasks</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
+<main class="content" id="quarto-document-content">
 
-
-
-
-<div class="hero-banner">
-<div class="content-block">
-<section id="using-python-in-physics" class="unnumbered hero-text">
-<h1 class="unnumbered">Using Python in Physics</h1>
-<p><img src="_imgs/sp2273_logo.png" class="img-fluid" style="float:left;width:250px"> Computing plays a crucial role in how science understands our world. It is often considered the ‘third pillar’ of science, alongside theory and experiments. This seminar will allow you to experience how we can use computers to solve fun and interesting problems in Physics. You will learn to approach complex problems by breaking them into smaller ones, noting similarities, identifying what data is essential, and devising steps to lead to a solution. You will also learn Python to implement these solutions. All in all, you will acquire problem-solving skills and essential computational know-how that will be valuable for your future. You will also be able to develop and refine your interpersonal skills during the group project.</p>
-</section>
-<div class="hero-animation">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="_imgs/xkcd_python_transparent.png" class="img-fluid figure-img"></p>
-<figcaption>(From xkcd.com)</figcaption>
-</figure>
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">05| A Researcher’s Frustration</h1>
 </div>
-</div>
-</div>
-</div>
-<section id="some-quick-info" class="unnumbered content-block">
-<h2 class="unnumbered">Some Quick Info</h2>
-<style>
-    .front-table tr {
-      border-collapse: collapse;
-      width: 800px;
-      min-height: 75px;
-      height: 75px;
-    }
 
-    .front-table td {
-      vertical-align: top;
-    }
 
-    .front-table td:nth-of-type(1) {
-      width: 300px;
-      font-weight: bold;
 
-    }
+<div class="quarto-title-meta">
 
-    .front-table td:nth-of-type(2) {
-      width: 500px;
-      padding-left: 25px;
-    }
+    
+  
+    
+  </div>
+  
 
-    .front-table-header {
-      color: rgb(186, 105, 6);
-      padding-bottom: .35em;
-      padding-left: .5em;
-      font-weight: bolder;
-    }
 
-    .fas {
-      color: rgb(186, 105, 6);
-      margin-right:.5em;
-    }
-  </style>
-<table class="front-table">
+</header>
+
+
+<section id="introduction" class="level1">
+<h1>Introduction</h1>
+<p>You are the lead researcher in an international collaboration involving five countries (Singapore, US, UK, Australia New Zealand). The research project consists of measuring the height of an adult macaque species. The project is at its end, and you are collating all the data measured by your collaborators.</p>
+<p>Upon trying to combine the data files from your collaborators, you realise (in incredulous frustration) that each of your collaborators has made their measurements using a different unit! Here are the units that were used.</p>
+<div class="my-table-300">
+<table class="table">
+<thead>
+<tr class="header">
+<th style="text-align: center;">Country</th>
+<th style="text-align: center;">Unit</th>
+</tr>
+</thead>
 <tbody>
-<tr>
-<td>
-<p class="front-table-header">
-<i class="fas fa-question-circle"></i>Target audience?
-</p>
-</td>
-<td>
-The seminar is designed for <strong>all</strong> Physics students.<br>No prior programming knowledge is necessary.<br>However, an enthusiasm for learning and exploring new stuff is.
-</td>
+<tr class="odd">
+<td style="text-align: center;">Singapore</td>
+<td style="text-align: center;">metres</td>
 </tr>
-<tr>
-<td>
-<p class="front-table-header">
-<i class="fas fa-question-circle"></i>Schedule
-</p>
-</td>
-<td>
-Monday(13 May 2024) to Friday (16 May 2024)<br>10:00 to 17:00 (with an hour for lunch)
-</td>
+<tr class="even">
+<td style="text-align: center;">UK</td>
+<td style="text-align: center;">inches</td>
 </tr>
-<tr>
-<td>
-<p class="front-table-header">
-<i class="fas fa-question-circle"></i>Requirements
-</p>
-</td>
-<td>
-Your own device that can access the web and run Python.<br>(Instructions to install Python will be given.)
-</td>
+<tr class="odd">
+<td style="text-align: center;">US</td>
+<td style="text-align: center;">feet</td>
 </tr>
-<tr>
-<td>
-<p class="front-table-header">
-<i class="fas fa-question-circle"></i>Fascilitator
-</p>
-</td>
-<td>
-Dr Chammika Udalagama<br>Natiional Univeristy of Singapore, NUS
-</td>
+<tr class="even">
+<td style="text-align: center;">Australia</td>
+<td style="text-align: center;">centimetres</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">New Zealand</td>
+<td style="text-align: center;">millimeters</td>
 </tr>
 </tbody>
 </table>
+</div>
+<p>You can download the data <a href="https://github.com/chammika-udalagama/data/raw/main/data-for-questions/researchers-frustration/frustrated-data.zip">here</a></p>
+</section>
+<section id="tasks" class="level1">
+<h1>Tasks</h1>
+<p>Write some Python code to:</p>
+<ol type="1">
+<li>Produce a <strong>copy</strong> of the data that is ‘corrected’ to SI units.
+<ul>
+<li>Name these files with an ‘_si’ at the end.</li>
+</ul></li>
+<li>Organise your data files in the following file structure</li>
+</ol>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">graph TB
+A(All Data)    --&gt;B(SIN) 
+         A --&gt;C(AUS)
+         A --&gt;D(UK)
+         A --&gt;E(US)
+         A --&gt;F(NZ)
+         B --&gt;G(SI)
+         C --&gt;I(SI)
+         C --&gt;J(ORIGINAL)
+         D --&gt;K(SI)
+         D --&gt;L(ORIGINAL)
+         E --&gt;M(SI)
+         E --&gt;N(ORIGINAL)
+         F --&gt;O(SI)
+         F --&gt;P(ORIGINAL)
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<ol start="3" type="1">
+<li>Plot histograms of the data.
+<ol type="1">
+<li>Plot a histogram for <strong>each</strong> of the countries as a separate plot,</li>
+<li>Plot histograms of the countries as a grid of plots,</li>
+<li>Plot a histogram for the <strong>combined</strong> data. <!-- 4. Using `plt.axes()` produce the following plot. --></li>
+</ol></li>
+</ol>
+
+
 </section>
 
-
-
-
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

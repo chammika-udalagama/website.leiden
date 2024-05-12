@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="description" content="This seminar is designed for students of all levels. No prior programming knowledge is necessary. However, an enthusiasm for learning and exploring new stuff is.">
 
-<title>Seminar on Using Python in Physics</title>
+<title>Seminar on Using Python in Physics - 14| Vibrational Rotational Spectrum of HCl</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -24,22 +23,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -68,22 +67,50 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<link rel="stylesheet" href="styles/specific-optimisations.css">
-<link rel="stylesheet" href="styles/index.css">
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../styles/specific-optimisations.css">
 </head>
 
-<body class="nav-fixed fullcontent">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="./index.html" class="navbar-brand navbar-brand-logo">
-    <img src="./_imgs/sp2273_logo_gray.png" alt="" class="navbar-logo">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../_imgs/sp2273_logo_gray.png" alt="" class="navbar-logo">
     </a>
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Seminar on Using Python in Physics</span>
     </a>
   </div>
@@ -94,19 +121,19 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./docs/about/overview.html"> 
+    <a class="nav-link" href="../../docs/about/overview.html"> 
 <span class="menu-text">Overview</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./docs/about/instructions.html"> 
+    <a class="nav-link" href="../../docs/about/instructions.html"> 
 <span class="menu-text">Instructions</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./docs/about/instructions.html"> 
+    <a class="nav-link" href="../../docs/about/instructions.html"> 
 <span class="menu-text">Content</span></a>
   </li>  
 </ul>
@@ -117,116 +144,209 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-layout-custom page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a>
+  <ul class="collapse">
+  <li><a href="#energy-levels" id="toc-energy-levels" class="nav-link" data-scroll-target="#energy-levels">Energy levels</a></li>
+  <li><a href="#rotational-energy-levels" id="toc-rotational-energy-levels" class="nav-link" data-scroll-target="#rotational-energy-levels">Rotational Energy levels</a></li>
+  <li><a href="#degeneracy-of-states" id="toc-degeneracy-of-states" class="nav-link" data-scroll-target="#degeneracy-of-states">Degeneracy of states</a></li>
+  <li><a href="#intensity-of-the-spectrums" id="toc-intensity-of-the-spectrums" class="nav-link" data-scroll-target="#intensity-of-the-spectrums">Intensity of the spectrums</a></li>
+  <li><a href="#vibrational-energy-levels" id="toc-vibrational-energy-levels" class="nav-link" data-scroll-target="#vibrational-energy-levels">Vibrational Energy levels</a></li>
+  <li><a href="#rotational-vibrational-energy-levels" id="toc-rotational-vibrational-energy-levels" class="nav-link" data-scroll-target="#rotational-vibrational-energy-levels">Rotational Vibrational Energy levels</a></li>
+  <li><a href="#data-for-hcl" id="toc-data-for-hcl" class="nav-link" data-scroll-target="#data-for-hcl">Data for HCl</a></li>
+  </ul></li>
+  <li><a href="#tasks" id="toc-tasks" class="nav-link" data-scroll-target="#tasks">Tasks</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">14| Vibrational Rotational Spectrum of HCl</h1>
+</div>
 
 
 
+<div class="quarto-title-meta">
 
-<div class="hero-banner">
-<div class="content-block">
-<section id="using-python-in-physics" class="unnumbered hero-text">
-<h1 class="unnumbered">Using Python in Physics</h1>
-<p><img src="_imgs/sp2273_logo.png" class="img-fluid" style="float:left;width:250px"> Computing plays a crucial role in how science understands our world. It is often considered the ‘third pillar’ of science, alongside theory and experiments. This seminar will allow you to experience how we can use computers to solve fun and interesting problems in Physics. You will learn to approach complex problems by breaking them into smaller ones, noting similarities, identifying what data is essential, and devising steps to lead to a solution. You will also learn Python to implement these solutions. All in all, you will acquire problem-solving skills and essential computational know-how that will be valuable for your future. You will also be able to develop and refine your interpersonal skills during the group project.</p>
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="introduction" class="level1">
+<h1>Introduction</h1>
+<section id="energy-levels" class="level2">
+<h2 class="anchored" data-anchor-id="energy-levels">Energy levels</h2>
+<p>We know from our basic chemistry lessons that atoms have energy levels. For example, the hydrogen atom’s ground state (<span class="math inline">\(n=1\)</span>) has an energy of -13.6 eV, and the next excited state (<span class="math inline">\(n=2\)</span>) has an energy of -3.4 eV. We also know that electrons can get excited to higher energy levels and spontaneously decay to a lower energy level. In this process, the electron will emit energy corresponding to the difference in energy levels. So, an electron making the transition <span class="math inline">\(n=2 \rightarrow 1\)</span> will emit a photon of energy 10.2 eV. This corresponds to a wavelength of 121.6 nm. These electronic transitions lead to what we refer to as atomic spectra.</p>
+<p>Molecules, too, have electronic energy levels. However, they also have rotational and vibrational energy levels. However, the energy levels corresponding to these types of motions are lower than electronic levels. Hence, the corresponding emissions are related to the infrared and microwave parts of the electromagnetic spectrum.</p>
+<p>You can obtain the wavelength corresponding to a photon using the formula <span class="math inline">\(E = \dfrac{hc}{\lambda}\)</span>. <span class="math inline">\(h\)</span> is Planck’s constant, <span class="math inline">\(6.626 \times 10^{-34}\)</span> Js and <span class="math inline">\(c\)</span> is <span class="math inline">\(2.998\times 10^8\)</span> m/s, the speed of light in vacuum.</p>
 </section>
-<div class="hero-animation">
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="_imgs/xkcd_python_transparent.png" class="img-fluid figure-img"></p>
-<figcaption>(From xkcd.com)</figcaption>
-</figure>
-</div>
-</div>
-</div>
-</div>
-<section id="some-quick-info" class="unnumbered content-block">
-<h2 class="unnumbered">Some Quick Info</h2>
-<style>
-    .front-table tr {
-      border-collapse: collapse;
-      width: 800px;
-      min-height: 75px;
-      height: 75px;
-    }
-
-    .front-table td {
-      vertical-align: top;
-    }
-
-    .front-table td:nth-of-type(1) {
-      width: 300px;
-      font-weight: bold;
-
-    }
-
-    .front-table td:nth-of-type(2) {
-      width: 500px;
-      padding-left: 25px;
-    }
-
-    .front-table-header {
-      color: rgb(186, 105, 6);
-      padding-bottom: .35em;
-      padding-left: .5em;
-      font-weight: bolder;
-    }
-
-    .fas {
-      color: rgb(186, 105, 6);
-      margin-right:.5em;
-    }
-  </style>
-<table class="front-table">
+<section id="rotational-energy-levels" class="level2">
+<h2 class="anchored" data-anchor-id="rotational-energy-levels">Rotational Energy levels</h2>
+<p>The rotational energy levels of a diatomic molecule (like HCl or CO) is given by:</p>
+<p><span id="eq-rot-energy"><span class="math display">\[
+E_\text{ROT,$J$} = BJ(J+1)  
+\tag{1}\]</span></span></p>
+<p><span class="math inline">\(J = 0, 1, 2,3,\ldots\)</span> is the quantum number associated with the rotational motion. <span class="math inline">\(B\)</span> is called the <strong>Rotational constant</strong> and is given by:</p>
+<p><span id="eq-rot-B"><span class="math display">\[
+B = \dfrac{h^2}{8\pi^2 I}   
+\tag{2}\]</span></span></p>
+<p>Where <span class="math inline">\(I\)</span> is the moment of inertia of the molecule about its centre-of-mass given by:</p>
+<p><span id="eq-I"><span class="math display">\[
+I = \mu r^2_\text{bond length}  
+\tag{3}\]</span></span></p>
+<p>Where:</p>
+<p><span id="eq-x"><span class="math display">\[
+\mu = \dfrac{m_1 m_2}{m_1 + m_2}
+\tag{4}\]</span></span></p>
+<p>and <span class="math inline">\(m_1\)</span> and <span class="math inline">\(m_2\)</span> are the massess of the atoms and <span class="math inline">\(r_\text{bond length}\)</span> is the bond length.</p>
+<p>The rules of quantum mechanics restrict the transitions between rotational energy levels in a molecule, which are specified by <strong>selection rules</strong>. The selection rule is a consequence of the conservation of angular momentum in the molecule. The selection rule for rotational transitions for a diatomic system is:</p>
+<p><span id="eq-rot-selection"><span class="math display">\[
+\Delta J = \pm 1
+\tag{5}\]</span></span></p>
+<p>This means that the change in the rotational quantum number (<span class="math inline">\(J\)</span>) between the initial and final states of the transition can only be plus or minus one.</p>
+</section>
+<section id="degeneracy-of-states" class="level2">
+<h2 class="anchored" data-anchor-id="degeneracy-of-states">Degeneracy of states</h2>
+<p>There are multiple ways for a molecule to rotate. This is reflected in quantum mechanics by a concept called <strong>degeneracy</strong>, meaning that a given energy state can exist in multiple ways. The number of ways is called the degeneracy of the system.</p>
+<p>Rotational states have a degeneracy given by:</p>
+<p><span class="math display">\[
+\text{Rotational degeneracy} = 2J +1
+\]</span>{#eq-x)</p>
+</section>
+<section id="intensity-of-the-spectrums" class="level2">
+<h2 class="anchored" data-anchor-id="intensity-of-the-spectrums">Intensity of the spectrums</h2>
+<p>A photon will be emitted whenever there is a transition between two allowed <span class="math inline">\(J\)</span> values. The more transitions there are, the greater the number of photons emitted. Therefore, the intensity or brightness of the corresponding spectral line depends on how many transitions occur. Two factors determine this number of transitions.</p>
+<p>One is how many molecules are in the initial and final energy (<span class="math inline">\(J\)</span>) states. This is determined by the temperature of the system and is given by the famous Boltzmann distribution:</p>
+<p><span id="eq-boltzmann"><span class="math display">\[
+\dfrac{N_m}{N_n} = e^{-\left(\dfrac{E_m - E_n}{k_b T}\right)}   
+\tag{6}\]</span></span></p>
+<p>The second is the degeneracy of the states.</p>
+</section>
+<section id="vibrational-energy-levels" class="level2">
+<h2 class="anchored" data-anchor-id="vibrational-energy-levels">Vibrational Energy levels</h2>
+<p>The vibrational energy levels of a diatomic molecule (like HCl or CO) is given by:</p>
+<p><span id="eq-rot-energy"><span class="math display">\[
+E_\text{VIB,$\nu$} = \left(\nu+\dfrac{1}{2}\right) h\omega_\text{osc
+\tag{7}\]</span></span></p>
+<p><span class="math inline">\(\nu = 0, 1, 2,3,\ldots\)</span> is the quantum number associated with the rotational motion. <span class="math inline">\(\omega_\text{osc}\)</span> is the natural angular frequency (radians/second) of the oscillations and is given by:</p>
+<p><span id="eq-vib-energy"><span class="math display">\[
+\omega_\text{osc}   = \dfrac{1}{2\pi}\sqrt{\dfrac{k}{\mu}}  
+\tag{8}\]</span></span></p>
+<p><span class="math inline">\(k\)</span> represents the strength of the bond.</p>
+<p>The selection rules for vibrational transitions are:</p>
+<p><span id="eq-vib-selection"><span class="math display">\[
+\Delta \nu = \pm 1, \pm 2, \pm 3, \ldots    
+\tag{9}\]</span></span></p>
+</section>
+<section id="rotational-vibrational-energy-levels" class="level2">
+<h2 class="anchored" data-anchor-id="rotational-vibrational-energy-levels">Rotational Vibrational Energy levels</h2>
+<p>In reality, a molecule both rotates and vibrates. So, the energy levels of a molecule are more accurately described by:</p>
+<p><span id="eq-vibrot-energy"><span class="math display">\[
+E_\text{VIB-ROT,$J, \nu$} = BJ(J+1) + \left(\nu+\dfrac{1}{2}\right) h\omega_\text{osc}  
+\tag{10}\]</span></span></p>
+<p>The energy transitions follow both transition rules:</p>
+<p><span class="math display">\[\begin{align}
+\Delta J &amp;= \pm 1 \\
+\Delta \nu &amp;= \pm 1, \pm 2, \pm 3, \ldots   
+\end{align}\]</span></p>
+</section>
+<section id="data-for-hcl" class="level2">
+<h2 class="anchored" data-anchor-id="data-for-hcl">Data for HCl</h2>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Quantity</th>
+<th style="text-align: center;">Value</th>
+</tr>
+</thead>
 <tbody>
-<tr>
-<td>
-<p class="front-table-header">
-<i class="fas fa-question-circle"></i>Target audience?
-</p>
-</td>
-<td>
-The seminar is designed for <strong>all</strong> Physics students.<br>No prior programming knowledge is necessary.<br>However, an enthusiasm for learning and exploring new stuff is.
-</td>
+<tr class="odd">
+<td>Mass of <span class="math inline">\(^{1}\)</span>H</td>
+<td style="text-align: center;"><span class="math inline">\(1.673 \times 10^{−27}\)</span> kg</td>
 </tr>
-<tr>
-<td>
-<p class="front-table-header">
-<i class="fas fa-question-circle"></i>Schedule
-</p>
-</td>
-<td>
-Monday(13 May 2024) to Friday (16 May 2024)<br>10:00 to 17:00 (with an hour for lunch)
-</td>
+<tr class="even">
+<td>Mass of <span class="math inline">\(^{35}\)</span>Cl</td>
+<td style="text-align: center;"><span class="math inline">\(58.06 \times 10^{−27}\)</span> kg</td>
 </tr>
-<tr>
-<td>
-<p class="front-table-header">
-<i class="fas fa-question-circle"></i>Requirements
-</p>
-</td>
-<td>
-Your own device that can access the web and run Python.<br>(Instructions to install Python will be given.)
-</td>
+<tr class="odd">
+<td>Bond length (<span class="math inline">\(r_\text{bond length}\)</span>)</td>
+<td style="text-align: center;"><span class="math inline">\(0.127\)</span> nm</td>
 </tr>
-<tr>
-<td>
-<p class="front-table-header">
-<i class="fas fa-question-circle"></i>Fascilitator
-</p>
-</td>
-<td>
-Dr Chammika Udalagama<br>Natiional Univeristy of Singapore, NUS
-</td>
+<tr class="even">
+<td>Bond strength (<span class="math inline">\(k\)</span>)</td>
+<td style="text-align: center;"><span class="math inline">\(516\)</span> Nm<span class="math inline">\(^{-1}\)</span></td>
 </tr>
 </tbody>
 </table>
+<!-- | Mass of $^{37}$Cl                    | $61.38 \times 10^{−27}$ kg | -->
+</section>
+</section>
+<section id="tasks" class="level1">
+<h1>Tasks</h1>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">Task 1</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Task 2</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">Task 3</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<section id="vibrational-rotational-energy-levels" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="vibrational-rotational-energy-levels">Vibrational Rotational Energy levels</h3>
+<p>Using equation #eq-vibrot-energy, reproduce the following plot for the energy levels corresponding to the rotational states <span class="math inline">\(J=0\)</span> to <span class="math inline">\(J=10\)</span> of the vibrational states <span class="math inline">\(\nu=0,1,2\)</span> for HCl molecule.</p>
+<p><strong>Note:</strong> The energy is in eV.</p>
+<p><img src="__imgs__/viva_vib-rot-energies.png" class="external-images img-fluid"></p>
+</section>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<section id="boltzmann-population-and-rotational-degeneracy" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="boltzmann-population-and-rotational-degeneracy">Boltzmann population and Rotational Degeneracy</h3>
+<p>For a given sample of HCl molecules, we can use equation #eq-boltzmann to determine how many molecules will occupy an energy state <span class="math inline">\(E_{\nu=0,J=0}\)</span> relative to the lowest energy, which is the vibrational-rotational state <span class="math inline">\(\nu=0,J=0\)</span>. Further, remember there is a degeneracy of <span class="math inline">\((2J+1)\)</span> for the rotational states. So, to find the total number of states available, we can multiply the population and degeneracy. This will give us an idea of the intensity we expect if there is a transition from that vibrational-rotational level.</p>
+<p>The following plot shows this information for the <span class="math inline">\(J=0\)</span> to <span class="math inline">\(J=15\)</span> of <span class="math inline">\(\nu=0,1\)</span> of HCl for 300 K. Notice how fast the thermal population of states diminishes. Further, A peak at around <span class="math inline">\(\nu=0,J=3\)</span> indicates that we should expect more transitions from/to this level.</p>
+<p><strong>Your task</strong> is to reproduce the following (or a similar) plot.</p>
+<p><strong>Notes/Hints:</strong></p>
+<ul>
+<li>The energy now appears on the horizontal axis.</li>
+<li>The vertical lines indicate the same energy levels as the previous plot.</li>
+<li>Remember <code>twinx()</code></li>
+</ul>
+<p><img src="__imgs__/viva_vib-rot-degeneracies.png" class="external-images img-fluid" style="width:100%"></p>
+</section>
+</div>
+<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
+<section id="vibrational-rotational-spectrum-of-hcl" class="level3 unnumbered">
+<h3 class="unnumbered anchored" data-anchor-id="vibrational-rotational-spectrum-of-hcl">Vibrational Rotational Spectrum of HCl</h3>
+<p>If you look at the selection rules, you will notice that both of the following deexcitation transitions are possible:</p>
+<p><span class="math display">\[\begin{align}
+\text{P branch}\qquad&amp;(\nu, J) \rightarrow (\nu-1, J-1) \\
+\text{R branch}\qquad&amp;(\nu, J) \rightarrow (\nu-1, J+1) \\
+\end{align}\]</span></p>
+<p>Along with degeneracy and population states, use this information to create the vibrational-rotational spectrum for HCl shown below. You need only consider <span class="math inline">\(\nu=0,1\)</span> and <span class="math inline">\(J=0\)</span> to <span class="math inline">\(J=15\)</span> (why?).</p>
+<p>Do not worry about the style of the plot; just get the science right.</p>
+<p><img src="__imgs__/viva_vib-rot-spectrum.png" class="external-images img-fluid" style="width:100%"></p>
+<p>Just for comparison, here is the real vibrational-rotational spectrum from NIST:</p>
+<p><img src="__imgs__/viva_vib-rot-nist.png" class="external-images img-fluid" style="width:100%"></p>
+</section>
+</div>
+</div>
+</div>
+
+
 </section>
 
-
-
-
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
