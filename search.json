@@ -1,5 +1,26 @@
 [
   {
+    "objectID": "docs/setting-up/setup_2_github.html",
+    "href": "docs/setting-up/setup_2_github.html",
+    "title": "Hello, GitHub! (Need)",
+    "section": "",
+    "text": "GitHub is an online service to help develop and maintain code. It is called GitHub because it is based on a version control tool called Git. A key feature of Git and GitHub is how it helps keep track of the changes to code. You can think of GitHub as a sophisticated version of Google Drive or Dropbox. The know-how to use Git and GitHub is a plus for tech employees.\n73 will use the educational branch of GitHub called GitHub Classroom. We will only use the simplest features of GitHub Classroom that allow you to share your code and solicit instructor feedback. In this chapter, I will take you through the setup process for GitHub Classroom. If you are already familiar with GitHub, feel free to jump ahead."
+  },
+  {
+    "objectID": "docs/setting-up/setup_2_github.html#footnotes",
+    "href": "docs/setting-up/setup_2_github.html#footnotes",
+    "title": "Hello, GitHub! (Need)",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nor the End of the Universe↩︎"
+  },
+  {
+    "objectID": "docs/setting-up/setup_0_main.html",
+    "href": "docs/setting-up/setup_0_main.html",
+    "title": "Tools of the Trade",
+    "section": "",
+    "text": "Overview\nIt is not surprising that 73 will have to use technology. Some of the key requirements of technology in this module are:\n\nEasy access to Python,\nEase of incorporating a scientific discussion with the Python code,\nEase of sharing Python code for feedback and collaborative work.\nEase of starting a discussion about the content.\n\nNo single platform can fulfill all these requirements, so we must use several different tools. However, I have organised the course to have an easy workflow for you to learn by doing and getting feedback. So here are the platforms we will use.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPlatform\nHow it will help us\n\n\n\n\n\nJupyter Notebooks\nEasy access to Python with ample features for scientific discussions.\n\n\n\nGitHub Classroom\nSharing the Jupyter Notebooks\n\n\n\nHypothesis\nAnnotate, discuss centred on course notes.\n\n\n\nCanvas\nOfficial Learning Management System (LMS) of NUS\n\n\n\nGoogle Docs\nScheduling and grading.\n\n\n\nTEAMMATES\nFor within group feedback\n\n\n\n\nIn this section, I will show you how to set up three essential tools, namely:\n\nHypothesis,\nGitHub classrooms and\nJupyter Notebooks.\n\n\n\n\n\n Back to top"
+  },
+  {
     "objectID": "docs/about/instructions.html",
     "href": "docs/about/instructions.html",
     "title": "Instructions",
@@ -1708,5 +1729,110 @@
       "Introduction",
       "Overview"
     ]
+  },
+  {
+    "objectID": "docs/setting-up/setup_3_jupyter.html#download-install-miniconda",
+    "href": "docs/setting-up/setup_3_jupyter.html#download-install-miniconda",
+    "title": "Hello, Jupyter! (Need)",
+    "section": "2.1 Download & install Miniconda",
+    "text": "2.1 Download & install Miniconda\nFirst, we need to download the installer. Please follow the instructions below that are relevant to your operating system.\n\nWindows macOS \n\n\n\nDownload installer here\nInstall Miniconda.\n\nDouble-clicking the .exe file.\nFollow the instructions on the screen:\n\nWhen not sure, just use the installer’s default setting.\nYou must decide ‘Just Me’ or ‘All Users’. If you are installing for ‘All Users’, you must have Administrator privileges on your machine.\n\n\n\n\n\n\nDownload the installer\n\nVisit this page.\nChoose the bash package corresponding to your computer’s chip (i.e., M1, Intel)\nDownload to your Downloads folder (this is the default).\n\nInstall Miniconda.\n\nStart up the Terminal app either from the Applications folder or using the Launchpad.\n\nType the following and press ENTER\n\n\ncd ~/Downloads\nThis changes directory (folder) to ‘Downloads’.\n\n\nType the following, adjusting the file name according to step 1, and press ENTER\n\n\nbash Miniconda3-latest-MacOSX-x86_64.sh\nThis starts the installer.\n\n\nFollow the instructions on the screen:\n\nWhen not sure, just use the installer’s default setting.\nYou must decide ‘Just Me’ or ‘All Users’. If you are installing for ‘All Users’, you must have Administrator privileges on your machine.",
+    "crumbs": [
+      "Overview",
+      "<strong>Day 1</strong>",
+      "(A) Setting up",
+      "Hello, Jupyter! (Need)"
+    ]
+  },
+  {
+    "objectID": "docs/setting-up/setup_3_jupyter.html#what-is-the-command-prompt",
+    "href": "docs/setting-up/setup_3_jupyter.html#what-is-the-command-prompt",
+    "title": "Hello, Jupyter! (Need)",
+    "section": "3.1 What is the command prompt",
+    "text": "3.1 What is the command prompt\nBefore proceeding further, allow me to introduce you to the command prompt. The command prompt is one of the most powerful features of your operating system. However, because it is not as friendly as the windows based graphical user interface (GUI), people shy away from using it. Unfortunately, we do not have a choice; we have to use the prompt to maintain (i. e., install, uninstall, upgrade) components and to start Jupyter Notebooks. So, let’s bite the bullet and learn how to use it.",
+    "crumbs": [
+      "Overview",
+      "<strong>Day 1</strong>",
+      "(A) Setting up",
+      "Hello, Jupyter! (Need)"
+    ]
+  },
+  {
+    "objectID": "docs/setting-up/setup_3_jupyter.html#opening-the-prompt",
+    "href": "docs/setting-up/setup_3_jupyter.html#opening-the-prompt",
+    "title": "Hello, Jupyter! (Need)",
+    "section": "3.2 Opening the prompt",
+    "text": "3.2 Opening the prompt\n\nWindows macOS \n\n\nWindows users should use the Anaconda Prompt.You can open this from the Start menu.\n\n\nmacOS has a native prompt called the Terminal, which you can open from the Applications folder or the Launchpad.",
+    "crumbs": [
+      "Overview",
+      "<strong>Day 1</strong>",
+      "(A) Setting up",
+      "Hello, Jupyter! (Need)"
+    ]
+  },
+  {
+    "objectID": "docs/setting-up/setup_3_jupyter.html#navigate-using-the-prompt",
+    "href": "docs/setting-up/setup_3_jupyter.html#navigate-using-the-prompt",
+    "title": "Hello, Jupyter! (Need)",
+    "section": "3.3 Navigate using the prompt",
+    "text": "3.3 Navigate using the prompt\nWe will often need to navigate to different folders using the prompt. The command to change the directory (or folder) is issued as follows.\ncd path-to-folder\nLet’s navigate into the folder you created previously. For this, we need the full path (e.g. C:\\\\Documents...) of that folder. Using the GUI (Windows File Explorer or Finder) is the easiest way to extract the path to the folder you want.\n\n\n\n\n\nGo to the folder using the file explore GUI,\nRight-click on the top address bar as shown below.\n\nPick Copy address as text\nNow just paste the result in the command line and press Enter:\n\ncd path-to-folder\n\n\n\nLocate the folder using the Finder,\nRight-click on the folder icon and choose Get Info.\nNow hold the Option button and pick Copy filename as Pathname.\nNow just paste the result in the command line and press Enter:\n\ncd path-to-folder",
+    "crumbs": [
+      "Overview",
+      "<strong>Day 1</strong>",
+      "(A) Setting up",
+      "Hello, Jupyter! (Need)"
+    ]
+  },
+  {
+    "objectID": "docs/setting-up/setup_3_jupyter.html#using-the-prompt-with-conda",
+    "href": "docs/setting-up/setup_3_jupyter.html#using-the-prompt-with-conda",
+    "title": "Hello, Jupyter! (Need)",
+    "section": "3.4 Using the prompt with conda",
+    "text": "3.4 Using the prompt with conda\nconda is the name of the main programme from Anaconda that controls everything in the installation. It is called the package manager. You will typically have to use conda to install, upgrade or remove packages. Here are two examples of how to use the prompt. Please try them both.\n\nTesting our installation.Updating Miniconda\n\n\nLet’s use the prompt to check if our previous installation of Miniconda went okay. For this, run (i.e., type and press ENTER) the following:\nconda list\nThis will give you a list of all the things that are installed under Miniconda.\n\n\nThe installer does not always install the most recent versions. So, let’s first update Miniconda itself. Here is the command to do this.\nconda update conda",
+    "crumbs": [
+      "Overview",
+      "<strong>Day 1</strong>",
+      "(A) Setting up",
+      "Hello, Jupyter! (Need)"
+    ]
+  },
+  {
+    "objectID": "docs/setting-up/setup_3_jupyter.html#jupyter-the-first-run",
+    "href": "docs/setting-up/setup_3_jupyter.html#jupyter-the-first-run",
+    "title": "Hello, Jupyter! (Need)",
+    "section": "4.1 Jupyter… the first run",
+    "text": "4.1 Jupyter… the first run\nFinally, it is time to run Jupyter for the first time. We need to start Jupyter using the prompt by invoking:\njupyter notebook\nIf you are on Windows, you can also type “Jupyter notebook” in the search bar and click on the Jupyter Notebook icon.\nWhen you do this, a webpage will open up and display the content of the folder you started Jupyter in. Since we are in the Learning Portfolio, you should see that content.\nWe are done with this chapter. I will show you how to use Jupyter in the next part. But, for now, press the button Logout.",
+    "crumbs": [
+      "Overview",
+      "<strong>Day 1</strong>",
+      "(A) Setting up",
+      "Hello, Jupyter! (Need)"
+    ]
+  },
+  {
+    "objectID": "docs/setting-up/setup_3_jupyter.html#footnotes",
+    "href": "docs/setting-up/setup_3_jupyter.html#footnotes",
+    "title": "Hello, Jupyter! (Need)",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nFor instance: PyCharm, Spyder, Visual Studio, Colab, Kaggle↩︎\nwe will learn what a package does a bit later. For the moment, think of it as an essential ‘item’.↩︎\ni. e. only installs essential features↩︎",
+    "crumbs": [
+      "Overview",
+      "<strong>Day 1</strong>",
+      "(A) Setting up",
+      "Hello, Jupyter! (Need)"
+    ]
+  },
+  {
+    "objectID": "docs/setting-up/setup_1_hypothesis.html",
+    "href": "docs/setting-up/setup_1_hypothesis.html",
+    "title": "Hello, Hypothesis! (Good)",
+    "section": "",
+    "text": "Hypothesis is a free web tool that allows you to “annotate the web”. Specifically, it will enable you to highlight and make notes on web pages. It also has a chat feature that allows you to develop a discussion (with your instructors and peers) around the web page’s content. For 73, we will use Hypothesis to share comments and questions about the notes and inform me of any typos or mistakes."
+  },
+  {
+    "objectID": "docs/setting-up/setup_1_hypothesis.html#footnotes",
+    "href": "docs/setting-up/setup_1_hypothesis.html#footnotes",
+    "title": "Hello, Hypothesis! (Good)",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nHowever, by installing the Chrome extension, you can use Hypothesis with almost all other web pages. Please refer to this page if you want to do this.↩︎"
   }
 ]

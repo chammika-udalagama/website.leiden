@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Seminar on Using Python in Physics - Plotting (Good) Exercises</title>
+<title>Seminar on Using Python in Physics - Hello, Jupyter! (Need)</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -57,22 +57,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </style>
 
 
-<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../../">
-<script src="../../../site_libs/quarto-html/quarto.js"></script>
-<script src="../../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -102,7 +102,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 
 
-<link rel="stylesheet" href="../../../styles/specific-optimisations.css">
+<link rel="stylesheet" href="../../styles/specific-optimisations.css">
 </head>
 
 <body class="nav-sidebar docked nav-fixed">
@@ -112,10 +112,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a href="../../../index.html" class="navbar-brand navbar-brand-logo">
-    <img src="../../../_imgs/sp2273_logo_gray.png" alt="" class="navbar-logo">
+    <a href="../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../_imgs/sp2273_logo_gray.png" alt="" class="navbar-logo">
     </a>
-    <a class="navbar-brand" href="../../../index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Seminar on Using Python in Physics</span>
     </a>
   </div>
@@ -126,19 +126,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../../index.html"> 
+    <a class="nav-link" href="../../index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../../../docs/about/overview.html" aria-current="page"> 
+    <a class="nav-link active" href="../../docs/about/overview.html" aria-current="page"> 
 <span class="menu-text">Overview</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../../docs/about/instructions.html"> 
+    <a class="nav-link" href="../../docs/about/instructions.html"> 
 <span class="menu-text">Instructions</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../../docs/about/instructions.html"> 
+    <a class="nav-link" href="../../docs/about/instructions.html"> 
 <span class="menu-text">Content</span></a>
   </li>  
 </ul>
@@ -152,7 +152,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><strong>Day 1</strong></li><li class="breadcrumb-item">(B) Python (Basics)</li><li class="breadcrumb-item"><a href="../../../docs/python-basics/07_plotting/1_plotting_need.html">7. Plotting</a></li><li class="breadcrumb-item"><a href="../../../docs/python-basics/07_plotting/2_plotting_good_exercises.html"><img src="exerise_icon.png" class="exercise-icon-in-toc img-fluid">Exercise (Good)</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><strong>Day 1</strong></li><li class="breadcrumb-item"><a href="../../docs/setting-up/setup_3_jupyter.html">(A) Setting up</a></li><li class="breadcrumb-item"><a href="../../docs/setting-up/setup_3_jupyter.html">Hello, Jupyter! (Need)</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -183,13 +183,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../docs/about/instructions.html" class="sidebar-item-text sidebar-link">
+  <a href="../../docs/about/instructions.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Instructions</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../docs/about/overview.html" class="sidebar-item-text sidebar-link">
+  <a href="../../docs/about/overview.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Overview</span></a>
   </div>
 </li>
@@ -206,16 +206,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
  <span class="menu-text">(A) Setting up</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../docs/setting-up/setup_3_jupyter.html" class="sidebar-item-text sidebar-link">
+  <a href="../../docs/setting-up/setup_3_jupyter.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Hello, Jupyter! (Need)</span></a>
   </div>
 </li>
@@ -223,13 +223,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false">
  <span class="menu-text">(B) Python (Basics)</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 show">  
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="false">
@@ -241,25 +241,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth3 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../docs/python-basics/01_using_jupyter/1_using-jupyter_need.html" class="sidebar-item-text sidebar-link">
+  <a href="../../docs/python-basics/01_using_jupyter/1_using-jupyter_need.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Using Jupyter (Need)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../docs/python-basics/01_using_jupyter/1_using-jupyter_need_exercises.html" class="sidebar-item-text sidebar-link">
+  <a href="../../docs/python-basics/01_using_jupyter/1_using-jupyter_need_exercises.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><img src="exerise_icon.png" class="exercise-icon-in-toc img-fluid">Exercises (Simple)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../docs/python-basics/01_using_jupyter/2_using-jupyter_good.html" class="sidebar-item-text sidebar-link">
+  <a href="../../docs/python-basics/01_using_jupyter/2_using-jupyter_good.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Using Jupyter (Good)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../docs/python-basics/01_using_jupyter/2_using-jupyter_good_exercises.html" class="sidebar-item-text sidebar-link">
+  <a href="../../docs/python-basics/01_using_jupyter/2_using-jupyter_good_exercises.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><img src="exerise_icon.png" class="exercise-icon-in-toc img-fluid">Exercises (Simple)</span></a>
   </div>
 </li>
@@ -276,31 +276,31 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth3 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../docs/python-basics/02_basics/1_basics_need.html" class="sidebar-item-text sidebar-link">
+  <a href="../../docs/python-basics/02_basics/1_basics_need.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Fundamentals (Need)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../docs/python-basics/02_basics/1_basics_need_exercises.html" class="sidebar-item-text sidebar-link">
+  <a href="../../docs/python-basics/02_basics/1_basics_need_exercises.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><img src="exerise_icon.png" class="exercise-icon-in-toc img-fluid">Exercises (Simple)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../docs/python-basics/02_basics/2_basics_good.html" class="sidebar-item-text sidebar-link">
+  <a href="../../docs/python-basics/02_basics/2_basics_good.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Fundamentals (Good)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../docs/python-basics/02_basics/2_basics_good_exercises.html" class="sidebar-item-text sidebar-link">
+  <a href="../../docs/python-basics/02_basics/2_basics_good_exercises.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><img src="exerise_icon.png" class="exercise-icon-in-toc img-fluid">Exercises (Simple)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../docs/python-basics/02_basics/3_basics_nice.html" class="sidebar-item-text sidebar-link">
+  <a href="../../docs/python-basics/02_basics/3_basics_nice.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Fundamentals (Nice)</span></a>
   </div>
 </li>
@@ -317,25 +317,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth3 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../docs/python-basics/03_storing-data/1_storing-data_need.html" class="sidebar-item-text sidebar-link">
+  <a href="../../docs/python-basics/03_storing-data/1_storing-data_need.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Storing Data (Need)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../docs/python-basics/03_storing-data/1_storing-data_need_exercises.html" class="sidebar-item-text sidebar-link">
+  <a href="../../docs/python-basics/03_storing-data/1_storing-data_need_exercises.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><img src="exerise_icon.png" class="exercise-icon-in-toc img-fluid">Exercise (Need)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../docs/python-basics/03_storing-data/2_storing-data_good.html" class="sidebar-item-text sidebar-link">
+  <a href="../../docs/python-basics/03_storing-data/2_storing-data_good.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Storing Data (Good)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../docs/python-basics/03_storing-data/2_storing-data_good_exercises.html" class="sidebar-item-text sidebar-link">
+  <a href="../../docs/python-basics/03_storing-data/2_storing-data_good_exercises.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><img src="exerise_icon.png" class="exercise-icon-in-toc img-fluid">Exercise (Good)</span></a>
   </div>
 </li>
@@ -355,31 +355,31 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth3 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../docs/python-basics/04_loops/1_loops_need.html" class="sidebar-item-text sidebar-link">
+  <a href="../../docs/python-basics/04_loops/1_loops_need.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Loops (Need)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../docs/python-basics/04_loops/1_loops_need_exercises.html" class="sidebar-item-text sidebar-link">
+  <a href="../../docs/python-basics/04_loops/1_loops_need_exercises.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><img src="exerise_icon.png" class="exercise-icon-in-toc img-fluid">Exercise (Need)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../docs/python-basics/04_loops/2_loops_good.html" class="sidebar-item-text sidebar-link">
+  <a href="../../docs/python-basics/04_loops/2_loops_good.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Loops (Good)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../docs/python-basics/04_loops/2_loops_good_exercises.html" class="sidebar-item-text sidebar-link">
+  <a href="../../docs/python-basics/04_loops/2_loops_good_exercises.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><img src="exerise_icon.png" class="exercise-icon-in-toc img-fluid">Exercise (Good)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../docs/python-basics/04_loops/3_loops_nice.html" class="sidebar-item-text sidebar-link">
+  <a href="../../docs/python-basics/04_loops/3_loops_nice.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Loops (Nice)</span></a>
   </div>
 </li>
@@ -399,31 +399,31 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth3 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../docs/python-basics/05_functions/1_functions_need.html" class="sidebar-item-text sidebar-link">
+  <a href="../../docs/python-basics/05_functions/1_functions_need.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Functions (Need)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../docs/python-basics/05_functions/1_functions_need_exercises.html" class="sidebar-item-text sidebar-link">
+  <a href="../../docs/python-basics/05_functions/1_functions_need_exercises.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><img src="exerise_icon.png" class="exercise-icon-in-toc img-fluid">Exercise (Need)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../docs/python-basics/05_functions/2_functions_good.html" class="sidebar-item-text sidebar-link">
+  <a href="../../docs/python-basics/05_functions/2_functions_good.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Functions (Good)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../docs/python-basics/05_functions/2_functions_good_exercises.html" class="sidebar-item-text sidebar-link">
+  <a href="../../docs/python-basics/05_functions/2_functions_good_exercises.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><img src="exerise_icon.png" class="exercise-icon-in-toc img-fluid">Exercise (Good)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../docs/python-basics/05_functions/3_functions_nice.html" class="sidebar-item-text sidebar-link">
+  <a href="../../docs/python-basics/05_functions/3_functions_nice.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Functions (Nice)</span></a>
   </div>
 </li>
@@ -440,13 +440,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth3 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../docs/python-basics/06_this-n-that/1_os_need.html" class="sidebar-item-text sidebar-link">
+  <a href="../../docs/python-basics/06_this-n-that/1_os_need.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Files, Folders &amp; OS (Need)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../docs/python-basics/06_this-n-that/1_os_need_exercises.html" class="sidebar-item-text sidebar-link">
+  <a href="../../docs/python-basics/06_this-n-that/1_os_need_exercises.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><img src="exerise_icon.png" class="exercise-icon-in-toc img-fluid">Exercise (Need)</span></a>
   </div>
 </li>
@@ -454,34 +454,34 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" aria-expanded="false">
  <span class="menu-text">7. Plotting</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth3 show">  
+      <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth3 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../docs/python-basics/07_plotting/1_plotting_need.html" class="sidebar-item-text sidebar-link">
+  <a href="../../docs/python-basics/07_plotting/1_plotting_need.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Plotting (Need)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../docs/python-basics/07_plotting/1_plotting_need_exercises.html" class="sidebar-item-text sidebar-link">
+  <a href="../../docs/python-basics/07_plotting/1_plotting_need_exercises.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><img src="exerise_icon.png" class="exercise-icon-in-toc img-fluid">Exercise (Need)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../docs/python-basics/07_plotting/2_plotting_good.html" class="sidebar-item-text sidebar-link">
+  <a href="../../docs/python-basics/07_plotting/2_plotting_good.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Plotting (Good)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../docs/python-basics/07_plotting/2_plotting_good_exercises.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../docs/python-basics/07_plotting/2_plotting_good_exercises.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><img src="exerise_icon.png" class="exercise-icon-in-toc img-fluid">Exercise (Good)</span></a>
   </div>
 </li>
@@ -501,14 +501,35 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#jupyter-who" id="toc-jupyter-who" class="nav-link active" data-scroll-target="#jupyter-who"><span class="header-section-number">1</span> Jupyter, who?</a></li>
+  <li><a href="#anaconda-miniconda" id="toc-anaconda-miniconda" class="nav-link" data-scroll-target="#anaconda-miniconda"><span class="header-section-number">2</span> Anaconda &amp; Miniconda</a>
+  <ul class="collapse">
+  <li><a href="#download-install-miniconda" id="toc-download-install-miniconda" class="nav-link" data-scroll-target="#download-install-miniconda"><span class="header-section-number">2.1</span> Download &amp; install Miniconda</a></li>
+  </ul></li>
+  <li><a href="#hello-command-prompt" id="toc-hello-command-prompt" class="nav-link" data-scroll-target="#hello-command-prompt"><span class="header-section-number">3</span> Hello Command prompt</a>
+  <ul class="collapse">
+  <li><a href="#what-is-the-command-prompt" id="toc-what-is-the-command-prompt" class="nav-link" data-scroll-target="#what-is-the-command-prompt"><span class="header-section-number">3.1</span> What is the command prompt</a></li>
+  <li><a href="#opening-the-prompt" id="toc-opening-the-prompt" class="nav-link" data-scroll-target="#opening-the-prompt"><span class="header-section-number">3.2</span> Opening the prompt</a></li>
+  <li><a href="#navigate-using-the-prompt" id="toc-navigate-using-the-prompt" class="nav-link" data-scroll-target="#navigate-using-the-prompt"><span class="header-section-number">3.3</span> Navigate using the prompt</a></li>
+  <li><a href="#using-the-prompt-with-conda" id="toc-using-the-prompt-with-conda" class="nav-link" data-scroll-target="#using-the-prompt-with-conda"><span class="header-section-number">3.4</span> Using the prompt with <code>conda</code></a></li>
+  </ul></li>
+  <li><a href="#installing-jupyter-and-other-stuff" id="toc-installing-jupyter-and-other-stuff" class="nav-link" data-scroll-target="#installing-jupyter-and-other-stuff"><span class="header-section-number">4</span> Installing Jupyter and other stuff</a>
+  <ul class="collapse">
+  <li><a href="#jupyter-the-first-run" id="toc-jupyter-the-first-run" class="nav-link" data-scroll-target="#jupyter-the-first-run"><span class="header-section-number">4.1</span> Jupyter… the first run</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><strong>Day 1</strong></li><li class="breadcrumb-item">(B) Python (Basics)</li><li class="breadcrumb-item"><a href="../../../docs/python-basics/07_plotting/1_plotting_need.html">7. Plotting</a></li><li class="breadcrumb-item"><a href="../../../docs/python-basics/07_plotting/2_plotting_good_exercises.html"><img src="exerise_icon.png" class="exercise-icon-in-toc img-fluid">Exercise (Good)</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><strong>Day 1</strong></li><li class="breadcrumb-item"><a href="../../docs/setting-up/setup_3_jupyter.html">(A) Setting up</a></li><li class="breadcrumb-item"><a href="../../docs/setting-up/setup_3_jupyter.html">Hello, Jupyter! (Need)</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Plotting (Good) Exercises<img src="exerise_icon.png" class="exercise-icon-in-title img-fluid"></h1>
+<h1 class="title">Hello, Jupyter! (Need)</h1>
 </div>
 
 
@@ -528,106 +549,200 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="hidden">
 
 </div>
-<div id="exr-x" class="theorem exercise">
-<p><span class="theorem-title"><strong>Exercise 1</strong></span> &nbsp;</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://jupyter.org/assets/homepage/jupyterpreview.webp" class="img-fluid figure-img" width="500"></p>
+<figcaption>Examples of Jupyter Notebooks (from <a href="https://jupyter.org/">jupyter.org</a>)</figcaption>
+</figure>
+</div>
+<section id="jupyter-who" class="level1" data-number="1">
+<h1 data-number="1"><span class="header-section-number">1</span> Jupyter, who?</h1>
+<p>There are many<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> ways to use (i.e., give it instructions to) Python. One very versatile way is using <span class="glossary">Jupyter Notebooks</span>. Jupyter Notebooks offers a rich textual background to place our code in context. It is particularly useful for scientific work and is used in research. A cool example is the analysis of gravitational wave experiments (LIGO) that won the 2017 Nobel Prize in Physics (see <a href="https://www.gw-openscience.org/s/events/GW150914/GW150914_tutorial.html">here</a>).</p>
+<p>In this introductory chapter, I will take you through the installation of Python and Jupyter Notebooks on your computer. Later, we will explore how we can leverage other features of Jupyter to make our coding journey easy and fun.</p>
+</section>
+<section id="anaconda-miniconda" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Anaconda &amp; Miniconda</h1>
+<p><img src="https://upload.wikimedia.org/wikipedia/en/c/cd/Anaconda_Logo.png" class="img-fluid" style="float:left;margin-right:1em" width="100"> Several companies have created collections of Python and related packages<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> to make it easy for us to get started. We call such collections a <span class="glossary">distribution</span>. We will use the free distributions from the company <strong>Anaconda</strong> (<a href="https://www.anaconda.com/">anaconda.com</a>). Anaconda offers two Python distributions: <code>Miniconda</code> (≈ 200 MB) and <code>Anaconda</code>(≈ 2 GB).</p>
+<p>We will use <code>Miniconda</code> because it is lightweight<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a> and won’t hog up disk space on your machine. However, since <code>Miniconda</code> does not install <strong>all</strong> packages, we must install the ones we need as and when we need them. This is good because it gives us more control and allows us to learn how to install Python packages.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Remember
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Please speak to us often, especially if you encounter <strong>any</strong> difficulties.</p>
+</div>
+</div>
+<section id="download-install-miniconda" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="download-install-miniconda"><span class="header-section-number">2.1</span> Download &amp; install Miniconda</h2>
+<p>First, we need to download the installer. Please follow the instructions below that are relevant to your operating system.</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">Plots</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Tasks</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">Code</a></li></ul>
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">Windows <i class="fa-brands fa-windows fa-2xl centre-icon"></i></a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">macOS <i class="fa-brands fa-apple fa-2xl centre-icon"></i></a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
-<p><strong>Before</strong></p>
-<p><img src="__imgs__/plotting_good_exercise-01_problem.png" class="python-images img-fluid"></p>
-<p><strong>After</strong></p>
-<p><img src="__imgs__/plotting_good_exercise-01_solution.png" class="python-images img-fluid" style="margin-bottom:5px;"></p>
+<ol type="1">
+<li><p><a href="https://docs.conda.io/projects/miniconda/en/latest/#latest-miniconda-installer-links"><strong>Download</strong> installer here</a></p></li>
+<li><p><strong>Install</strong> Miniconda.</p>
+<ol type="1">
+<li>Double-clicking the <code>.exe</code> file.</li>
+<li>Follow the instructions on the screen:
+<ul>
+<li>When not sure, just use the installer’s default setting.</li>
+<li>You must decide ‘Just Me’ or ‘All Users’. If you are installing for ‘All Users’, you must have Administrator privileges on your machine.</li>
+</ul></li>
+</ol></li>
+</ol>
 </div>
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
-<p>The code shown in the <strong>Code</strong> tab generates the ‘Before’ figure shown in the <strong>Plots</strong> tab.<br>
-Your task is to modify this code to end with the ‘After’ figure in <code>jpg</code> format.<br>
-Here are some things to get you started:</p>
 <ol type="1">
-<li>Remove the text ‘I am..’</li>
-<li>Change the colours used for filling.</li>
-<li>Change the limits of the filled areas.</li>
-<li>Add titles to each subplot.</li>
-<li>Share the x axis across columns.</li>
-<li>Add/Remove labels to the x-axis.</li>
-<li>Make the tick labels of the two bottom plots the same.</li>
-<li>Add grids to <strong>all</strong> subplots.</li>
-<li>Add a legend to <strong>all</strong> subplots in the upper right position.</li>
-<li>Use <code>tight_layout()</code> to improve the figure.</li>
-<li>Save the figure as a <code>jpg</code> file.</li>
+<li><strong>Download</strong> the installer
+<ol type="1">
+<li>Visit <a href="https://docs.conda.io/projects/miniconda/en/latest/#latest-miniconda-installer-links">this</a> page.</li>
+<li>Choose the <strong>bash</strong> package corresponding to your computer’s chip (i.e., M1, Intel)</li>
+<li>Download to your <strong>Downloads</strong> folder (this is the default).</li>
+</ol></li>
+<li><strong>Install</strong> Miniconda.
+<ol type="1">
+<li>Start up the <strong>Terminal</strong> app either from the Applications folder or using the Launchpad.<br>
+</li>
+<li>Type the following and press <code>ENTER</code></li>
 </ol>
-<p>You might want to view the images in their full resolution by opening them in another tab.</p>
+<div style="margin-left:40px;margin-top:1em;">
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> ~/Downloads</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This <strong>c</strong>hanges <strong>d</strong>irectory (folder) to ‘Downloads’.</p>
 </div>
-<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#--------- Generate cosine and sine values --------#</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> np.linspace(<span class="op">-</span>np.pi, np.pi, num<span class="op">=</span><span class="dv">100</span>, endpoint<span class="op">=</span><span class="va">True</span>)</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>cos_x <span class="op">=</span> np.cos(x)</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>sin_x <span class="op">=</span> np.sin(x)</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>fun1_x <span class="op">=</span> np.exp(<span class="op">-</span>x) <span class="op">*</span> np.cos(<span class="dv">5</span> <span class="op">*</span> x)</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>fun2_x <span class="op">=</span> np.exp(<span class="op">-</span>x) <span class="op">*</span> np.sin(<span class="dv">2</span> <span class="op">*</span> x)</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">#------- Plot the data -------#</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>fig, axes <span class="op">=</span> plt.subplots(nrows<span class="op">=</span><span class="dv">2</span>, ncols<span class="op">=</span><span class="dv">2</span>,</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>                         figsize<span class="op">=</span>(<span class="dv">12</span>, <span class="dv">8</span>),  sharey<span class="op">=</span><span class="st">'row'</span>)</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co">#------- Subplot 1 -------#</span></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>, <span class="dv">0</span>].plot(x, cos_x, color<span class="op">=</span><span class="st">'r'</span>, label<span class="op">=</span><span class="st">'$\cos x$'</span>)</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>, <span class="dv">0</span>].plot(x, cos_x<span class="op">**</span><span class="dv">2</span>, color<span class="op">=</span><span class="st">'r'</span>,</span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>                linestyle<span class="op">=</span><span class="st">':'</span>, label<span class="op">=</span><span class="st">'$\cos^2 x$'</span>)</span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>, <span class="dv">0</span>].set_title(<span class="st">'$\cos x$ &amp; $\cos^2x$'</span>)</span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>, <span class="dv">0</span>].set_ylabel(<span class="st">'Cosine Value'</span>)</span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>, <span class="dv">0</span>].fill_between(x, cos_x, <span class="op">-</span><span class="dv">1</span>, color<span class="op">=</span><span class="st">'g'</span>, alpha<span class="op">=</span><span class="fl">.125</span>)</span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>, <span class="dv">0</span>].set_xlabel(<span class="st">'Angle (radians)'</span>)</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>, <span class="dv">0</span>].text(<span class="dv">0</span>, <span class="dv">0</span>, <span class="st">'I am [0, 0]!'</span>, fontsize<span class="op">=</span><span class="dv">30</span>,</span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>                horizontalalignment<span class="op">=</span><span class="st">'center'</span>)</span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="co">#------- Subplot 2 -------#</span></span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>, <span class="dv">1</span>].plot(x, sin_x, color<span class="op">=</span><span class="st">'g'</span>, label<span class="op">=</span><span class="st">'$\sin x$'</span>)</span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>, <span class="dv">1</span>].fill_between(x, cos_x, <span class="op">-</span><span class="dv">2</span>, color<span class="op">=</span><span class="st">'r'</span>, alpha<span class="op">=</span><span class="fl">.125</span>)</span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>, <span class="dv">1</span>].plot(x, sin_x<span class="op">**</span><span class="dv">2</span>, label<span class="op">=</span><span class="st">'$\sin^2 x$'</span>)</span>
-<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>, <span class="dv">1</span>].set_ylabel(<span class="st">'Cosine Value'</span>)</span>
-<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>, <span class="dv">1</span>].set_ylim(<span class="op">-</span><span class="fl">1.25</span>, <span class="fl">1.25</span>)</span>
-<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>, <span class="dv">1</span>].legend(loc<span class="op">=</span><span class="st">'lower right'</span>, frameon<span class="op">=</span><span class="va">False</span>)</span>
-<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>, <span class="dv">1</span>].text(<span class="dv">0</span>, <span class="dv">0</span>, <span class="st">'I am [0, 1]!'</span>, fontsize<span class="op">=</span><span class="dv">30</span>,</span>
-<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>                horizontalalignment<span class="op">=</span><span class="st">'center'</span>)</span>
-<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="co">#------- Subplot 3 -------#</span></span>
-<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>, <span class="dv">0</span>].plot(x, fun1_x, color<span class="op">=</span><span class="st">'b'</span>, label<span class="op">=</span><span class="st">'$e^{-x}\cos 5x$'</span>)</span>
-<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>, <span class="dv">0</span>].fill_between(x, fun1_x, <span class="dv">0</span>, color<span class="op">=</span><span class="st">'b'</span>, alpha<span class="op">=</span><span class="fl">.125</span>)</span>
-<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>, <span class="dv">0</span>].set_title(<span class="st">'$e^{-x}\cos 5x$'</span>)</span>
-<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>, <span class="dv">0</span>].set_xlabel(<span class="st">'Angle (radians)'</span>)</span>
-<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>, <span class="dv">0</span>].set_ylabel(<span class="st">'Cosine Value'</span>)</span>
-<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>, <span class="dv">0</span>].set_xticks([<span class="op">-</span>np.pi, <span class="op">-</span>np.pi <span class="op">/</span> <span class="dv">2</span>, <span class="dv">0</span>, np.pi <span class="op">/</span> <span class="dv">2</span>, np.pi])</span>
-<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>, <span class="dv">0</span>].set_xticklabels([<span class="st">'$-\pi$'</span>, <span class="st">'$-\pi/2$'</span>, <span class="st">'0'</span>, <span class="st">'$\pi/2$'</span>, <span class="st">'$\pi$'</span>])</span>
-<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>, <span class="dv">0</span>].legend()</span>
-<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>, <span class="dv">0</span>].text(<span class="dv">0</span>, <span class="dv">0</span>, <span class="st">'I am [1, 0]!'</span>, fontsize<span class="op">=</span><span class="dv">30</span>,</span>
-<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>                horizontalalignment<span class="op">=</span><span class="st">'center'</span>)</span>
-<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a><span class="co">#------- Subplot 4 -------#</span></span>
-<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>, <span class="dv">1</span>].plot(x, fun2_x, color<span class="op">=</span><span class="st">'y'</span>, label<span class="op">=</span><span class="st">'$e^{-x}\sin 2x$'</span>)</span>
-<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>, <span class="dv">1</span>].set_title(<span class="st">'$e^{-x}\sin 2x$'</span>)</span>
-<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>, <span class="dv">1</span>].fill_between(x, fun2_x, <span class="dv">10</span>, color<span class="op">=</span><span class="st">'y'</span>, alpha<span class="op">=</span><span class="fl">.125</span>)</span>
-<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>, <span class="dv">1</span>].set_xticks([<span class="op">-</span>np.pi, <span class="op">-</span>np.pi <span class="op">/</span> <span class="dv">2</span>, <span class="dv">0</span>, np.pi <span class="op">/</span> <span class="dv">2</span>, np.pi])</span>
-<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>, <span class="dv">1</span>].legend()</span>
-<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>, <span class="dv">1</span>].text(<span class="dv">0</span>, <span class="dv">0</span>, <span class="st">'I am [1, 1]!'</span>, fontsize<span class="op">=</span><span class="dv">30</span>,</span>
-<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>                horizontalalignment<span class="op">=</span><span class="st">'center'</span>)</span>
-<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-54"><a href="#cb1-54" aria-hidden="true" tabindex="-1"></a><span class="co"># 'flatten', 'opens' the 2D array into a simple 1D array</span></span>
-<span id="cb1-55"><a href="#cb1-55" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> a <span class="kw">in</span> axes.flatten():</span>
-<span id="cb1-56"><a href="#cb1-56" aria-hidden="true" tabindex="-1"></a>    a.grid(alpha<span class="op">=</span><span class="fl">.5</span>)</span>
-<span id="cb1-57"><a href="#cb1-57" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-58"><a href="#cb1-58" aria-hidden="true" tabindex="-1"></a><span class="co"># plt.tight_layout()</span></span>
-<span id="cb1-59"><a href="#cb1-59" aria-hidden="true" tabindex="-1"></a>plt.show(block<span class="op">=</span><span class="va">False</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<ol start="3" type="1">
+<li>Type the following, adjusting the file name according to step 1, and press <code>ENTER</code></li>
+</ol>
+<div style="margin-left:40px;margin-top:1em;">
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">bash</span> Miniconda3-latest-MacOSX-x86_64.sh</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This starts the installer.</p>
+</div>
+<ol start="4" type="1">
+<li>Follow the instructions on the screen:
+<ul>
+<li>When not sure, just use the installer’s default setting.</li>
+<li>You must decide ‘Just Me’ or ‘All Users’. If you are installing for ‘All Users’, you must have Administrator privileges on your machine.</li>
+</ul></li>
+</ol></li>
+</ol>
 </div>
 </div>
 </div>
+</section>
+</section>
+<section id="hello-command-prompt" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Hello Command prompt</h1>
+<section id="what-is-the-command-prompt" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="what-is-the-command-prompt"><span class="header-section-number">3.1</span> What is the command prompt</h2>
+<p><img src="https://www.lifewire.com/thmb/iZgx0UAz7MdmWLbhbH0CP7-R1G8=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/windows-terminal-bc68f652016d4bc3a0b1e62f219a2637.png" class="right-300 img-fluid quarto-figure quarto-figure-center">Before proceeding further, allow me to introduce you to the <span class="glossary">command prompt</span>. The command prompt is one of the most powerful features of your operating system. However, because it is not as friendly as the windows based graphical user interface (GUI), people shy away from using it. Unfortunately, we do not have a choice; we have to use the prompt to maintain (i. e., install, uninstall, upgrade) components and to start Jupyter Notebooks. So, let’s bite the bullet and learn how to use it.</p>
+</section>
+<section id="opening-the-prompt" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="opening-the-prompt"><span class="header-section-number">3.2</span> Opening the prompt</h2>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true">Windows <i class="fa-brands fa-windows fa-2xl centre-icon"></i></a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false">macOS <i class="fa-brands fa-apple fa-2xl centre-icon"></i></a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
+<p>Windows users should use the <span class="glossary">Anaconda Prompt</span>.<br>You can open this from the <code>Start</code> menu.</p>
+</div>
+<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
+<p>macOS has a native prompt called the <span class="glossary">Terminal</span>, which you can open from the <code>Applications</code> folder or the <code>Launchpad</code>.</p>
 </div>
 </div>
+</div>
+</section>
+<section id="navigate-using-the-prompt" class="level2" data-number="3.3">
+<h2 data-number="3.3" class="anchored" data-anchor-id="navigate-using-the-prompt"><span class="header-section-number">3.3</span> Navigate using the prompt</h2>
+<p>We will often need to navigate to different folders using the prompt. The command to change the directory (or folder) is issued as follows.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> path-to-folder</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Let’s navigate into the folder you created previously. For this, we need the full path (e.g.&nbsp;<code>C:\\Documents...</code>) of that folder. Using the GUI (Windows File Explorer or Finder) is the easiest way to extract the path to the folder you want.</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-3-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-1" role="tab" aria-controls="tabset-3-1" aria-selected="true"></a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-3-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-3-2" role="tab" aria-controls="tabset-3-2" aria-selected="false"></a></li></ul>
+<div class="tab-content">
+<div id="tabset-3-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-3-1-tab">
+<ol type="1">
+<li><p>Go to the folder using the file explore GUI,</p></li>
+<li><p>Right-click on the top address bar as shown below.</p>
+<p><img src="https://www.sony.com/articleimage/servlet/servlet.FileDownload?file=0155F000007IHkaQAG" class="img-fluid" width="600"></p></li>
+<li><p>Pick <strong>Copy address as text</strong></p></li>
+<li><p>Now just paste the result in the command line and press <code>Enter</code>:</p></li>
+</ol>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> path-to-folder</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="tabset-3-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-3-2-tab">
+<ol type="1">
+<li>Locate the folder using the Finder,</li>
+<li>Right-click on the folder icon and choose <strong>Get Info</strong>.</li>
+<li>Now hold the <code>Option</code> button and pick <strong>Copy <code>filename</code> as Pathname</strong>.</li>
+<li>Now just paste the result in the command line and press <code>Enter</code>:</li>
+</ol>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> path-to-folder</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="using-the-prompt-with-conda" class="level2" data-number="3.4">
+<h2 data-number="3.4" class="anchored" data-anchor-id="using-the-prompt-with-conda"><span class="header-section-number">3.4</span> Using the prompt with <code>conda</code></h2>
+<p><code>conda</code> is the name of the main programme from Anaconda that controls everything in the installation. It is called the <span class="glossary">package manager</span>. You will typically have to use <code>conda</code> to install, upgrade or remove packages. Here are two examples of how to use the prompt. Please try them both.</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-4-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-1" role="tab" aria-controls="tabset-4-1" aria-selected="true">Testing our installation.</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-4-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-4-2" role="tab" aria-controls="tabset-4-2" aria-selected="false">Updating Miniconda</a></li></ul>
+<div class="tab-content">
+<div id="tabset-4-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-4-1-tab">
+<p>Let’s use the prompt to check if our previous installation of Miniconda went okay. For this, run (i.e., type and press <code>ENTER</code>) the following:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> list</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This will give you a list of all the things that are installed under Miniconda.</p>
+</div>
+<div id="tabset-4-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-4-2-tab">
+<p>The installer does not always install the most recent versions. So, let’s first update Miniconda itself. Here is the command to do this.</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> update conda                  </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="installing-jupyter-and-other-stuff" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Installing Jupyter and other stuff</h1>
+<p>Now, let’s install Jupyter and some other really useful packages. For this, please <strong>type</strong> out the following and press <code>ENTER</code> after each command.</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> install jupyter <span class="at">-c</span> conda-forge <span class="at">-y</span>   </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb9"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> install numpy <span class="at">-c</span> conda-forge <span class="at">-y</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<!-- 
+```bash
+conda install matplotlib -c conda-forge -y
+```
+
+```bash
+conda install pandas -c conda-forge -y
+``` -->
+<p>Just so that you understand what is happening:</p>
+<ul>
+<li><code>-c conda-forge</code> specifies that I want the packages to be installed from the source called <code>conda-forge</code> because this usually has the most recent versions of the packages.</li>
+<li><code>-y</code> is there because I am lazy and don’t want to keep on answering questions; instead, I have said yes to all!</li>
+</ul>
+<section id="jupyter-the-first-run" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="jupyter-the-first-run"><span class="header-section-number">4.1</span> Jupyter… the first run</h2>
+<p>Finally, it is time to run Jupyter for the first time. We need to start Jupyter using the prompt by invoking:</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="ex">jupyter</span> notebook</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>If you are on Windows, you can also type “Jupyter notebook” in the search bar and click on the Jupyter Notebook icon.</p>
+<p>When you do this, a webpage will open up and display the content of the folder you started Jupyter in. Since we are in the Learning Portfolio, you should see that content.</p>
+<p>We are done with this chapter. I will show you how to use Jupyter in the next part. But, for now, press the button <span class="button">Logout</span>.</p>
 
 
+</section>
+</section>
 
-<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
+
+<a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a><div id="quarto-appendix" class="default"><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>For instance: <a href="https://www.jetbrains.com/pycharm/">PyCharm</a>, <a href="https://www.spyder-ide.org/">Spyder</a>, <a href="https://visualstudio.microsoft.com/">Visual Studio</a>, <a href="https://colab.research.google.com/">Colab</a>, <a href="https://www.kaggle.com/code">Kaggle</a><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>we will learn what a package does a bit later. For the moment, think of it as an essential ‘item’.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>i. e. only installs essential features<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
